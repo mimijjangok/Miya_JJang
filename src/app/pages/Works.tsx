@@ -39,7 +39,6 @@ const allProjects = [
     category: "AI UX 전략 및 DX",
     image:
       "https://images.unsplash.com/photo-1622631407413-bfb7d4aec3b0",
-    link: "/AiTransformation", // <-- 이 부분을 추가했습니다!
   },
 ];
 
@@ -103,7 +102,6 @@ export const Works = () => {
             category={project.category}
             image={project.image}
             index={idx}
-            link={project.link} // <-- 링크 속성을 전달합니다!
           />
         ))}
       </div>
