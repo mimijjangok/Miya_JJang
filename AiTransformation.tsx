@@ -21,16 +21,61 @@ export default function AiTransformation() {
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
           AI & DIGITAL TRANSFORMATION
         </h1>
-        <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-12">
+        <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-16">
           최신 생성형 인공지능 기술과 디자인 프로세스를 융합하여, 복잡한 데이터와 워크플로우를 직관적이고 아름다운 사용자 경험으로 재정의한 프로젝트입니다.
         </p>
 
-        {/* 비주얼 배너 영역 */}
-        <div className="w-full h-96 bg-black flex items-center justify-center text-white mb-16 relative overflow-hidden rounded-none shadow-lg">
-          <div className="absolute inset-0 bg-[radial-gradient(#22c55e_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
-          <span className="text-2xl md:text-3xl font-bold tracking-wider text-green-400 border border-green-400 px-6 py-3">
-            AI DRIVEN AESTHETICS
-          </span>
+        {/* ✨ 배너 및 시각 예제 3개 영역 (보내주신 이미지 소스 적용) */}
+        <div className="mb-20">
+          <h3 className="text-sm font-mono tracking-widest uppercase text-gray-500 mb-6 border-b border-black pb-2">
+            Featured Key Visuals & Examples (3 Cases)
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* 배너 1: 자정 / 00 */}
+            <div className="bg-zinc-50 border border-black p-4 flex flex-col justify-between group">
+              <div className="w-full h-80 bg-[#0B132B] mb-4 overflow-hidden relative flex flex-col justify-between p-6">
+                <div className="absolute top-3 left-3 bg-white text-black text-[10px] font-mono px-2 py-0.5 font-bold">
+                  01
+                </div>
+                <div className="text-white text-6xl font-black tracking-tighter mt-8">00</div>
+                <div className="text-white text-3xl font-bold tracking-widest">자정</div>
+              </div>
+              <div>
+                <h4 className="font-bold text-base mb-1 uppercase tracking-tight">MIDNIGHT ARCHITECTURE</h4>
+                <p className="text-xs text-gray-600 leading-relaxed">시간의 흐름에 따른 몰입감 있는 첫 번째 시각 레이어</p>
+              </div>
+            </div>
+
+            {/* 배너 2: 꿈 / 02 */}
+            <div className="bg-zinc-50 border border-black p-4 flex flex-col justify-between group">
+              <div className="w-full h-80 bg-[#1C2541] mb-4 overflow-hidden relative flex flex-col justify-between p-6">
+                <div className="absolute top-3 left-3 bg-white text-black text-[10px] font-mono px-2 py-0.5 font-bold">
+                  02
+                </div>
+                <div className="text-white text-6xl font-black tracking-tighter mt-8">02</div>
+                <div className="text-white text-3xl font-bold tracking-widest">꿈</div>
+              </div>
+              <div>
+                <h4 className="font-bold text-base mb-1 uppercase tracking-tight">DREAM SEQUENCE</h4>
+                <p className="text-xs text-gray-600 leading-relaxed">직관적인 타이포그래피와 깊이감 있는 톤앤매너</p>
+              </div>
+            </div>
+
+            {/* 배너 3: 새벽 / 04 */}
+            <div className="bg-zinc-50 border border-black p-4 flex flex-col justify-between group">
+              <div className="w-full h-80 bg-[#3A506B] mb-4 overflow-hidden relative flex flex-col justify-between p-6">
+                <div className="absolute top-3 left-3 bg-white text-black text-[10px] font-mono px-2 py-0.5 font-bold">
+                  03
+                </div>
+                <div className="text-white text-6xl font-black tracking-tighter mt-8">04</div>
+                <div className="text-white text-3xl font-bold tracking-widest">새벽</div>
+              </div>
+              <div>
+                <h4 className="font-bold text-base mb-1 uppercase tracking-tight">DAWN TRANSITION</h4>
+                <p className="text-xs text-gray-600 leading-relaxed">흐름에 따라 유기적으로 전환되는 인터랙션 디자인</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* 상세 설명 그리드 */}
