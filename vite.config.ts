@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Miya_JJang/', // 👈 저장소 이름('/저장소이름/')을 정확히 넣어주어야 합니다!
+  base: './', // 👈 여기를 다시 './' 로 변경해주세요!
 })
