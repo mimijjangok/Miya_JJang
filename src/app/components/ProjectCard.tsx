@@ -9,7 +9,7 @@ interface ProjectCardProps {
   index: number;
 }
 
-// 각 프로젝트별 상세 내용 (AI 프로젝트 모달 팝업에 자정/꿈/새벽 배너 소스 적용)
+// 각 프로젝트별 상세 내용 (AI 프로젝트 모달 팝업에 자정/꿈/새벽 배너 소스 반영)
 const projectDetails: Record<string, { 
   subtitle: string; 
   description: string; 
