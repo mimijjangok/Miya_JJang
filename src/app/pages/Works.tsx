@@ -64,7 +64,7 @@ export const Works = () => {
 
         <div className="flex items-center gap-6 mb-1">
   {/* 이력서 다운로드 링크 */}
-  <a
+ <a
     href="/resume.pdf"
     download="Resume_MI3_Lee.pdf"
     target="_blank"
