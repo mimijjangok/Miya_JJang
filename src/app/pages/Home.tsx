@@ -67,22 +67,22 @@ export const Home = () => {
       >
         <div className="overflow-hidden">
           <motion.p variants={revealVariants} className="text-[#05D920] font-semibold mb-6 tracking-[0.3em] border-l-2 border-[#05D920] pl-4 uppercase text-xs">
-            Leadership in Digital Era
+           MODUVA CREATIVE STUDIO
           </motion.p>
         </div>
         
         <div className="overflow-hidden">
           <motion.h1 variants={revealVariants} className="text-7xl md:text-[10rem] font-black tracking-tighter leading-[0.9] mb-12 text-black">
-            <span className="text-[#05D920]">예쁨</span><br />
-            AI가 <br />
-            녹여지다.
+            <span className="text-[#05D920]">YOUR IDEAS.</span><br />
+            BECOME<br />
+            DESIGN.
           </motion.h1>
         </div>
 
         <motion.div variants={revealVariants} className="flex flex-col md:flex-row md:items-end justify-between gap-12">
           <p className="text-lg md:text-2xl text-zinc-500 max-w-3xl font-normal leading-relaxed break-keep">
-            아름다움과 인공지능 기술이 일상에 디자인으로 자연스럽게 녹여지는 순간, <br />
-            20년의 설계 노하우와 리더십으로 그 본질적인 가치를 완성합니다.
+            당신의 생각이 디자인이 된다. <br />
+            아이디어에서 브랜드까지, 생각을 새로운 가치로 완성합니다.
           </p>
           
           <Link to="/experience-value">
