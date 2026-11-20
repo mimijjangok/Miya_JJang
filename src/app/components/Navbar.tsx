@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-6 md:px-12 bg-white border-b-[1px] border-black/10">
       <NavLink to="/" className="text-2xl font-black tracking-tighter text-black uppercase">
-        MODUVA
+      MI3<span className="text-[#05D920]">___</span>Lee
       </NavLink>
       <div className="flex gap-10 items-center">
         <NavLink 
