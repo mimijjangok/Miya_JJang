@@ -744,7 +744,6 @@ export const works: Work[] = [
     name: "LG전자 · ThinQ Voice 신규 페이지",
     desc: "LG ThinQ Voice Command Book 모바일웹 신규 제작 및 LG전자 반응형 신규 페이지 디자인",
     thumb: "/works/web/lg-thumb.jpg",
-    icon: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/54/ac/f4/54acf431-c39c-d720-549f-d98306c2a9ae/Placeholder.mill/512x512bb.jpg",
     thumbCard: { bg: "#A50034", color: "#FFFFFF", text: "LG ThinQ", sub: "Voice Command Book" },
     info: {
       client: "LG전자",
