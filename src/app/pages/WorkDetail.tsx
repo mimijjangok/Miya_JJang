@@ -73,7 +73,10 @@ export const WorkDetail = () => {
           </div>
           {work.desc && <p className="text-sm md:text-base text-gray-600 mt-3">{work.desc}</p>}
         </div>
-        {work.link && (
+        {work.link?.textOnly && (
+          <span className="inline-flex items-center text-sm font-mono text-gray-600">{work.link.label}</span>
+        )}
+        {work.link && !work.link.textOnly && (
           <a
             href={work.link.url}
             target="_blank"
@@ -239,7 +242,7 @@ export const WorkDetail = () => {
           </div>
 
           <div className="mt-6 space-y-2">
-            {work.link && (
+            {work.link && !work.link.textOnly && (
               <a
                 href={work.link.url}
                 target="_blank"

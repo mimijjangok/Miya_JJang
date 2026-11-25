@@ -34,7 +34,8 @@ export interface Work {
   name: string;
   desc?: string;
   thumb: string;
-  link?: { label: string; url: string };
+  // textOnly: 사이트가 열리지 않을 때 주소만 글자로 표시 (클릭·바로가기 버튼 없음)
+  link?: { label: string; url: string; textOnly?: boolean };
   info?: WorkInfo;
   overview?: string;
   challenge?: string;
@@ -237,6 +238,7 @@ export const works: Work[] = [
     name: "(주)세찬아이앤씨 · SECHAN I&C",
     desc: "공공기관 유지보수 및 웹/앱 사이트 제작·개발 기업 CI 로고 · 국문/영문, 가로형/세로형, 컬러 배경 버전",
     thumb: "/works/brand/sechan-thumb.jpg",
+    link: { label: "www.sechaninc.co.kr", url: "https://www.sechaninc.co.kr/", textOnly: true },
     info: {
       client: "(주)세찬아이앤씨 (Sechan I&C Corp.)",
       role: "CI 로고 디자인",
