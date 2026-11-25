@@ -16,7 +16,7 @@ export const WorkThumb = ({ work, className = "" }: { work: Work; className?: st
   }
   return (
     <div
-      className={`w-full h-full flex flex-col items-center justify-center text-center px-6 ${className}`}
+      className={`w-full h-full flex flex-col items-center justify-center text-center px-6 ${c.border ? "border border-zinc-200" : ""} ${className}`}
       style={{ background: c.bg, color: c.color ?? "#111111" }}
     >
       {c.logo ? (

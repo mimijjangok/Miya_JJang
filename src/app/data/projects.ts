@@ -35,7 +35,8 @@ export interface Work {
   desc?: string;
   thumb: string;
   // 목록 썸네일을 로고/이름 글자로 보여 줄 때 (logo 이미지가 있으면 로고, 없으면 text)
-  thumbCard?: { bg: string; color?: string; logo?: string; text?: string; sub?: string };
+  // border: 연한 회색 테두리
+  thumbCard?: { bg: string; color?: string; logo?: string; text?: string; sub?: string; border?: boolean };
   // textOnly: 사이트가 열리지 않을 때 주소만 글자로 표시 (클릭·바로가기 버튼 없음)
   link?: { label: string; url: string; textOnly?: boolean };
   info?: WorkInfo;
@@ -364,7 +365,7 @@ export const works: Work[] = [
     name: "KEB하나은행 · 개인뱅킹 웹/앱",
     desc: "KEB하나은행 개인뱅킹 PC 웹·모바일웹·앱 메인 화면 UI 디자인",
     thumb: "/works/web/hana-mockup.png",
-    thumbCard: { bg: "#008485", color: "#FFFFFF", text: "KEB하나은행", sub: "개인뱅킹 웹 · 앱" },
+    thumbCard: { bg: "#008485", color: "#FFFFFF", text: "KEB하나은행", sub: "개인뱅킹 웹 · 앱", border: true },
     info: {
       client: "KEB하나은행",
       role: "웹·모바일 UI 디자인",
