@@ -63,7 +63,7 @@ export interface Work {
   custom?: "goest-brand";
   // 이미지 아래 추가 섹션 (작은 원본은 원래 크기로 선명하게)
   // withFeatures: 이미지 옆 빈칸에 특징(features) 텍스트 표시
-  extras?: { title: string; desc?: string; withFeatures?: boolean; cols?: 3 | 4; square?: "cover" | "contain"; uniform?: boolean; images: { src: string; alt: string; caption?: string }[] }[];
+  extras?: { title: string; desc?: string; withFeatures?: boolean; cols?: 3 | 4; square?: "cover" | "contain"; uniform?: boolean; bordered?: boolean; images: { src: string; alt: string; caption?: string }[] }[];
   // 컬러 시스템 (이미지 아래에 색상 칩으로 표시)
   // 앱 아이콘 (제목 왼쪽에 작게 표시)
   icon?: string;
@@ -766,6 +766,45 @@ export const works: Work[] = [
         images: [
           { src: "/works/web/lg-main.jpg", alt: "LG전자 메인 신규 페이지", caption: "메인" },
           { src: "/works/web/lg-oled.jpg", alt: "LG OLED 제품 상세 신규 페이지", caption: "OLED 제품 상세" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "libms",
+    category: "web-platform",
+    name: "LIBMS · 리튬이온 배터리 모니터링 대시보드",
+    desc: "Lithium-ion Battery Monitoring System 대시보드 기획 · 디자인 · 반응형",
+    thumb: "/works/web/libms-main.png",
+    thumbCard: { bg: "#E8512D", color: "#FFFFFF", text: "LIBMS", sub: "배터리 모니터링 대시보드" },
+    info: {
+      client: "굿어스데이터 (GOODUSDATA)",
+      year: "2022",
+      role: "기획 80% · 디자인 100% · 반응형",
+      target: "배터리 설비 관리자",
+      expression: "대시보드 · 데이터 시각화 · 등각 라인 일러스트",
+      concept: "리튬이온 배터리의 상태(SOC·전압·온도)를 셋 → 배터리 → 랙 → 모듈 → 셀 단계로 한눈에 확인하는 모니터링 대시보드",
+      colors: [
+        { name: "ORANGE", hex: "#E8512D" },
+        { name: "CHARCOAL", hex: "#2B2B2B" },
+        { name: "GRAY", hex: "#F2F2F2" },
+      ],
+      tools: "Figma",
+    },
+    overview: "리튬이온 배터리 모니터링 시스템(LIBMS)의 대시보드를 기획하고 디자인했습니다. 로그인 화면의 등각 라인 일러스트부터 SOC 게이지, 랙·모듈·셀 단위 상태 카드, 온도·전압 차트까지 반응형으로 설계했습니다.",
+    hero: { src: "/works/web/libms-login.png", alt: "LIBMS 로그인 화면" },
+    images: [],
+    extras: [
+      {
+        title: "DASHBOARD",
+        desc: "메인 · 배터리 · 모듈 모니터링 화면",
+        cols: 3,
+        uniform: true,
+        bordered: true,
+        images: [
+          { src: "/works/web/libms-main.png", alt: "LIBMS 메인 대시보드 · SOC와 차트", caption: "메인" },
+          { src: "/works/web/libms-battery.png", alt: "LIBMS 배터리 · 랙 모니터링", caption: "배터리 · 랙" },
+          { src: "/works/web/libms-module.png", alt: "LIBMS 모듈 · 셀 모니터링", caption: "모듈 · 셀" },
         ],
       },
     ],
