@@ -99,6 +99,29 @@ export const WorkDetail = () => {
               ))}
             </div>
           )}
+
+          {/* 컬러 시스템 */}
+          {work.palette && work.palette.length > 0 && (
+            <div className="mt-10 border border-zinc-200 p-6 md:p-10">
+              <h3 className="text-2xl md:text-3xl font-black tracking-tighter mb-8">Colors</h3>
+              <div className="space-y-8">
+                {work.palette.map((g) => (
+                  <div key={g.group}>
+                    <div className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-3">{g.group}</div>
+                    <div className="grid grid-cols-4 md:grid-cols-8 gap-2">
+                      {g.colors.map((c) => (
+                        <div key={g.group + c.hex}>
+                          <div className="aspect-square border border-zinc-200" style={{ background: c.hex }} />
+                          <div className="mt-1 text-[10px] font-bold">{c.name}</div>
+                          <div className="text-[10px] font-mono text-gray-400">{c.hex}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* 오른쪽: 고정 정보 패널 */}

@@ -42,6 +42,8 @@ export interface Work {
   // "pc-mobile"이면 첫 이미지는 PC(넓게), 둘째는 모바일(좁게)로 나란히
   layout?: "pc-mobile";
   images: { src: string; alt: string }[];
+  // 컬러 시스템 (이미지 아래에 색상 칩으로 표시)
+  palette?: { group: string; colors: { name: string; hex: string }[] }[];
 }
 
 export const categories: Category[] = [
@@ -130,6 +132,73 @@ export const works: Work[] = [
       { src: "/works/brand/woosung-logo.jpg", alt: "WOOSUNG Industries 로고" },
       { src: "/works/brand/woosung-folder.jpg", alt: "WOOSUNG Industries 폴더 디자인" },
       { src: "/works/brand/woosung-card.jpg", alt: "(주)우성산업기술 명함 디자인" },
+    ],
+  },
+  {
+    slug: "goest-brand",
+    category: "brand-identity",
+    name: "지오이스트 · GOEST",
+    desc: "로고 및 브랜딩 (심볼·국문·영문 로고, 앱 아이콘, 컬러 시스템)",
+    thumb: "/works/brand/goest-logo.png",
+    link: { label: "www.goest.co.kr", url: "https://www.goest.co.kr" },
+    info: {
+      client: "지오이스트 (GOEST)",
+      role: "로고 디자인 · 브랜드 아이덴티티",
+      target: "기업 IT 담당자 · B2B 고객",
+      expression: "심볼마크 · 로고타입 · 컬러 시스템",
+      concept: "G 이니셜을 원형 흐름으로 감싼 심볼과 선명한 블루로 AI·SI 기술 기업의 연결과 신뢰를 표현",
+      colors: [
+        { name: "BLUE", hex: "#3268F4" },
+        { name: "BLACK", hex: "#0A0A0A" },
+        { name: "WHITE", hex: "#FFFFFF" },
+      ],
+      tools: "Illustrator · Figma",
+    },
+    images: [
+      { src: "/works/brand/goest-logo.png", alt: "지오이스트 심볼·국문·영문 로고와 앱 아이콘" },
+    ],
+    palette: [
+      {
+        group: "Primary",
+        colors: [
+          { name: "Blue", hex: "#3268F4" },
+          { name: "Black", hex: "#0A0A0A" },
+          { name: "White", hex: "#FFFFFF" },
+        ],
+      },
+      {
+        group: "Color Palette",
+        colors: [
+          { name: "Black", hex: "#000000" },
+          { name: "Blue", hex: "#3268F4" },
+          { name: "Light Blue", hex: "#4F8FF3" },
+          { name: "Red", hex: "#D33334" },
+        ],
+      },
+      {
+        group: "Gray Scale",
+        colors: [
+          { name: "G900", hex: "#1A1A1A" },
+          { name: "G800", hex: "#3B3B3B" },
+          { name: "G700", hex: "#5D5D5D" },
+          { name: "G600", hex: "#808080" },
+          { name: "G500", hex: "#9C9C9C" },
+          { name: "G400", hex: "#C5C5C5" },
+          { name: "G300", hex: "#DEDEDE" },
+          { name: "G100", hex: "#F2F2F2" },
+        ],
+      },
+      {
+        group: "Blue Scale",
+        colors: [
+          { name: "B900", hex: "#050133" },
+          { name: "B700", hex: "#2744CA" },
+          { name: "B500", hex: "#4F8FF3" },
+          { name: "B300", hex: "#8BBAFA" },
+          { name: "B100", hex: "#DBEAFD" },
+          { name: "B50", hex: "#F4F8FE" },
+        ],
+      },
     ],
   },
   {
