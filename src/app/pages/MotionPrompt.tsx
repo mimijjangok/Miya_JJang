@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router";
 import { ArrowLeft, Check, Copy } from "lucide-react";
 import { MotionCanvas } from "../components/motion/MotionCanvas";
-import { motionPrep, motionPrompts, motionTips } from "../data/motionPrompts";
+import { motionPrep, motionPrompts } from "../data/motionPrompts";
 import { categories } from "../data/projects";
 
 // 클로드 모션 프롬프트 12종: 프롬프트대로 만든 모션을 위에서 재생, 아래에 아주 작은 보기·복사
@@ -120,8 +120,8 @@ export const MotionPrompt = () => {
         </Link>
       </div>
 
-      {/* 준비물 · 바꿔 쓰기 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+      {/* 준비물 */}
+      <div className="mb-16">
         <div className="bg-zinc-50 p-6 md:p-8">
           <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-4">준비물</div>
           <ul className="space-y-3">
@@ -132,18 +132,6 @@ export const MotionPrompt = () => {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="bg-black text-white p-6 md:p-8">
-          <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#05D920] mb-2">자유롭게 바꿔 쓰세요</div>
-          <p className="text-sm text-zinc-400 mb-4 break-keep">프롬프트 첫 문단에 규격이 들어 있어요. 그 숫자와 단어만 바꾸면 돼요.</p>
-          <dl className="space-y-2">
-            {motionTips.map((t) => (
-              <div key={t.label} className="grid grid-cols-[48px_1fr] gap-3 text-sm">
-                <dt className="font-bold">{t.label}</dt>
-                <dd className="text-zinc-300 break-keep">{t.value}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </div>
 
