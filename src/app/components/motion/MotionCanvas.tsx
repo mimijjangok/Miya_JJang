@@ -4,6 +4,7 @@ import { popArt, flat2d, glass, y2k } from "./scenes1";
 import { synthwave, collage, glitch, particles } from "./scenes2";
 import { vaporwave, isometric, lowpoly, lineart } from "./scenes3";
 import { pricing } from "./scenes4";
+import { keynote, flipCard, onboarding, chatAI, notiSummary, calendarFill, featureGrid, uploadRing, appStore, delivery } from "./scenes6";
 import { tilePuzzle, countdown, morphDash, searchDemo, todoList, checkout, beforeAfter, themeSwitch, fitnessRing, donutBudget } from "./scenes5";
 
 // No.01 ~ No.12 순서
@@ -14,6 +15,8 @@ export const SCENES: Record<string, Scene> = {
   "J.10": pricing,
   "J.03": tilePuzzle, "J.05": countdown, "J.11": morphDash, "J.13": searchDemo, "J.14": todoList,
   "J.18": checkout, "J.19": beforeAfter, "J.24": themeSwitch, "J.31": fitnessRing, "J.32": donutBudget,
+  "J.02": keynote, "J.04": flipCard, "J.15": onboarding, "J.17": chatAI, "J.20": notiSummary,
+  "J.21": calendarFill, "J.23": featureGrid, "J.25": uploadRing, "J.27": appStore, "J.33": delivery,
 };
 
 // 3초 모션을 계속 반복 재생 (화면에 보일 때만 그림)

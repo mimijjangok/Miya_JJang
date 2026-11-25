@@ -21,7 +21,7 @@ export const rollText = (c: CanvasRenderingContext2D, from: string, to: string, 
   let cx = x; // 왼쪽 정렬
   for (let i = 0; i < n; i++) {
     const ca = a[i], cb = b[i];
-    const w = cb === "," ? cw * 0.45 : cb === " " ? 0 : cw;
+    const w = cb === "," || cb === "." || cb === ":" ? cw * 0.45 : cb === " " ? 0 : cw;
     const p = easeInOut3(clamp((k - i * 0.06) / 0.7));
     c.save(); c.beginPath(); c.rect(cx - 4, y - size * 0.95, w + 8, size * 1.2); c.clip();
     if (ca === cb || p <= 0) c.fillText(p >= 1 ? cb : ca, cx, y);

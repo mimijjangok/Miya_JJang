@@ -75,7 +75,7 @@ export const Motion100 = () => {
         <ArrowLeft size={12} /> Motion Prompt
       </Link>
       <div className="border-b-2 border-black pb-10 mb-10">
-        <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#05D920] mb-4">Motion 100 · Pick 10</div>
+        <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#05D920] mb-4">Motion 100 · Pick 21</div>
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
           <h1 className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9]">
             MOTION
@@ -84,7 +84,7 @@ export const Motion100 = () => {
           </h1>
           <div className="max-w-md">
             <p className="text-base md:text-lg text-zinc-500 leading-relaxed break-keep">
-              「클로드 모션그래픽 한글 프롬프트 100」에서 11개를 골라 프롬프트대로 직접 만들어 본 결과예요. [이름] 칸은 포트폴리오에 있는 작업 이름으로 채웠어요.
+              「클로드 모션그래픽 한글 프롬프트 100」에서 21개를 골라 프롬프트대로 직접 만들어 본 결과예요. [이름] 칸은 포트폴리오에 있는 작업 이름으로 채웠어요.
             </p>
             <a href={MOTION100_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-4 text-xs font-bold hover:text-[#05D920] transition-colors">
               출처 · {MOTION100_CREDIT} <ArrowUpRight size={12} />
@@ -107,7 +107,7 @@ export const Motion100 = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 items-start">
-        {motion100.map((p, i) => (
+        {[...motion100].sort((a, b) => parseInt(a.no.slice(1)) - parseInt(b.no.slice(1))).map((p, i) => (
           <Card key={p.id} p={p} index={i} />
         ))}
       </div>
