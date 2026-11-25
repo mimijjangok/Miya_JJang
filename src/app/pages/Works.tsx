@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "motion/react";
 import { Download } from "lucide-react";
 import { ProjectCard } from "../components/ProjectCard";
-import { projects } from "../data/projects";
+import { categories } from "../data/projects";
 
 // 작업 목록은 data/projects.ts 한 곳에서 관리
-const allProjects = projects;
+const allProjects = categories;
 
 export const Works = () => {
   return (

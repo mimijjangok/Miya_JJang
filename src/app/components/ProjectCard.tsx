@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { getProjectByTitle, projectDetails } from '../data/projects';
+import { getCategoryByTitle } from '../data/projects';
 
 interface ProjectCardProps {
   title: string;
@@ -11,12 +11,10 @@ interface ProjectCardProps {
   index: number;
 }
 
-// 카드를 누르면 팝업 대신 프로젝트 상세 페이지(/works/:slug)로 이동합니다.
+// 배너를 누르면 그 분류의 작업 목록(/works/:category)으로 이동합니다.
 export const ProjectCard = ({ title, category, image, index }: ProjectCardProps) => {
-  const slug = getProjectByTitle(title)?.slug;
+  const slug = getCategoryByTitle(title)?.slug;
   const to = slug ? `/works/${slug}` : '/works';
-  // 실제 작업 썸네일이 있으면 그걸 우선 사용
-  const src = projectDetails[title]?.thumb || image;
 
   return (
     <Link to={to} className="block" aria-label={`${title} 상세 보기`}>
@@ -29,7 +27,7 @@ export const ProjectCard = ({ title, category, image, index }: ProjectCardProps)
       >
         <div className="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-110">
           <ImageWithFallback
-            src={src}
+            src={image}
             alt={title}
             className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-700"
           />
