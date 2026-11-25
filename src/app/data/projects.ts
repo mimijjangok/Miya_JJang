@@ -231,7 +231,6 @@ export const works: Work[] = [
     overview: "지오이스트의 AI 기반 크롤러 트래픽 탐지·차단 솔루션 ABSR(Anti-Bot Security Resource)의 제품 로고입니다. 가로형·세로형 조합과 다크·라이트 배경 버전, 슬로건 포함·미포함 버전까지 정리했습니다.",
     images: [
       { src: "/works/brand/absr-logo-v1.jpg", alt: "ABSR 로고 · 슬로건 포함 버전" },
-      { src: "/works/brand/absr-logo-v2.jpg", alt: "ABSR 로고 · 심볼+로고타입 버전" },
     ],
     extras: [
       {
