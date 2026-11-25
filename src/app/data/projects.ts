@@ -350,6 +350,7 @@ export const works: Work[] = [
     },
     overview: "하나은행 임직원이 사용하는 준법시스템 HiCS(Hana Internal Control System)를 대시보드 형태로 고도화한 작업입니다. WebSquare를 사용해 메인 대시보드와 배경 설정 화면을 만들었고, 2024년 1월 오픈을 알리는 홍보 배너도 함께 디자인했습니다.",
     hero: { src: "/works/web/hics-logo.png", alt: "HiCS 하나은행 준법시스템 로고", small: true },
+    layout: "cover-grid",
     images: [
       { src: "/works/web/hics-banner.jpg", alt: "HiCS 오픈 홍보 배너 · 빠르고 편리해진 준법시스템" },
       { src: "/works/web/hics-main-day.jpg", alt: "HiCS 메인 대시보드 · 일몰 배경 테마" },

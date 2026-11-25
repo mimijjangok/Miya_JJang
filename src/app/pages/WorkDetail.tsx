@@ -152,7 +152,7 @@ export const WorkDetail = () => {
                   <img src={work.images[0].src} alt={work.images[0].alt} loading="lazy" className="w-full h-auto block" />
                 </div>
               )}
-              <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
+              <div className={`grid gap-2 ${work.images.length - 1 <= 3 ? "grid-cols-3" : work.images.length - 1 === 4 ? "grid-cols-2 md:grid-cols-4" : "grid-cols-3 md:grid-cols-6"}`}>
                 {work.images.slice(1).map((img, iIdx) => (
                   <figure key={iIdx} className="flex flex-col">
                     <div className="bg-zinc-50 overflow-hidden">
