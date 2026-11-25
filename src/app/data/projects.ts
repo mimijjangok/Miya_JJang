@@ -359,6 +359,50 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "hana-bank",
+    category: "web-platform",
+    name: "KEB하나은행 · 개인뱅킹 웹/앱",
+    desc: "KEB하나은행 개인뱅킹 PC 웹·모바일웹·앱 메인 화면 UI 디자인",
+    thumb: "/works/web/hana-mockup.png",
+    thumbCard: { bg: "#008485", color: "#FFFFFF", text: "KEB하나은행", sub: "개인뱅킹 웹 · 앱" },
+    info: {
+      client: "KEB하나은행",
+      role: "웹·모바일 UI 디자인",
+      target: "하나은행 개인 고객",
+      expression: "라인 일러스트 · 퀵메뉴 아이콘 · 반응형",
+      concept: "가는 라인 일러스트와 하나은행 그린으로, 시간대·요일에 맞춘 인사와 자산관리(하이로보) 메시지를 따뜻하게 전하는 메인 화면",
+      colors: [
+        { name: "HANA GREEN", hex: "#008485" },
+        { name: "MINT", hex: "#2EC4A0" },
+        { name: "SLATE", hex: "#4A5866" },
+      ],
+    },
+    overview: "KEB하나은행 개인뱅킹의 PC 웹·모바일웹·앱 메인 화면을 디자인했습니다. 계좌조회·계좌이체·신용카드 퀵메뉴를 중심으로, 시간대와 요일에 따라 바뀌는 라인 일러스트 인사 화면을 만들었습니다.",
+    icon: "/works/app/hana-oneq-icon.png",
+    hero: { src: "/works/web/hana-mockup.png", alt: "KEB하나은행 PC·모바일 메인 화면 목업" },
+    images: [],
+    extras: [
+      {
+        title: "WEB",
+        desc: "PC 웹 메인 · 로그인 화면",
+        cols: 3,
+        images: [
+          { src: "/works/web/hana-web-main.png", alt: "KEB하나은행 PC 메인 화면", caption: "PC 메인" },
+          { src: "/works/web/hana-web-login.png", alt: "KEB하나은행 로그인 화면", caption: "로그인" },
+          { src: "/works/web/hana-m-main.png", alt: "KEB하나은행 모바일웹 메인 화면", caption: "모바일웹 메인" },
+        ],
+      },
+      {
+        title: "APP",
+        desc: "시간대·요일에 따라 바뀌는 메인 인사 화면",
+        images: [
+          { src: "/works/web/hana-app-morning.png", alt: "앱 메인 · 좋은 아침입니다", caption: "아침 인사" },
+          { src: "/works/web/hana-app-weekend.png", alt: "앱 메인 · 기다렸던 주말", caption: "주말 인사" },
+        ],
+      },
+    ],
+  },
+  {
     slug: "lg-thinq-voice",
     category: "web-platform",
     name: "LG전자 · ThinQ Voice 신규 페이지",
