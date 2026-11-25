@@ -12,6 +12,8 @@ export interface ProjectDetail {
   challenge: string;
   solution: string;
   banners: ProjectBanner[];
+  // 실제 사이트 주소 (있을 때만 버튼 표시)
+  link?: { label: string; url: string };
 }
 
 export interface Project {
@@ -46,6 +48,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   "Web Platform Design": {
     subtitle: "Section 02 / Web Homepage Renewal",
+    link: { label: "www.goest.co.kr", url: "https://www.goest.co.kr" },
     description: "사용자 중심의 정보 구조(IA) 설계와 미니멀한 UI를 결합하여, 브랜드 경험을 극대화한 반응형 웹 플랫폼 디자인입니다.",
     challenge: "복잡하게 얽혀 있던 방대한 콘텐츠를 사용자가 직관적으로 탐색할 수 있도록 단순화하고, 로딩 속도와 시각적 몰입감을 동시에 잡아야 했습니다.",
     solution: "여백의 미를 살린 레이아웃과 부드러운 마이크로 인터랙션을 도입하여 정보 전달력을 높이고 사용자의 체류 시간을 극대화했습니다.",

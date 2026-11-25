@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { Link, Navigate, useParams } from "react-router";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { projects, projectDetails, getProjectBySlug } from "../data/projects";
 
@@ -52,6 +52,18 @@ export const ProjectDetail = () => {
         <p className="text-base md:text-xl text-gray-700 leading-relaxed max-w-3xl">
           {detail.description}
         </p>
+        {detail.link && (
+          <a
+            href={detail.link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 mt-8 bg-black text-white px-6 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-[#05D920] hover:text-black transition-colors"
+          >
+            Visit Website
+            <span className="font-mono normal-case tracking-normal text-[#05D920] group-hover:text-black">{detail.link.label}</span>
+            <ArrowUpRight size={16} />
+          </a>
+        )}
       </div>
 
       {/* 대표 이미지 */}
