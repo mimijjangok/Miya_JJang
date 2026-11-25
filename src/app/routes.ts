@@ -9,6 +9,7 @@ import { DesignValue } from "./pages/DesignValue";
 import { ExperienceValue } from "./pages/ExperienceValue";
 import { Contact } from "./pages/Contact";
 import { MotionPrompt } from "./pages/MotionPrompt";
+import { Motion100 } from "./pages/Motion100";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ export const router = createBrowserRouter([
       { path: "experience-value", Component: ExperienceValue },
       { path: "contact", Component: Contact },
       { path: "motion-prompt", Component: MotionPrompt },
+      { path: "motion-100", Component: Motion100 },
     ],
   },
 ]);

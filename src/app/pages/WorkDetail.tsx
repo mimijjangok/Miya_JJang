@@ -116,7 +116,7 @@ export const WorkDetail = () => {
               <img
                 src={work.icon}
                 alt={`${work.name} 앱 아이콘`}
-                className="w-24 h-24 md:w-36 md:h-36 shrink-0 object-contain rounded-[22%]"
+                className="w-24 h-24 md:w-32 md:h-32 shrink-0 aspect-square object-cover rounded-[22%] border border-zinc-200"
               />
               <div className="min-w-0">
                 <div className="text-xl md:text-3xl font-bold tracking-tight leading-tight">{work.name}</div>

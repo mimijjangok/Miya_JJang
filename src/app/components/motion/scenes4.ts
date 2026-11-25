@@ -13,7 +13,7 @@ const BEAT = 0.5;
 const BAR = 2;
 
 // 자릿수마다 세로로 구르는 숫자
-const rollText = (c: CanvasRenderingContext2D, from: string, to: string, x: number, y: number, k: number, size: number) => {
+export const rollText = (c: CanvasRenderingContext2D, from: string, to: string, x: number, y: number, k: number, size: number) => {
   const n = Math.max(from.length, to.length);
   const a = from.padStart(n, " "), b = to.padStart(n, " ");
   c.font = `800 ${size}px ${KR}`;
@@ -31,7 +31,7 @@ const rollText = (c: CanvasRenderingContext2D, from: string, to: string, x: numb
   }
 };
 
-const cursor = (c: CanvasRenderingContext2D, x: number, y: number, press: number) => {
+export const cursor = (c: CanvasRenderingContext2D, x: number, y: number, press: number) => {
   c.save(); c.translate(x, y); c.scale(1 - press * 0.15, 1 - press * 0.15);
   c.beginPath(); c.moveTo(0, 0); c.lineTo(0, 44); c.lineTo(12, 33); c.lineTo(21, 52); c.lineTo(29, 48); c.lineTo(20, 30); c.lineTo(36, 30); c.closePath();
   c.fillStyle = "#111"; c.fill(); c.lineWidth = 3; c.strokeStyle = "#fff"; c.stroke();

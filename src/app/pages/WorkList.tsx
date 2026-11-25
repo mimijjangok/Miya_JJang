@@ -77,6 +77,12 @@ export const WorkList = () => {
         >
           모션 프롬프트
         </Link>
+        <Link
+          to="/motion-100"
+          className="px-5 py-2.5 text-[13px] md:text-sm font-bold border transition-colors border-zinc-300 text-gray-600 hover:border-black hover:text-black"
+        >
+          모션 100
+        </Link>
       </div>
 
       {/* 무료 템플릿 코너 */}
