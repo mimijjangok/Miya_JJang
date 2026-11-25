@@ -132,7 +132,18 @@ export const WorkList = () => {
       {/* 썸네일 목록 */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-10">
         {list.map((w, i) => (
-          <Link key={w.slug} to={`/works/${category.slug}/${w.slug}`} className="group block">
+          w.noDetail ? (
+            // 상세 페이지 없음: 썸네일만 표시 (클릭 안 됨)
+            <div key={w.slug} className="block">
+              <div className="aspect-[4/3] bg-zinc-100 overflow-hidden mb-3">
+                <WorkThumb work={w} />
+              </div>
+              <div className="text-[10px] font-mono text-[#05D920] mb-1">{String(i + 1).padStart(2, "0")}</div>
+              <h3 className="text-sm md:text-base font-bold leading-snug">{w.name}</h3>
+              {w.desc && <p className="text-xs text-gray-500 mt-1 leading-relaxed">{w.desc}</p>}
+            </div>
+          ) : (
+            <Link key={w.slug} to={`/works/${category.slug}/${w.slug}`} className="group block">
             <div className="aspect-[4/3] bg-zinc-100 overflow-hidden mb-3">
               <WorkThumb work={w} className="group-hover:scale-105 transition-transform duration-500" />
             </div>
@@ -142,6 +153,7 @@ export const WorkList = () => {
             </h3>
             {w.desc && <p className="text-xs text-gray-500 mt-1 leading-relaxed">{w.desc}</p>}
           </Link>
+          )
         ))}
 
         {Array.from({ length: empty }).map((_, i) => (

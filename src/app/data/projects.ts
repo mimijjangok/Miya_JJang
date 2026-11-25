@@ -34,6 +34,8 @@ export interface Work {
   name: string;
   desc?: string;
   thumb: string;
+  // true면 목록에 썸네일만 보이고 상세 페이지는 없음
+  noDetail?: boolean;
   // 목록 썸네일을 로고/이름 글자로 보여 줄 때 (logo 이미지가 있으면 로고, 없으면 text)
   // border: 연한 회색 테두리
   thumbCard?: { bg: string; color?: string; logo?: string; text?: string; sub?: string; border?: boolean };
@@ -690,6 +692,16 @@ export const works: Work[] = [
       { src: "/works/app/namu-tax.jpg", alt: "나무증권 MY세금 화면" },
       { src: "/works/app/namu-pension.jpg", alt: "나무증권 MY연금 화면" },
     ],
+  },
+  {
+    slug: "posco-dx",
+    category: "mobile-ux",
+    name: "POSCO DX",
+    desc: "포스코DX 앱 UI/UX 디자인",
+    thumb: "",
+    noDetail: true,
+    thumbCard: { bg: "#05507D", color: "#FFFFFF", text: "POSCO DX", sub: "포스코DX" },
+    images: [],
   },
   {
     slug: "woori-won",

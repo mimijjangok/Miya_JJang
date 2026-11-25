@@ -21,7 +21,8 @@ export const WorkDetail = () => {
   if (!work) return <Navigate to={`/works/${category.slug}`} replace />;
 
   const info = work.info || {};
-  const siblings = getWorksByCategory(category.slug);
+  // 상세 페이지가 없는 작업(noDetail)은 다음 작업·이전 작업에서 제외
+  const siblings = getWorksByCategory(category.slug).filter((w) => !w.noDetail || w.slug === work.slug);
   const idx = siblings.findIndex((w) => w.slug === work.slug);
   // 현재 작업 다음 순서부터 최대 3개 (한 바퀴 돌아서 현재 작업은 제외)
   const moreWorks = Array.from({ length: Math.min(3, siblings.length - 1) }, (_, i) =>
