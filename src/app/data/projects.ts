@@ -42,6 +42,8 @@ export interface Work {
   // "pc-mobile"이면 첫 이미지는 PC(넓게), 둘째는 모바일(좁게)로 나란히
   layout?: "pc-mobile";
   images: { src: string; alt: string }[];
+  // 고객사 소개 (로고 시트 아래에 표시)
+  about?: { title: string; lead: string; body: string[]; facts?: { label: string; value: string }[] };
   // 특별 컴포넌트로 그리는 시트 (선명한 벡터 로고 등)
   custom?: "goest-brand";
   // 이미지 아래 추가 섹션 (작은 원본은 원래 크기로 선명하게)
@@ -157,6 +159,21 @@ export const works: Work[] = [
         { name: "WHITE", hex: "#FFFFFF" },
       ],
       tools: "Illustrator · Figma · PowerPoint",
+    },
+    about: {
+      title: "About GOEST",
+      lead: "AI 보안 솔루션과 SI를 함께하는 IT 인프라 전문 기업",
+      body: [
+        "지오이스트는 첨단 AI 기술로 새로운 가치를 만들고, 검증된 SI 역량으로 안정적인 IT 인프라를 구축하는 기업입니다. '창의와 혁신, 도전'을 바탕으로 고객과 함께 성장하는 파트너를 지향합니다.",
+        "대표 제품 ABSR(Anti-Bot Security Resource)은 AI가 만든 크롤러 트래픽을 탐지·차단하는 L7 레벨 보안 솔루션입니다. 여기에 네트워크 설계·구축, IT 인프라 통합, 다층 보안, 빅데이터 기반 위협 분석까지 함께 제공합니다.",
+        "2026년 이노비즈 A등급 인증, '혁신 프리미어 1000' 선정, ABSR V1.0 보안기능확인서 발급 등으로 기술력을 인정받고 있으며, 대학·공공기관·병원 등 다양한 고객의 인프라를 맡고 있습니다.",
+      ],
+      facts: [
+        { label: "Business", value: "AI Solution · SI Service" },
+        { label: "Product", value: "ABSR (AI 방화벽 · L7 보안)" },
+        { label: "Expertise", value: "Zero Trust · Network Security · DDoS Protection · XDR" },
+        { label: "Clients", value: "국민대학교 · 서울대학교병원 · 방송통신위원회 등" },
+      ],
     },
     custom: "goest-brand",
     images: [],

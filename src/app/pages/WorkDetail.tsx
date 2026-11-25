@@ -79,6 +79,29 @@ export const WorkDetail = () => {
         {/* 왼쪽: 작업 이미지 */}
         <div className="min-w-0">
           {work.custom === "goest-brand" && <GoestBrandSheet />}
+
+          {/* 고객사 소개 */}
+          {work.about && (
+            <div className="mt-10 border border-zinc-200 p-6 md:p-10">
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#05D920] mb-2">{work.about.title}</div>
+              <h3 className="text-xl md:text-2xl font-black tracking-tighter mb-5">{work.about.lead}</h3>
+              <div className="space-y-3">
+                {work.about.body.map((t, i) => (
+                  <p key={i} className="text-sm text-gray-700 leading-relaxed">{t}</p>
+                ))}
+              </div>
+              {work.about.facts && (
+                <dl className="mt-8 border-t border-zinc-200">
+                  {work.about.facts.map((f) => (
+                    <div key={f.label} className="grid grid-cols-[96px_1fr] gap-3 py-3 border-b border-zinc-200 text-sm">
+                      <dt className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 pt-0.5">{f.label}</dt>
+                      <dd className="font-medium">{f.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
+            </div>
+          )}
           {work.layout === "pc-mobile" ? (
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,3fr)_minmax(0,1fr)] gap-4 items-start">
               {work.images.map((img, iIdx) => (
