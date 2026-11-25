@@ -54,6 +54,7 @@ export interface Project {
 export const projects: Project[] = [
   { slug: "brand-identity", title: "Brand Identity System", category: "기업브랜딩 CIBI", image: "https://images.unsplash.com/photo-1586830746542-19b25c53497f" },
   { slug: "web-platform", title: "Web Platform Design", category: "웹 홈페이지", image: "https://images.unsplash.com/photo-1761792654327-b32d0be2a96b" },
+  { slug: "nec-platform", title: "Public Opinion Platform", category: "공공 플랫폼 웹·모바일", image: "/works/web/nec-thumb.jpg" },
   { slug: "mobile-ux", title: "Mobile User Experience", category: "앱 디자인 UIUX", image: "https://images.unsplash.com/photo-1622212993957-6d4631a0ba8b" },
   { slug: "strategic-documentation", title: "Strategic Documentation", category: "제안문서", image: "https://images.unsplash.com/photo-1693045181676-57199422ee66" },
   { slug: "design-leadership", title: "Design Leadership", category: "PMPL 리딩", image: "https://images.unsplash.com/photo-1765405016361-5881d4f8982b" },
@@ -102,7 +103,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     link: { label: "www.goest.co.kr", url: "https://www.goest.co.kr" },
     thumb: "/works/web/goest-hero.jpg",
     info: {
-      client: "지오이스트 (GOEST) · 국가교육위원회",
+      client: "지오이스트 (GOEST)",
       role: "웹 디자인 · UI 디자인",
       target: "기업 IT 담당자 · B2B 고객",
       expression: "타이포그래피 · 그래픽",
@@ -124,15 +125,6 @@ export const projectDetails: Record<string, ProjectDetail> = {
           { src: "/works/web/goest-solution.jpg", alt: "지오이스트 홈페이지 솔루션 섹션" },
         ],
       },
-      {
-        name: "국가교육위원회 · 국민의견플랫폼",
-        desc: "국민 참여형 공공 플랫폼 PC·모바일 반응형 디자인",
-        layout: "pc-mobile",
-        images: [
-          { src: "/works/web/nec-pc.jpg", alt: "국민의견플랫폼 PC 메인 화면" },
-          { src: "/works/web/nec-mobile.jpg", alt: "국민의견플랫폼 모바일 메인 화면" },
-        ],
-      },
     ],
     description: "사용자 중심의 정보 구조(IA) 설계와 미니멀한 UI를 결합하여, 브랜드 경험을 극대화한 반응형 웹 플랫폼 디자인입니다.",
     challenge: "복잡하게 얽혀 있던 방대한 콘텐츠를 사용자가 직관적으로 탐색할 수 있도록 단순화하고, 로딩 속도와 시각적 몰입감을 동시에 잡아야 했습니다.",
@@ -142,6 +134,38 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { title: "RESPONSIVE GRID", desc: "모바일과 데스크톱 대응 그리드 시스템", bg: "bg-[#1C2541]", number: "02", text: "꿈" },
       { title: "INTERACTION FLOW", desc: "사용자 경험을 높이는 마이크로 인터랙션", bg: "bg-[#3A506B]", number: "04", text: "새벽" }
     ]
+  },
+  "Public Opinion Platform": {
+    subtitle: "Section 02 / Public Platform · Responsive",
+    description: "국민이 국가교육과정과 교육정책에 대한 의견을 제시하고 동의할 수 있도록 만든 국가교육위원회 국민의견플랫폼의 PC·모바일 반응형 디자인입니다.",
+    challenge: "학생·학부모부터 교육 관계자까지 연령과 디지털 숙련도가 다른 모든 국민이 복잡한 요청·동의 절차를 어렵지 않게 이해하고 참여하도록 하는 것이 핵심 과제였습니다.",
+    solution: "따뜻한 인물 사진으로 공공 사이트의 딱딱함을 덜고, 요청 유형별로 컬러를 나눈 카드 UI에 요청 주제·대상·제출 방법을 한눈에 정리해 참여 동선을 단순화했습니다.",
+    banners: [],
+    thumb: "/works/web/nec-thumb.jpg",
+    info: {
+      client: "국가교육위원회",
+      role: "웹·모바일 UI 디자인",
+      target: "국민 누구나 (학생·학부모·교육 관계자)",
+      expression: "인물 사진 · 카드 UI · 반응형",
+      concept: "따뜻한 가족 사진과 청록·블루 카드로 누구나 쉽게 참여하는 열린 소통 공간",
+      colors: [
+        { name: "TEAL", hex: "#17C3B2" },
+        { name: "BLUE", hex: "#2F6BE6" },
+        { name: "CORAL", hex: "#F25C5C" },
+      ],
+      tools: "Figma · Photoshop",
+    },
+    cases: [
+      {
+        name: "국가교육위원회 · 국민의견플랫폼",
+        desc: "메인 화면 PC·모바일",
+        layout: "pc-mobile",
+        images: [
+          { src: "/works/web/nec-pc.jpg", alt: "국민의견플랫폼 PC 메인 화면" },
+          { src: "/works/web/nec-mobile.jpg", alt: "국민의견플랫폼 모바일 메인 화면" },
+        ],
+      },
+    ],
   },
   "Mobile User Experience": {
     subtitle: "Section 03 / App UI/UX Design",

@@ -2,45 +2,10 @@ import React from "react";
 import { motion } from "motion/react";
 import { Download } from "lucide-react";
 import { ProjectCard } from "../components/ProjectCard";
+import { projects } from "../data/projects";
 
-const allProjects = [
-  {
-    title: "Brand Identity System",
-    category: "기업브랜딩 CIBI",
-    image:
-      "https://images.unsplash.com/photo-1586830746542-19b25c53497f",
-  },
-  {
-    title: "Web Platform Design",
-    category: "웹 홈페이지",
-    image:
-      "https://images.unsplash.com/photo-1761792654327-b32d0be2a96b",
-  },
-  {
-    title: "Mobile User Experience",
-    category: "앱 디자인 UIUX",
-    image:
-      "https://images.unsplash.com/photo-1622212993957-6d4631a0ba8b",
-  },
-  {
-    title: "Strategic Documentation",
-    category: "제안문서",
-    image:
-      "https://images.unsplash.com/photo-1693045181676-57199422ee66",
-  },
-  {
-    title: "Design Leadership",
-    category: "PMPL 리딩",
-    image:
-      "https://images.unsplash.com/photo-1765405016361-5881d4f8982b",
-  },
-  {
-    title: "AI & Digital Transformation",
-    category: "AI UX 전략 및 DX",
-    image:
-      "https://images.unsplash.com/photo-1622631407413-bfb7d4aec3b0",
-  },
-];
+// 작업 목록은 data/projects.ts 한 곳에서 관리
+const allProjects = projects;
 
 export const Works = () => {
   return (
@@ -98,7 +63,7 @@ export const Works = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
         {allProjects.map((project, idx) => (
           <ProjectCard
-            key={idx}
+            key={project.slug}
             title={project.title}
             category={project.category}
             image={project.image}
