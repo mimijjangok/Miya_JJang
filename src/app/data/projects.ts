@@ -356,7 +356,7 @@ export const works: Work[] = [
     slug: "barocheck",
     category: "mobile-ux",
     name: "바로Check · 출퇴근 체크 앱",
-    desc: "아르바이트생이 매장에서 바로 찍는 출퇴근 관리 앱 · 로고 및 앱 UI 디자인",
+    desc: "BAROCHECK가맹점 출퇴근시스템",
     thumb: "/works/app/barocheck-logo.jpg",
     info: {
       client: "세찬아이앤씨 (Sechan I&C)",
