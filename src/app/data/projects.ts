@@ -42,7 +42,7 @@ export interface Work {
   solution?: string;
   // "pc-mobile"이면 첫 이미지는 PC(넓게), 둘째는 모바일(좁게)로 나란히
   // "pc-mobile": PC(넓게)+모바일(좁게) / "phones": 앱 화면 여러 장을 나란히
-  // "cover-grid": 첫 이미지는 크게, 나머지 페이지는 작게 한 줄에 4개씩
+  // "cover-grid": 제안서 페이지들을 작게 한 줄에 4개씩 (표지 포함)
   layout?: "pc-mobile" | "phones" | "cover-grid";
   // 이미지 위에 크게 보여 줄 대표 이미지 (로고 등)
   hero?: { src: string; alt: string };
