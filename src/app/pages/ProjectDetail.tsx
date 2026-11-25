@@ -87,11 +87,11 @@ export const ProjectDetail = () => {
                 <h4 className="text-2xl md:text-3xl font-black tracking-tighter">{c.name}</h4>
                 {c.desc && <p className="text-sm text-gray-600">{c.desc}</p>}
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className={`grid grid-cols-1 gap-6 ${c.wide ? "" : "md:grid-cols-2"}`}>
                 {c.images.map((img, iIdx) => (
                   <div
                     key={iIdx}
-                    className={`bg-zinc-50 border border-zinc-200 overflow-hidden ${iIdx === 0 && c.images.length % 2 === 1 ? "md:col-span-2" : ""}`}
+                    className={`bg-zinc-50 border border-zinc-200 overflow-hidden ${!c.wide && iIdx === 0 && c.images.length % 2 === 1 ? "md:col-span-2" : ""}`}
                   >
                     <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
                   </div>
