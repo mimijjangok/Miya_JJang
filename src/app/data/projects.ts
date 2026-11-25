@@ -923,6 +923,54 @@ export const works: Work[] = [
       },
     ],
   },
+  {
+    slug: "shinhan-invest",
+    category: "design-leadership",
+    name: "신한금융투자 · 웹/앱 사이트 운영 PL",
+    desc: "2016 신한금융투자 웹·앱 사이트 운영 PL · 프로모션 · 이벤트 · 마이크로사이트 · 사이트 개선",
+    thumb: "/works/web/shinhan-mockup.png",
+    thumbCard: { bg: "#0046A6", color: "#FFFFFF", text: "신한금융투자", sub: "웹 · 앱 사이트 운영 PL" },
+    link: { label: "www.shinhaninvest.com", url: "https://www.shinhaninvest.com/" },
+    info: {
+      client: "신한금융투자",
+      year: "2016",
+      role: "운영 PL · 웹/앱 UI 디자인",
+      target: "신한금융투자 개인 투자자",
+      expression: "프로모션 · 이벤트 · 마이크로사이트",
+      concept: "신한금융투자 웹·앱 사이트를 운영하며 프로모션과 이벤트, 마이크로사이트 제작부터 사이트 개선까지 디자인 품질과 일정을 리딩",
+      colors: [
+        { name: "SHINHAN BLUE", hex: "#0046A6" },
+        { name: "SKY", hex: "#3DA0E3" },
+        { name: "GRAY", hex: "#D9DDE1" },
+      ],
+    },
+    overview: "2016년 신한금융투자 웹·앱 사이트 운영 PL로 프로모션, 이벤트, 마이크로사이트, 사이트 개선 작업을 이끌었습니다. 메인 상품 배너, 시즌 이벤트, S check·신한 i smart 앱 화면, 빅데이터 주가 예측 서비스 S캐치 마이크로사이트 등을 디자인했습니다.",
+    features: [
+      { title: "프로모션 · 이벤트", desc: "추천상품 배너와 시즌 이벤트 페이지 디자인" },
+      { title: "마이크로사이트", desc: "빅데이터 주가 예측 서비스 S캐치 등 서비스 소개 사이트" },
+      { title: "사이트 개선", desc: "웹·앱 운영 중 화면 개선과 디자인 품질 관리" },
+    ],
+    icon: "/works/app/shinhan-scheck-icon.png",
+    hero: { src: "/works/web/shinhan-mockup.png", alt: "신한금융투자 웹·모바일 화면 목업" },
+    images: [],
+    extras: [
+      {
+        title: "APP",
+        desc: "S check 앱 스플래시 · 아이콘, 신한 i smart 로그인 화면",
+        images: [
+          { src: "/works/web/shinhan-scheck.png", alt: "S check 앱 스플래시와 아이콘", caption: "S check" },
+          { src: "/works/web/shinhan-ismart.png", alt: "신한 i smart 로그인 화면", caption: "신한 i smart" },
+        ],
+      },
+      {
+        title: "MICROSITE",
+        desc: "빅데이터로 주가의 흐름을 예측하는 S캐치 서비스 사이트",
+        images: [
+          { src: "/works/web/shinhan-scatch.png", alt: "S캐치 빅데이터 추천 마이크로사이트", caption: "S캐치 · 빅데이터 추천" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getCategory = (slug?: string) => categories.find((c) => c.slug === slug);
