@@ -85,4 +85,5 @@ export interface Scene {
   // 매 프레임: t(0~3초)만으로 그림 → 몇 번을 그려도 같은 결과
   draw: (c: CanvasRenderingContext2D, t: number, st: any) => void;
   init?: () => any;
+  dur?: number; // 기본 3초
 }

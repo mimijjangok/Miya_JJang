@@ -80,7 +80,7 @@ export const MotionPrompt = () => {
       {/* 제목 */}
       <div className="border-b-2 border-black pb-10 mb-12">
         <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#05D920] mb-4">
-          Claude Motion Prompt · 12 Styles
+          Claude Motion Prompt · 13 Styles
         </div>
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
           <h1 className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9]">
@@ -89,7 +89,7 @@ export const MotionPrompt = () => {
             PROMPT
           </h1>
           <p className="text-base md:text-lg text-zinc-500 max-w-md leading-relaxed break-keep">
-            스타일별 프롬프트 12종과, 각 프롬프트대로 만든 3초 모션입니다. 외부 AI 영상 서비스 없이 코드만으로 그렸어요. 프롬프트를 Claude Code에 붙여 넣으면 같은 모션을 mp4로 만들 수 있어요.
+            스타일별 프롬프트 13종과, 각 프롬프트대로 만든 모션입니다. 외부 AI 영상 서비스 없이 코드만으로 그렸어요. 프롬프트를 Claude Code에 붙여 넣으면 같은 모션을 mp4로 만들 수 있어요.
           </p>
         </div>
       </div>

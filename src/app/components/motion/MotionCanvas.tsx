@@ -3,12 +3,14 @@ import { W, H, DUR, Scene } from "./util";
 import { popArt, flat2d, glass, y2k } from "./scenes1";
 import { synthwave, collage, glitch, particles } from "./scenes2";
 import { vaporwave, isometric, lowpoly, lineart } from "./scenes3";
+import { pricing } from "./scenes4";
 
 // No.01 ~ No.12 순서
 export const SCENES: Record<string, Scene> = {
   "No.01": popArt, "No.02": flat2d, "No.03": glass, "No.04": y2k,
   "No.05": synthwave, "No.06": collage, "No.07": glitch, "No.08": particles,
   "No.09": vaporwave, "No.10": isometric, "No.11": lowpoly, "No.12": lineart,
+  "No.13": pricing,
 };
 
 // 3초 모션을 계속 반복 재생 (화면에 보일 때만 그림)
@@ -32,7 +34,7 @@ export const MotionCanvas = ({ id, className = "" }: { id: string; className?: s
     const loop = (now: number) => {
       raf = requestAnimationFrame(loop);
       if (!visible) return;
-      const t = (((now - start) / 1000) % DUR);
+      const t = (((now - start) / 1000) % (scene.dur ?? DUR));
       ctx.setTransform(cv.width / W, 0, 0, cv.height / H, 0, 0);
       ctx.globalAlpha = 1; ctx.globalCompositeOperation = "source-over"; ctx.filter = "none";
       try { scene.draw(ctx, t, st); } catch { /* 한 프레임 실패는 건너뜀 */ }
