@@ -22,7 +22,10 @@ export const WorkDetail = () => {
   const info = work.info || {};
   const siblings = getWorksByCategory(category.slug);
   const idx = siblings.findIndex((w) => w.slug === work.slug);
-  const next = siblings.length > 1 ? siblings[(idx + 1) % siblings.length] : undefined;
+  // 현재 작업 다음 순서부터 최대 3개 (한 바퀴 돌아서 현재 작업은 제외)
+  const moreWorks = Array.from({ length: Math.min(3, siblings.length - 1) }, (_, i) =>
+    siblings[(idx + 1 + i) % siblings.length]
+  );
   const prev = siblings.length > 1 ? siblings[(idx - 1 + siblings.length) % siblings.length] : undefined;
 
   const rows: { label: string; value?: string }[] = [
@@ -271,24 +274,38 @@ export const WorkDetail = () => {
         </div>
       </div>
 
-      {/* 다음 작업 (같은 분류 안에서) */}
-      {next && (
-        <Link
-          to={`/works/${category.slug}/${next.slug}`}
-          className="group block mt-20 relative overflow-hidden bg-black aspect-[21/9]"
-        >
-          <img
-            src={next.thumb}
-            alt={next.name}
-            className="absolute inset-0 w-full h-full object-cover object-top opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
-          />
-          <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
-            <span className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#05D920] mb-3">
+      {/* 다른 작업 썸네일 3개 (같은 분류 안에서, 현재 작업 다음부터) */}
+      {moreWorks.length > 0 && (
+        <div className="mt-20">
+          <div className="flex items-center justify-between mb-5">
+            <span className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#05D920]">
               Next Work <ArrowRight size={12} />
             </span>
-            <span className="text-2xl md:text-5xl font-black tracking-tighter text-white">{next.name}</span>
+            <Link
+              to={`/works/${category.slug}`}
+              className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 hover:text-black transition-colors"
+            >
+              View All
+            </Link>
           </div>
-        </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+            {moreWorks.map((w) => (
+              <Link key={w.slug} to={`/works/${category.slug}/${w.slug}`} className="group block">
+                <div className="relative overflow-hidden bg-black aspect-[4/3]">
+                  <img
+                    src={w.thumb}
+                    alt={w.name}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover object-top opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  />
+                </div>
+                <div className="mt-3 text-sm font-black tracking-tight leading-snug group-hover:text-[#05D920] transition-colors">
+                  {w.name}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
       )}
 
       <div className="mt-6 flex justify-between text-[10px] font-black uppercase tracking-[0.2em]">
