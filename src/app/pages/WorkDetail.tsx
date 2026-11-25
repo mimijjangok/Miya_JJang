@@ -333,7 +333,7 @@ export const WorkDetail = () => {
             )}
             {category.slug === "character" && (
               <Link
-                to="/contact"
+                to={`/inquiry?type=character&ref=${encodeURIComponent(work.name.split(" · ")[0])}`}
                 className="flex items-center justify-center gap-2 w-full bg-[#05D920] text-black py-4 text-sm md:text-[15px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition-colors"
               >
                 <MessageCircle size={16} /> 캐릭터 문의
