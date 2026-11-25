@@ -456,6 +456,42 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "lg-uplus",
+    category: "web-platform",
+    name: "LG유플러스 · U+ 웹/모바일 광고 페이지",
+    desc: "TV 광고를 웹·모바일로 새롭게 구성한 배너 광고 중심의 U+ 홈페이지와 이벤트 페이지 디자인",
+    thumb: "/works/web/uplus-mockup.jpg",
+    thumbCard: { bg: "#E6007E", color: "#FFFFFF", text: "LG U+", sub: "웹 · 모바일 광고 페이지" },
+    info: {
+      client: "LG유플러스",
+      role: "웹·모바일 UI 디자인 · 광고 배너 · 이벤트 페이지 디자인",
+      target: "U+ 모바일·LTE 고객",
+      expression: "배너 광고 · 이벤트 페이지",
+      concept: "광고를 중심으로 혁신적인 디자인 도출 — 배너 광고를 중점으로 하는 컨셉으로, TV 광고를 웹/모바일로 새롭게 구성하여 페이지를 구성",
+      colors: [
+        { name: "MAGENTA", hex: "#E6007E" },
+        { name: "PURPLE", hex: "#4B2C6F" },
+        { name: "WHITE", hex: "#FFFFFF" },
+      ],
+      tools: "Photoshop · Illustrator",
+    },
+    overview: "LG유플러스 U+ 홈페이지와 모바일 웹을 광고 중심으로 디자인했습니다. TV 광고를 웹·모바일 배너와 페이지로 새롭게 구성하고, LTE 단말 예약가입·서비스 출시·경품 증정 등 이벤트 페이지를 만들었습니다.",
+    hero: { src: "/works/web/uplus-mockup.jpg", alt: "LG U+ 웹·모바일 메인 화면 목업" },
+    images: [],
+    extras: [
+      {
+        title: "EVENT",
+        desc: "TV 광고를 웹·모바일로 옮긴 이벤트 페이지",
+        cols: 3,
+        images: [
+          { src: "/works/web/uplus-lte.jpg", alt: "U+ LTE 갤럭시 S III 예약가입 페이지", caption: "U+ LTE 갤럭시 S III 예약가입" },
+          { src: "/works/web/uplus-bookmarket.jpg", alt: "U+ 북마켓 출시 기념 이벤트 페이지", caption: "U+ 북마켓 출시 기념 이벤트" },
+          { src: "/works/web/uplus-wifi.jpg", alt: "옵티머스 G Portable Wifi AP 증정 이벤트 페이지", caption: "Portable Wifi AP 증정 이벤트" },
+        ],
+      },
+    ],
+  },
+  {
     slug: "lg-thinq-voice",
     category: "web-platform",
     name: "LG전자 · ThinQ Voice 신규 페이지",
