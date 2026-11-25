@@ -102,7 +102,25 @@ export const WorkDetail = () => {
               )}
             </div>
           )}
-          {work.layout === "pc-mobile" ? (
+          {work.hero && (
+            <div className="bg-zinc-50 border border-zinc-200 overflow-hidden mb-6">
+              <img src={work.hero.src} alt={work.hero.alt} className="w-full h-auto block" />
+            </div>
+          )}
+          {work.layout === "phones" ? (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-zinc-100 border border-zinc-200 p-4 md:p-6">
+              {work.images.map((img, iIdx) => (
+                <figure key={iIdx} className="flex flex-col">
+                  <div className="rounded-[18px] overflow-hidden border border-zinc-300 bg-white shadow-sm">
+                    <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
+                  </div>
+                  <figcaption className="mt-2 text-[10px] font-bold text-gray-500 text-center">
+                    {img.alt.replace(/^\S+\s/, "")}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          ) : work.layout === "pc-mobile" ? (
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,3fr)_minmax(0,1fr)] gap-4 items-start">
               {work.images.map((img, iIdx) => (
                 <div key={iIdx}>

@@ -40,7 +40,10 @@ export interface Work {
   challenge?: string;
   solution?: string;
   // "pc-mobile"이면 첫 이미지는 PC(넓게), 둘째는 모바일(좁게)로 나란히
-  layout?: "pc-mobile";
+  // "pc-mobile": PC(넓게)+모바일(좁게) / "phones": 앱 화면 여러 장을 나란히
+  layout?: "pc-mobile" | "phones";
+  // 이미지 위에 크게 보여 줄 대표 이미지 (로고 등)
+  hero?: { src: string; alt: string };
   images: { src: string; alt: string }[];
   // 고객사 소개 (로고 시트 아래에 표시)
   about?: { title: string; lead: string; body: string[]; facts?: { label: string; value: string }[] };
@@ -239,6 +242,38 @@ export const works: Work[] = [
     images: [
       { src: "/works/web/nec-pc.jpg", alt: "국민의견플랫폼 PC 메인 화면" },
       { src: "/works/web/nec-mobile.jpg", alt: "국민의견플랫폼 모바일 메인 화면" },
+    ],
+  },
+  {
+    slug: "barocheck",
+    category: "mobile-ux",
+    name: "바로Check · 출퇴근 체크 앱",
+    desc: "아르바이트생이 매장에서 바로 찍는 출퇴근 관리 앱 · 로고 및 앱 UI 디자인",
+    thumb: "/works/app/barocheck-logo.jpg",
+    info: {
+      client: "세찬아이앤씨 (Sechan I&C)",
+      year: "2025",
+      role: "로고 디자인 · 앱 UI/UX 디자인",
+      target: "매장 아르바이트생 · 매장 대표",
+      expression: "심볼마크 · 모바일 UI",
+      concept: "원형 시계와 체크 표시를 합친 심볼, 강렬한 오렌지로 '바로 찍고 바로 확인하는' 출퇴근 경험을 표현",
+      colors: [
+        { name: "ORANGE", hex: "#FF4800" },
+        { name: "NAVY", hex: "#24243E" },
+        { name: "BLACK", hex: "#111111" },
+      ],
+      tools: "Figma · Illustrator",
+    },
+    overview: "바로Check는 매장 아르바이트생이 휴대폰으로 출근·퇴근을 바로 기록하고, 대표는 근무 시간을 한눈에 확인하는 출퇴근 관리 앱입니다. 로고부터 앱 화면까지 디자인했습니다.",
+    challenge: "앱 사용에 익숙하지 않은 근로자도 바쁜 출근 시간에 망설임 없이 쓸 수 있어야 했고, 근로자와 대표 두 사용자의 진입 경로를 헷갈리지 않게 나누는 것이 과제였습니다.",
+    solution: "첫 화면에서 근로자·대표 로그인을 색으로 구분하고, 출퇴근 화면은 큰 시계와 출근·퇴근 버튼 두 개만 남겨 한 번의 터치로 끝나도록 단순화했습니다. 메뉴는 오렌지 하이라이트로 현재 위치를 분명히 했습니다.",
+    hero: { src: "/works/app/barocheck-logo.jpg", alt: "바로Check 로고" },
+    layout: "phones",
+    images: [
+      { src: "/works/app/barocheck-splash.png", alt: "바로Check 스플래시 화면" },
+      { src: "/works/app/barocheck-login.png", alt: "바로Check 로그인 선택 화면" },
+      { src: "/works/app/barocheck-check.png", alt: "바로Check 출퇴근 체크 화면" },
+      { src: "/works/app/barocheck-menu.png", alt: "바로Check 메뉴 화면" },
     ],
   },
 ];
