@@ -139,7 +139,7 @@ export const WorkDetail = () => {
                   <div className="rounded-[18px] overflow-hidden bg-white">
                     <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
                   </div>
-                  <figcaption className="mt-2 text-[10px] font-bold text-gray-500 text-center">
+                  <figcaption className="mt-3 text-sm md:text-base font-bold text-gray-600 text-center">
                     {img.alt.replace(/^\S+\s/, "")}
                   </figcaption>
                 </figure>
