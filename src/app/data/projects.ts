@@ -220,7 +220,7 @@ export const works: Work[] = [
         { name: "CHARCOAL", hex: "#303030" },
         { name: "POINT RED", hex: "#B62B3A" },
       ],
-      tools: "Illustrator",
+      tools: "Figma · Illustrator · Photoshop",
     },
     overview: "하나은행 준법시스템 HiCS의 로고타입을 디자인했습니다. 굵은 산세리프로 시스템의 신뢰감을 주고, 'iC'를 하나은행 그린으로 강조해 내부통제 시스템이라는 정체성을 한눈에 보이도록 했습니다. 시스템 화면 디자인은 웹 · 앱 UIUX의 하나은행 준법시스템 HiCS에서 볼 수 있어요.",
     hero: { src: "/works/brand/hics-logo-brand.png", alt: "하나은행 HiCS 로고", medium: true },
