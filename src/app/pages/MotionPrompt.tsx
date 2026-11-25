@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { ArrowLeft, Check, ChevronDown, Copy, Download } from "lucide-react";
+import { ArrowLeft, Check, Copy, Download } from "lucide-react";
+import { MotionCanvas } from "../components/motion/MotionCanvas";
 import { motionPrep, motionPrompts, motionTips } from "../data/motionPrompts";
 
-// 클로드 모션 프롬프트 12종: 카드마다 펼쳐 보기 + 복사 버튼
+// 클로드 모션 프롬프트 12종: 프롬프트대로 만든 모션을 위에서 재생, 아래에 아주 작은 보기·복사
 const PromptCard = ({ p, index }: { p: (typeof motionPrompts)[number]; index: number }) => {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -25,38 +26,32 @@ const PromptCard = ({ p, index }: { p: (typeof motionPrompts)[number]; index: nu
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, delay: (index % 3) * 0.06 }}
-      className="border-2 border-black flex flex-col bg-white"
+      className="flex flex-col"
     >
-      <div className="p-6 md:p-8 flex-1">
-        <div className="flex items-center justify-between mb-6">
-          <span className="text-[11px] font-mono text-[#05D920] tracking-widest">{p.no}</span>
-          {p.en && <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400">{p.en}</span>}
+      <MotionCanvas id={p.no} />
+      <div className="pt-4">
+        <div className="flex items-baseline justify-between gap-3">
+          <div className="flex items-baseline gap-3 min-w-0">
+            <span className="text-[10px] font-mono text-[#05D920] tracking-widest shrink-0">{p.no}</span>
+            <h3 className="text-lg md:text-xl font-bold tracking-tight truncate">{p.title}</h3>
+          </div>
+          <div className="flex items-center gap-3 shrink-0 text-[10px] text-gray-400">
+            <button onClick={() => setOpen((v) => !v)} className="hover:text-black transition-colors">
+              {open ? "접기" : "프롬프트"}
+            </button>
+            <span className="text-gray-300">·</span>
+            <button onClick={copy} className="inline-flex items-center gap-1 hover:text-black transition-colors">
+              {copied ? <Check size={10} /> : <Copy size={10} />}
+              {copied ? "복사됨" : "복사"}
+            </button>
+          </div>
         </div>
-        <h3 className="text-2xl md:text-3xl font-black tracking-tighter mb-3">{p.title}</h3>
-        <p className="text-sm text-gray-500 leading-relaxed break-keep">{p.subtitle}</p>
-      </div>
-
-      {open && (
-        <pre className="mx-6 md:mx-8 mb-6 p-4 bg-zinc-50 border border-zinc-200 text-xs leading-relaxed text-gray-700 whitespace-pre-wrap break-keep font-sans max-h-[420px] overflow-auto">
-          {p.prompt}
-        </pre>
-      )}
-
-      <div className="grid grid-cols-2 border-t-2 border-black">
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="flex items-center justify-center gap-2 py-4 text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-zinc-100 transition-colors"
-        >
-          {open ? "접기" : "프롬프트 보기"}
-          <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} />
-        </button>
-        <button
-          onClick={copy}
-          className="flex items-center justify-center gap-2 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border-l-2 border-black bg-black text-white hover:bg-[#05D920] hover:text-black transition-colors"
-        >
-          {copied ? <Check size={14} /> : <Copy size={14} />}
-          {copied ? "복사됨" : "복사"}
-        </button>
+        <p className="text-sm text-gray-500 leading-relaxed break-keep mt-1">{p.subtitle}</p>
+        {open && (
+          <pre className="mt-3 p-4 bg-zinc-50 border border-zinc-200 text-[11px] leading-relaxed text-gray-600 whitespace-pre-wrap break-keep font-sans max-h-[360px] overflow-auto">
+            {p.prompt}
+          </pre>
+        )}
       </div>
     </motion.article>
   );
@@ -93,8 +88,7 @@ export const MotionPrompt = () => {
             PROMPT
           </h1>
           <p className="text-base md:text-lg text-zinc-500 max-w-md leading-relaxed break-keep">
-            Claude Code에 붙여 넣기만 하면 3초 모션 영상(mp4)이 완성되는 스타일별 프롬프트 12종입니다. 외부 AI 영상 서비스 없이
-            HTML·CSS·JavaScript로 만들고 HyperFrames로 렌더해요.
+            스타일별 프롬프트 12종과, 각 프롬프트대로 만든 3초 모션입니다. 외부 AI 영상 서비스 없이 코드만으로 그렸어요. 프롬프트를 Claude Code에 붙여 넣으면 같은 모션을 mp4로 만들 수 있어요.
           </p>
         </div>
       </div>
@@ -137,7 +131,7 @@ export const MotionPrompt = () => {
           <Download size={12} /> PDF 다운로드
         </a>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 items-start">
         {motionPrompts.map((p, i) => (
           <PromptCard key={p.no} p={p} index={i} />
         ))}

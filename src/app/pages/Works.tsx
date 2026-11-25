@@ -31,7 +31,7 @@ export const Works = () => {
   {/* 이력서 다운로드 링크 */}
  <a
     href="/resume.pdf"
-    download="Resume_MI3_Lee.pdf"
+    download="Resume_2027_MI3_Lee.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em]"
@@ -46,7 +46,7 @@ export const Works = () => {
   {/* 포트폴리오 다운로드 링크 */}
   <a
     href="/portfolio.pdf"
-    download="Portfolio_MI3_Lee.pdf"
+    download="Portfolio_2027_MI3_Lee.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em]"
