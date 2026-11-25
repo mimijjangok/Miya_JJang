@@ -131,7 +131,7 @@ export const works: Work[] = [
     name: "(주)우성산업기술 · WOOSUNG Industries",
     desc: "CI 로고 디자인과 회사 서식(폴더·명함) 어플리케이션",
     thumb: "/works/brand/woosung-folder.jpg",
-    thumbCard: { bg: "#2E3192", color: "#FFFFFF", text: "WOOSUNG", sub: "(주)우성산업기술" },
+    thumbCard: { bg: "#F1F1F1", logo: "/works/brand/woosung-logo-trim.png" },
     info: {
       client: "(주)우성산업기술",
       role: "CI 디자인 · 어플리케이션 디자인",
