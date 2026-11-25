@@ -213,7 +213,7 @@ export const WorkDetail = () => {
                       />
                     )}
                     {img.caption && (
-                      <figcaption className="mt-3 text-[11px] font-medium text-gray-500">{img.caption}</figcaption>
+                      <figcaption className="mt-3 text-[13px] md:text-sm font-medium text-gray-600">{img.caption}</figcaption>
                     )}
                   </figure>
                 ))}
