@@ -109,7 +109,7 @@ export const WorkDetail = () => {
             </div>
           )}
           {work.hero && (
-            <div className="bg-zinc-50 border border-zinc-200 overflow-hidden mb-6">
+            <div className="overflow-hidden mb-6">
               <img src={work.hero.src} alt={work.hero.alt} className="w-full h-auto block" />
             </div>
           )}
@@ -128,10 +128,10 @@ export const WorkDetail = () => {
             </div>
           )}
           {work.layout === "phones" ? (
-            <div className={`grid grid-cols-2 gap-4 bg-zinc-100 border border-zinc-200 p-4 md:p-6 ${work.images.length === 5 ? "md:grid-cols-5" : work.images.length === 3 ? "md:grid-cols-3 md:px-16 lg:px-24" : "md:grid-cols-4"}`}>
+            <div className={`grid grid-cols-2 gap-4 bg-zinc-100 p-4 md:p-6 ${work.images.length === 5 ? "md:grid-cols-5" : work.images.length === 3 ? "md:grid-cols-3 md:px-16 lg:px-24" : "md:grid-cols-4"}`}>
               {work.images.map((img, iIdx) => (
                 <figure key={iIdx} className="flex flex-col">
-                  <div className="rounded-[18px] overflow-hidden border border-zinc-300 bg-white shadow-sm">
+                  <div className="rounded-[18px] overflow-hidden bg-white">
                     <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
                   </div>
                   <figcaption className="mt-2 text-[10px] font-bold text-gray-500 text-center">
@@ -147,7 +147,7 @@ export const WorkDetail = () => {
                   <div className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-2">
                     {iIdx === 0 ? "PC" : "Mobile"}
                   </div>
-                  <div className="bg-zinc-50 border border-zinc-200 overflow-hidden">
+                  <div className="bg-zinc-50 overflow-hidden">
                     <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
                   </div>
                 </div>
@@ -156,7 +156,7 @@ export const WorkDetail = () => {
           ) : (
             <div className="space-y-6">
               {work.images.map((img, iIdx) => (
-                <div key={iIdx} className="bg-zinc-50 border border-zinc-200 overflow-hidden">
+                <div key={iIdx} className="bg-zinc-50 overflow-hidden">
                   <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
                 </div>
               ))}
@@ -175,7 +175,7 @@ export const WorkDetail = () => {
                       src={img.src}
                       alt={img.alt}
                       loading="lazy"
-                      className="block w-auto max-w-full h-auto border border-zinc-200 shadow-sm"
+                      className="block w-auto max-w-full h-auto"
                     />
                     {img.caption && (
                       <figcaption className="mt-2 text-[11px] font-bold text-gray-500">{img.caption}</figcaption>

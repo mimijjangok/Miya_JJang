@@ -132,7 +132,7 @@ export const WorkList = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-10">
         {list.map((w, i) => (
           <Link key={w.slug} to={`/works/${category.slug}/${w.slug}`} className="group block">
-            <div className="aspect-[4/3] bg-zinc-100 border border-zinc-200 overflow-hidden mb-3">
+            <div className="aspect-[4/3] bg-zinc-100 overflow-hidden mb-3">
               <img
                 src={w.thumb}
                 alt={w.name}
