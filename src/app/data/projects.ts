@@ -59,7 +59,8 @@ export interface Work {
   // 특별 컴포넌트로 그리는 시트 (선명한 벡터 로고 등)
   custom?: "goest-brand";
   // 이미지 아래 추가 섹션 (작은 원본은 원래 크기로 선명하게)
-  extras?: { title: string; desc?: string; images: { src: string; alt: string; caption?: string }[] }[];
+  // withFeatures: 이미지 옆 빈칸에 특징(features) 텍스트 표시
+  extras?: { title: string; desc?: string; withFeatures?: boolean; images: { src: string; alt: string; caption?: string }[] }[];
   // 컬러 시스템 (이미지 아래에 색상 칩으로 표시)
   // 앱 아이콘 (제목 왼쪽에 작게 표시)
   icon?: string;
@@ -630,15 +631,16 @@ export const works: Work[] = [
     extras: [
       {
         title: "CHARACTER",
+        withFeatures: true,
         images: [
           { src: "/works/character/babystar-main.png", alt: "아기별 BABY STAR 대표 이미지", caption: "아기별 BABY STAR" },
-          { src: "/works/character/babystar-face.png", alt: "아기별 얼굴", caption: "기본 표정" },
         ],
       },
       {
         title: "GOODS",
         desc: "아기별을 활용한 굿즈 디자인",
         images: [
+          { src: "/works/character/babystar-face.png", alt: "아기별 기본 캐릭터", caption: "기본 캐릭터" },
           { src: "/works/character/babystar-cushion.png", alt: "아기별 쿠션", caption: "쿠션" },
           { src: "/works/character/babystar-mug.png", alt: "아기별 머그컵", caption: "머그컵" },
           { src: "/works/character/babystar-ecobag.png", alt: "아기별 에코백", caption: "에코백" },
@@ -678,6 +680,7 @@ export const works: Work[] = [
     extras: [
       {
         title: "CHARACTER",
+        withFeatures: true,
         images: [
           { src: "/works/character/moru-main.png", alt: "모루 MORU 대표 이미지", caption: "모루 MORU" },
         ],
@@ -725,8 +728,15 @@ export const works: Work[] = [
     extras: [
       {
         title: "CHARACTER",
+        withFeatures: true,
         images: [
           { src: "/works/character/modi-main.png", alt: "모디 MODI 대표 이미지", caption: "모디 MODI" },
+        ],
+      },
+      {
+        title: "GOODS",
+        desc: "모디를 활용한 굿즈 디자인",
+        images: [
           { src: "/works/character/modi-mug.png", alt: "모디 머그컵", caption: "머그컵" },
         ],
       },
@@ -763,6 +773,7 @@ export const works: Work[] = [
     extras: [
       {
         title: "CHARACTER",
+        withFeatures: true,
         images: [
           { src: "/works/character/miya-main.png", alt: "MIYA 디자이너 캐릭터", caption: "MIYA" },
         ],

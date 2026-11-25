@@ -205,6 +205,23 @@ export const WorkDetail = () => {
                     )}
                   </figure>
                 ))}
+                {/* 캐릭터 옆 빈칸: 특징 텍스트 */}
+                {ex.withFeatures && work.features && work.features.length > 0 && (
+                  <div className="flex flex-col justify-center">
+                    <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-4">Features</div>
+                    <ol className="space-y-5">
+                      {work.features.map((f, i) => (
+                        <li key={f.title} className="grid grid-cols-[28px_1fr] gap-2">
+                          <span className="text-xs font-mono text-[#05D920] pt-1">{String(i + 1).padStart(2, "0")}</span>
+                          <div>
+                            <div className="text-base md:text-lg font-bold">{f.title}</div>
+                            {f.desc && <div className="text-sm text-gray-500 leading-relaxed mt-1">{f.desc}</div>}
+                          </div>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -248,7 +265,7 @@ export const WorkDetail = () => {
               </div>
             )}
 
-            {work.features && work.features.length > 0 && (
+            {work.features && work.features.length > 0 && !work.extras?.some((e) => e.withFeatures) && (
               <div className="py-5 border-b border-zinc-200">
                 <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-3">Features</div>
                 <ol className="space-y-3">
