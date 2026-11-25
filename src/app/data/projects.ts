@@ -307,17 +307,6 @@ export const works: Work[] = [
       { src: "/works/brand/sechan-logo.png", alt: "(주)세찬아이앤씨 국문·영문 로고" },
       { src: "/works/brand/sechan-versions.png", alt: "SECHAN 로고 · 화이트/컬러 배경, 세로형 버전" },
     ],
-    palette: [
-      {
-        group: "Brand Colors",
-        colors: [
-          { name: "VIOLET", hex: "#2B02BC" },
-          { name: "BLUE", hex: "#2424C7" },
-          { name: "CYAN", hex: "#00D0FF" },
-          { name: "ORANGE", hex: "#FF4800" },
-        ],
-      },
-    ],
     extras: [
       {
         title: "APP ICON",
