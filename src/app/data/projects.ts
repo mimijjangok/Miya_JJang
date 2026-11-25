@@ -63,7 +63,7 @@ export interface Work {
   custom?: "goest-brand";
   // 이미지 아래 추가 섹션 (작은 원본은 원래 크기로 선명하게)
   // withFeatures: 이미지 옆 빈칸에 특징(features) 텍스트 표시
-  extras?: { title: string; desc?: string; withFeatures?: boolean; cols?: 3 | 4; images: { src: string; alt: string; caption?: string }[] }[];
+  extras?: { title: string; desc?: string; withFeatures?: boolean; cols?: 3 | 4; square?: "cover" | "contain"; images: { src: string; alt: string; caption?: string }[] }[];
   // 컬러 시스템 (이미지 아래에 색상 칩으로 표시)
   // 앱 아이콘 (제목 왼쪽에 작게 표시)
   icon?: string;
@@ -793,6 +793,7 @@ export const works: Work[] = [
       {
         title: "GOODS",
         desc: "아기별을 활용한 굿즈 디자인",
+        square: "contain",
         images: [
           { src: "/works/character/babystar-face.png", alt: "아기별 기본 캐릭터", caption: "기본 캐릭터" },
           { src: "/works/character/babystar-cushion.png", alt: "아기별 쿠션", caption: "쿠션" },
@@ -842,6 +843,7 @@ export const works: Work[] = [
       {
         title: "GOODS",
         desc: "모루 2D 일러스트를 활용한 굿즈 디자인",
+        square: "contain",
         images: [
           { src: "/works/character/moru-phonecase.png", alt: "모루 폰케이스·그립톡", caption: "폰케이스 · 그립톡" },
           { src: "/works/character/moru-keyring.png", alt: "모루 아크릴 키링", caption: "아크릴 키링" },
@@ -897,10 +899,11 @@ export const works: Work[] = [
       {
         title: "GOODS COLLECTION",
         cols: 3,
+        square: "cover",
         images: [
-          { src: "/works/character/modi-wink-ecobag.png", alt: "모디 윙크 에코백", caption: "윙크 에코백" },
+          { src: "/works/character/modi-m-note.png", alt: "모디 윙크 에코백", caption: "윙크 에코백" },
           { src: "/works/character/modi-wink-mug.png", alt: "모디 윙크 머그컵", caption: "윙크 머그컵" },
-          { src: "/works/character/modi-m-note.png", alt: "모디 M 하드커버 노트", caption: "M 하드커버 노트" },
+          { src: "/works/character/modi-wink-ecobag.png", alt: "모디 M 하드커버 노트", caption: "M 하드커버 노트" },
           { src: "/works/character/modi-ecobag.png", alt: "모디 에코백", caption: "에코백" },
           { src: "/works/character/modi-springnote.png", alt: "모디 스프링 노트", caption: "스프링 노트" },
           { src: "/works/character/modi-mug.png", alt: "모디 머그컵", caption: "머그컵" },

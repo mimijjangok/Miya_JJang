@@ -190,19 +190,30 @@ export const WorkDetail = () => {
           {/* 추가 섹션 (PPT 등) — 작은 원본은 원래 크기 이상으로 늘리지 않음 */}
           {work.extras?.map((ex) => (
             <div key={ex.title} className="mt-10 border border-zinc-200 p-6 md:p-10">
-              <h3 className="text-xl md:text-2xl font-bold tracking-tight">{ex.title}</h3>
-              {ex.desc && <p className="text-sm text-gray-500 mt-1 mb-6">{ex.desc}</p>}
+              <h3 className={`text-xl md:text-2xl font-bold tracking-tight ${ex.desc ? "" : "mb-8"}`}>{ex.title}</h3>
+              {ex.desc && <p className="text-sm text-gray-500 mt-1 mb-8">{ex.desc}</p>}
               <div className={`grid gap-6 ${ex.cols === 4 ? "grid-cols-2 md:grid-cols-4" : ex.cols === 3 ? "grid-cols-2 md:grid-cols-3" : "grid-cols-1 sm:grid-cols-2"}`}>
                 {ex.images.map((img) => (
-                  <figure key={img.src} className="flex flex-col items-center justify-center">
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      loading="lazy"
-                      className="block w-auto max-w-full h-auto"
-                    />
+                  <figure key={img.src} className={`flex flex-col items-center ${ex.square ? "" : "justify-center"}`}>
+                    {ex.square ? (
+                      <div className="w-full aspect-square bg-zinc-50 overflow-hidden flex items-center justify-center">
+                        <img
+                          src={img.src}
+                          alt={img.alt}
+                          loading="lazy"
+                          className={`block w-full h-full ${ex.square === "cover" ? "object-cover" : "object-contain p-4"}`}
+                        />
+                      </div>
+                    ) : (
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="block w-auto max-w-full h-auto"
+                      />
+                    )}
                     {img.caption && (
-                      <figcaption className="mt-2 text-[11px] font-medium text-gray-500">{img.caption}</figcaption>
+                      <figcaption className="mt-3 text-[11px] font-medium text-gray-500">{img.caption}</figcaption>
                     )}
                   </figure>
                 ))}
