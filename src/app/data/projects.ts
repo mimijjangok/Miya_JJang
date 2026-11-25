@@ -61,7 +61,7 @@ export interface Work {
   custom?: "goest-brand";
   // 이미지 아래 추가 섹션 (작은 원본은 원래 크기로 선명하게)
   // withFeatures: 이미지 옆 빈칸에 특징(features) 텍스트 표시
-  extras?: { title: string; desc?: string; withFeatures?: boolean; cols?: 3; images: { src: string; alt: string; caption?: string }[] }[];
+  extras?: { title: string; desc?: string; withFeatures?: boolean; cols?: 3 | 4; images: { src: string; alt: string; caption?: string }[] }[];
   // 컬러 시스템 (이미지 아래에 색상 칩으로 표시)
   // 앱 아이콘 (제목 왼쪽에 작게 표시)
   icon?: string;
@@ -357,6 +357,45 @@ export const works: Work[] = [
       { src: "/works/web/hics-main-day.jpg", alt: "HiCS 메인 대시보드 · 일몰 배경 테마" },
       { src: "/works/web/hics-main-night.jpg", alt: "HiCS 메인 대시보드 · 야경 배경 테마" },
       { src: "/works/web/hics-bg-setting.jpg", alt: "HiCS 배경 설정 팝업" },
+    ],
+  },
+  {
+    slug: "kb-bank",
+    category: "web-platform",
+    name: "KB국민은행 · 웹/앱/모바일웹",
+    desc: "2017 웹어워드 금융 부문 대상 · KB국민은행 웹·앱·모바일웹 메인 디자인",
+    thumb: "/works/web/kb-mockup.png",
+    thumbCard: { bg: "#FFCC00", color: "#2B2B2B", text: "KB국민은행", sub: "2017 웹어워드 금융 부문 대상" },
+    info: {
+      client: "KB국민은행",
+      year: "2017",
+      role: "웹·앱·모바일웹 UI 디자인",
+      target: "KB국민은행 개인 고객",
+      expression: "친근한 일러스트 배너 · 심플한 메뉴",
+      concept: "국민은행의 고급스럽고 친근한 이미지를 컨셉으로, 상단 배너에는 친근한 일러스트를 쓰고 메뉴는 간결하고 심플하게 표현",
+      colors: [
+        { name: "KB YELLOW", hex: "#FFCC00" },
+        { name: "KB GRAY", hex: "#545045" },
+        { name: "WHITE", hex: "#FFFFFF" },
+      ],
+      tools: "Photoshop · Illustrator · Zeplin",
+    },
+    overview: "2017 웹어워드 금융 부문 대상을 받은 KB국민은행 웹·앱·모바일웹 디자인입니다. 국민은행의 고급스럽고 친근한 이미지를 컨셉으로, 상품 배너에는 친근한 일러스트를 쓰고 메뉴는 간결하고 심플하게 정리했습니다.",
+    icon: "/works/app/kb-star-icon.png",
+    hero: { src: "/works/web/kb-mockup.png", alt: "KB국민은행 모바일 메인 화면 목업" },
+    images: [],
+    extras: [
+      {
+        title: "MOBILE",
+        desc: "상품 배너 · 메인 전체 화면",
+        cols: 4,
+        images: [
+          { src: "/works/web/kb-m-carloan.png", alt: "KB 매직카대출 배너 메인", caption: "KB 매직카대출" },
+          { src: "/works/web/kb-m-smartphone.png", alt: "KB Smart★폰 적금 배너 메인", caption: "KB Smart★폰 적금" },
+          { src: "/works/web/kb-m-full1.png", alt: "KB국민은행 메인 전체 화면 1", caption: "메인 전체 1" },
+          { src: "/works/web/kb-m-full2.png", alt: "KB국민은행 메인 전체 화면 2", caption: "메인 전체 2" },
+        ],
+      },
     ],
   },
   {
