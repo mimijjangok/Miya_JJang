@@ -54,10 +54,21 @@ export const About = () => {
             </div>
                         <div>
               <h3 className="text-black font-bold mb-4 uppercase text-xs tracking-[0.2em]">Tool Stack</h3>
-              <ul className="space-y-3 text-black text-sm font-medium">
-                <li>Adobe Creative Cloud</li>
-                <li>Cursor (AI Code Editor)</li>
+              <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-2">Design</div>
+              <ul className="space-y-3 text-black text-sm font-medium mb-6">
                 <li>Figma</li>
+                <li>Photoshop · Illustrator</li>
+                <li>ProtoPie</li>
+                <li>Zeplin</li>
+                <li>Sketch</li>
+                <li>Adobe XD</li>
+              </ul>
+              <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#05D920] mb-2">AI</div>
+              <ul className="space-y-3 text-black text-sm font-medium">
+                <li>Claude · Claude Code</li>
+                <li>ChatGPT</li>
+                <li>Cursor (AI Code Editor)</li>
+                <li>Midjourney</li>
               </ul>
             </div>
           </div>
