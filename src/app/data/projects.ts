@@ -530,6 +530,44 @@ export const works: Work[] = [
       { src: "/works/app/nh-onong-p7.jpg", alt: "전체메뉴 구성 제안" },
     ],
   },
+  {
+    slug: "woori-won",
+    category: "mobile-ux",
+    name: "우리은행 · 우리WON뱅킹",
+    desc: "우리WON뱅킹 앱 시작 온보딩과 적금 상품 가입·예상금리 화면 UI 디자인",
+    thumb: "/works/app/woori-thumb.jpg",
+    info: {
+      client: "우리은행",
+      role: "앱 UI/UX 디자인",
+      target: "우리은행 개인 고객 · 신규 앱 사용자",
+      expression: "일러스트 온보딩 · 카드 UI · 금리 그래프",
+      concept: "밝은 블루와 가벼운 3D 일러스트로 결제·디지털OTP·오픈뱅킹 기능을 쉽게 소개하고, 우대금리를 막대 그래프로 한눈에 보여 주는 친근한 금융 경험",
+      colors: [
+        { name: "BLUE", hex: "#1E8FEB" },
+        { name: "NAVY", hex: "#0B3A8F" },
+        { name: "SKY", hex: "#7BC4EA" },
+      ],
+    },
+    overview: "우리은행 모바일 앱 우리WON뱅킹의 시작 온보딩 화면과 적금 상품 가입 페이지, 예상금리 안내 UI를 디자인했습니다.",
+    icon: "/works/app/woori-won-icon.png",
+    layout: "phones",
+    images: [
+      { src: "/works/app/woori-onboard-pay.jpg", alt: "우리WON뱅킹 온보딩 · 우리페이 간편결제" },
+      { src: "/works/app/woori-onboard-otp.jpg", alt: "우리WON뱅킹 온보딩 · 디지털OTP" },
+      { src: "/works/app/woori-onboard-start.jpg", alt: "우리WON뱅킹 온보딩 · 시작하기" },
+      { src: "/works/app/woori-onboard-openbanking.jpg", alt: "우리WON뱅킹 온보딩 · 다른기관 계좌 연결" },
+    ],
+    extras: [
+      {
+        title: "상품 가입 · 예상금리 UI",
+        desc: "롯데카드 제휴 적금 상품 상세 페이지와 고객 유형별 우대금리를 그래프로 보여 주는 예상금리 컴포넌트",
+        images: [
+          { src: "/works/app/woori-product.jpg", alt: "적금 상품 상세 페이지", caption: "상품 상세" },
+          { src: "/works/app/woori-rate.jpg", alt: "예상금리 우대금리 그래프", caption: "예상금리" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getCategory = (slug?: string) => categories.find((c) => c.slug === slug);
