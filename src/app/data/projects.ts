@@ -216,6 +216,17 @@ export const works: Work[] = [
       { src: "/works/brand/absr-logo-v1.jpg", alt: "ABSR 로고 · 슬로건 포함 버전" },
       { src: "/works/brand/absr-logo-v2.jpg", alt: "ABSR 로고 · 심볼+로고타입 버전" },
     ],
+    extras: [
+      {
+        title: "PPT · ABSR 제품소개서",
+        desc: "로고의 블루·퍼플 그라데이션과 원형 그래픽을 적용한 제품소개 프레젠테이션",
+        images: [
+          { src: "/works/brand/absr-ppt-cover.png", alt: "ABSR 제품소개서 표지", caption: "표지" },
+          { src: "/works/brand/absr-ppt-p1.png", alt: "ABSR 제품소개서 Product Overview · 보안장비간 로그 상관관계 분석", caption: "Product Overview 01" },
+          { src: "/works/brand/absr-ppt-p2.png", alt: "ABSR 제품소개서 Product Overview · Bot 트래픽 비율 증가", caption: "Product Overview 01" },
+        ],
+      },
+    ],
   },
   {
     slug: "sechan",
