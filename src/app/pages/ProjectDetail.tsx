@@ -75,6 +75,33 @@ export const ProjectDetail = () => {
         />
       </div>
 
+      {/* 실제 작업 사례 */}
+      {detail.cases && detail.cases.length > 0 && (
+        <div className="mb-16">
+          <h3 className="text-sm font-mono tracking-widest uppercase text-gray-500 mb-6 border-b border-gray-200 pb-2">
+            Selected Works
+          </h3>
+          {detail.cases.map((c, cIdx) => (
+            <div key={cIdx} className="mb-12 last:mb-0">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-2 mb-6">
+                <h4 className="text-2xl md:text-3xl font-black tracking-tighter">{c.name}</h4>
+                {c.desc && <p className="text-sm text-gray-600">{c.desc}</p>}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {c.images.map((img, iIdx) => (
+                  <div
+                    key={iIdx}
+                    className={`bg-zinc-50 border border-zinc-200 overflow-hidden ${iIdx === 0 && c.images.length % 2 === 1 ? "md:col-span-2" : ""}`}
+                  >
+                    <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* 배너 3개 */}
       <div className="mb-16">
         <h3 className="text-sm font-mono tracking-widest uppercase text-gray-500 mb-6 border-b border-gray-200 pb-2">

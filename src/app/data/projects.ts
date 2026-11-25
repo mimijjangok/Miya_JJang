@@ -6,6 +6,12 @@ export interface ProjectBanner {
   text: string;
 }
 
+export interface ProjectCase {
+  name: string;
+  desc?: string;
+  images: { src: string; alt: string }[];
+}
+
 export interface ProjectDetail {
   subtitle: string;
   description: string;
@@ -14,6 +20,8 @@ export interface ProjectDetail {
   banners: ProjectBanner[];
   // 실제 사이트 주소 (있을 때만 버튼 표시)
   link?: { label: string; url: string };
+  // 실제 작업 사례 (이미지는 public/works 폴더)
+  cases?: ProjectCase[];
 }
 
 export interface Project {
@@ -37,6 +45,17 @@ export const projects: Project[] = [
 export const projectDetails: Record<string, ProjectDetail> = {
   "Brand Identity System": {
     subtitle: "Section 01 / Brand Architecture & CIBI",
+    cases: [
+      {
+        name: "(주)우성산업기술 · WOOSUNG Industries",
+        desc: "CI 로고 디자인과 회사 서식(폴더·명함) 어플리케이션",
+        images: [
+          { src: "/works/brand/woosung-logo.jpg", alt: "WOOSUNG Industries 로고" },
+          { src: "/works/brand/woosung-folder.jpg", alt: "WOOSUNG Industries 폴더 디자인" },
+          { src: "/works/brand/woosung-card.jpg", alt: "(주)우성산업기술 명함 디자인" },
+        ],
+      },
+    ],
     description: "기업의 고유한 철학과 비전을 시각적 언어로 체계화하여, 일관된 아이덴티티와 강력한 브랜드 인지도를 구축한 프로젝트입니다.",
     challenge: "다양한 매체와 디지털 환경에서 브랜드의 통일성을 유지하면서도, 기업의 미래지향적 가치를 세련되게 전달하는 것이 핵심 과제였습니다.",
     solution: "정교한 그리드 시스템과 모던한 타이포그래피를 기반으로 CIBI 가이드라인을 재정립하고, 온·오프라인 전반에 걸친 통합 디자인 시스템을 구축했습니다.",
