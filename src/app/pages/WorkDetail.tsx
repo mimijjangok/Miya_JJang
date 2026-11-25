@@ -89,7 +89,6 @@ export const WorkDetail = () => {
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-10 lg:gap-14">
         {/* 왼쪽: 작업 이미지 */}
         <div className="min-w-0">
-          {work.category === "brand-identity" && <Watermark size={260} opacity={0.18} />}
           {work.custom === "goest-brand" && <GoestBrandSheet />}
 
           {/* 고객사 소개 */}

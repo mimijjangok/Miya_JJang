@@ -153,7 +153,6 @@ export const WorkList = () => {
             <div key={w.slug} className="block">
               <div className="aspect-[4/3] bg-zinc-100 overflow-hidden mb-3">
                 <WorkThumb work={w} />
-                {category.slug === "brand-identity" && <Watermark size={170} opacity={0.22} />}
               </div>
               <div className="text-[10px] font-mono text-[#05D920] mb-1">{String(i + 1).padStart(2, "0")}</div>
               <h3 className="text-sm md:text-base font-bold leading-snug">{w.name}</h3>
@@ -163,7 +162,6 @@ export const WorkList = () => {
             <Link key={w.slug} to={`/works/${category.slug}/${w.slug}`} className="group block">
             <div className="aspect-[4/3] bg-zinc-100 overflow-hidden mb-3">
               <WorkThumb work={w} className="group-hover:scale-105 transition-transform duration-500" />
-                {category.slug === "brand-identity" && <Watermark size={170} opacity={0.22} />}
             </div>
             <div className="text-[10px] font-mono text-[#05D920] mb-1">{String(i + 1).padStart(2, "0")}</div>
             <h3 className="text-sm md:text-base font-bold leading-snug group-hover:text-[#05D920] transition-colors">
