@@ -109,11 +109,6 @@ export const WorkDetail = () => {
               )}
             </div>
           )}
-          {work.hero && (
-            <div className="overflow-hidden mb-6">
-              <img src={work.hero.src} alt={work.hero.alt} className="w-full h-auto block" />
-            </div>
-          )}
           {/* 앱 아이콘: 앱스토어처럼 썸네일 위에 크게 */}
           {work.icon && (
             <div className="flex items-center gap-5 md:gap-8 mb-6">
@@ -126,6 +121,15 @@ export const WorkDetail = () => {
                 <div className="text-xl md:text-3xl font-black tracking-tighter leading-tight">{work.name}</div>
                 {work.info?.client && <div className="text-sm md:text-base text-gray-500 mt-1">{work.info.client}</div>}
               </div>
+            </div>
+          )}
+          {work.hero && (
+            <div className={`overflow-hidden mb-6 ${work.hero.small ? "flex justify-center py-6" : ""}`}>
+              <img
+                src={work.hero.src}
+                alt={work.hero.alt}
+                className={work.hero.small ? "block w-auto max-w-[220px] md:max-w-[260px] h-auto" : "w-full h-auto block"}
+              />
             </div>
           )}
           {work.layout === "phones" ? (

@@ -47,7 +47,8 @@ export interface Work {
   // "cover-grid": 표지만 크게, 나머지 페이지는 그 아래 작게 한 줄로
   layout?: "pc-mobile" | "phones" | "cover-grid";
   // 이미지 위에 크게 보여 줄 대표 이미지 (로고 등)
-  hero?: { src: string; alt: string };
+  // small: 로고를 작게 가운데 표시
+  hero?: { src: string; alt: string; small?: boolean };
   images: { src: string; alt: string }[];
   // 고객사 소개 (로고 시트 아래에 표시)
   about?: { title: string; lead: string; body: string[]; facts?: { label: string; value: string }[] };
@@ -343,7 +344,7 @@ export const works: Work[] = [
       tools: "WebSquare · Photoshop",
     },
     overview: "하나은행 임직원이 사용하는 준법시스템 HiCS(Hana Internal Control System)를 대시보드 형태로 고도화한 작업입니다. WebSquare를 사용해 메인 대시보드와 배경 설정 화면을 만들었고, 2024년 1월 오픈을 알리는 홍보 배너도 함께 디자인했습니다.",
-    hero: { src: "/works/web/hics-logo.png", alt: "HiCS 하나은행 준법시스템 로고" },
+    hero: { src: "/works/web/hics-logo.png", alt: "HiCS 하나은행 준법시스템 로고", small: true },
     images: [
       { src: "/works/web/hics-banner.jpg", alt: "HiCS 오픈 홍보 배너 · 빠르고 편리해진 준법시스템" },
       { src: "/works/web/hics-main-day.jpg", alt: "HiCS 메인 대시보드 · 일몰 배경 테마" },
@@ -478,6 +479,7 @@ export const works: Work[] = [
     challenge: "앱 사용에 익숙하지 않은 근로자도 바쁜 출근 시간에 망설임 없이 쓸 수 있어야 했고, 근로자와 대표 두 사용자의 진입 경로를 헷갈리지 않게 나누는 것이 과제였습니다.",
     solution: "첫 화면에서 근로자·대표 로그인을 색으로 구분하고, 출퇴근 화면은 큰 시계와 출근·퇴근 버튼 두 개만 남겨 한 번의 터치로 끝나도록 단순화했습니다. 메뉴는 오렌지 하이라이트로 현재 위치를 분명히 했습니다.",
     hero: { src: "/works/app/barocheck-logo.jpg", alt: "바로Check 로고" },
+    icon: "/works/app/barocheck-icon.png",
     layout: "phones",
     images: [
       { src: "/works/app/barocheck-splash.png", alt: "바로Check 스플래시 화면" },
