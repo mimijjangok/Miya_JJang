@@ -321,6 +321,16 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "hana-gcs",
+    category: "web-platform",
+    name: "하나은행 · 글로벌 준법시스템 GCS",
+    desc: "하나은행 글로벌 준법시스템 GCS 웹 UI 디자인 · 2027 오픈 예정",
+    thumb: "",
+    noDetail: true,
+    thumbCard: { bg: "#0F7A66", color: "#FFFFFF", text: "하나은행 글로벌 준법시스템", sub: "GCS · 2027 OPEN" },
+    images: [],
+  },
+  {
     slug: "hana-hics",
     category: "web-platform",
     name: "하나은행 · 준법시스템 HiCS",
