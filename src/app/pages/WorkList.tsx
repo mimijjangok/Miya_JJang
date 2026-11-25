@@ -4,6 +4,7 @@ import { Link, Navigate, useParams } from "react-router";
 import { ArrowLeft, ArrowRight, Download } from "lucide-react";
 import { WorkThumb } from "../components/WorkThumb";
 import { CopyrightNotice } from "../components/CopyrightNotice";
+import { Watermark } from "../components/Watermark";
 import { categories, freeTemplates, getCategory, getWorksByCategory } from "../data/projects";
 
 // 최소로 보여 줄 칸 수 (작업이 적으면 나머지는 '준비 중' 칸)
@@ -151,8 +152,9 @@ export const WorkList = () => {
           w.noDetail ? (
             // 상세 페이지 없음: 썸네일만 표시 (클릭 안 됨)
             <div key={w.slug} className="block">
-              <div className="aspect-[4/3] bg-zinc-100 overflow-hidden mb-3">
+              <div className="aspect-[4/3] bg-zinc-100 overflow-hidden relative mb-3">
                 <WorkThumb work={w} />
+                {category.slug === "brand-identity" && <Watermark size={170} opacity={0.22} />}
               </div>
               <div className="text-[10px] font-mono text-[#05D920] mb-1">{String(i + 1).padStart(2, "0")}</div>
               <h3 className="text-sm md:text-base font-bold leading-snug">{w.name}</h3>
@@ -160,8 +162,9 @@ export const WorkList = () => {
             </div>
           ) : (
             <Link key={w.slug} to={`/works/${category.slug}/${w.slug}`} className="group block">
-            <div className="aspect-[4/3] bg-zinc-100 overflow-hidden mb-3">
+            <div className="aspect-[4/3] bg-zinc-100 overflow-hidden relative mb-3">
               <WorkThumb work={w} className="group-hover:scale-105 transition-transform duration-500" />
+                {category.slug === "brand-identity" && <Watermark size={170} opacity={0.22} />}
             </div>
             <div className="text-[10px] font-mono text-[#05D920] mb-1">{String(i + 1).padStart(2, "0")}</div>
             <h3 className="text-sm md:text-base font-bold leading-snug group-hover:text-[#05D920] transition-colors">
