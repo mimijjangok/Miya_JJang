@@ -595,6 +595,7 @@ export const works: Work[] = [
     name: "NH 오늘농사 · 네이티브 앱 4차 고도화",
     desc: "농협 영농 지원 앱 '오늘농사' 네이티브 앱 4차 고도화 · 앱 UI 디자인",
     thumb: "/works/app/nh-onong-thumb.jpg",
+    thumbCard: { bg: "#426DD7", color: "#FFFFFF", text: "오늘농사", sub: "NH 네이티브 앱 4차 고도화" },
     info: {
       client: "NH농협 · 오늘농사 (NH오늘의농업)",
       year: "2025",
