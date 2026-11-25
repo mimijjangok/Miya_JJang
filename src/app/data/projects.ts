@@ -160,6 +160,16 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "atogrit",
+    category: "brand-identity",
+    name: "아토그릿 · ATOGRIT",
+    desc: "ATOGRIT 로고 디자인 · THE BACKBONE OF BUSINESS",
+    thumb: "/works/brand/atogrit-thumb.png",
+    noDetail: true,
+    thumbCard: { bg: "#000000", logo: "/works/brand/atogrit-logo.png" },
+    images: [],
+  },
+  {
     slug: "goest-brand",
     category: "brand-identity",
     name: "지오이스트 · GOEST",
