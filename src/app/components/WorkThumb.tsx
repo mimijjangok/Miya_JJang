@@ -20,11 +20,11 @@ export const WorkThumb = ({ work, className = "" }: { work: Work; className?: st
       style={{ background: c.bg, color: c.color ?? "#111111" }}
     >
       {c.logo ? (
-        <img src={c.logo} alt={work.name} loading="lazy" className="max-w-[62%] max-h-[42%] object-contain" />
+        <img src={c.logo} alt={work.name} loading="lazy" className={c.sub ? "max-w-[80%] max-h-[66%] object-contain" : "max-w-[62%] max-h-[42%] object-contain"} />
       ) : (
         <div className="text-2xl md:text-4xl font-black tracking-tighter leading-tight break-keep">{c.text}</div>
       )}
-      {c.sub && <div className="mt-2 md:mt-3 text-[10px] md:text-xs font-bold opacity-70">{c.sub}</div>}
+      {c.sub && <div className={c.logo ? "mt-2 md:mt-3 text-sm md:text-lg font-bold opacity-80" : "mt-2 md:mt-3 text-[10px] md:text-xs font-bold opacity-70"}>{c.sub}</div>}
     </div>
   );
 };
