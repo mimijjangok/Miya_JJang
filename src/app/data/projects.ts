@@ -34,6 +34,8 @@ export interface Work {
   name: string;
   desc?: string;
   thumb: string;
+  // 목록 썸네일을 로고/이름 글자로 보여 줄 때 (logo 이미지가 있으면 로고, 없으면 text)
+  thumbCard?: { bg: string; color?: string; logo?: string; text?: string; sub?: string };
   // textOnly: 사이트가 열리지 않을 때 주소만 글자로 표시 (클릭·바로가기 버튼 없음)
   link?: { label: string; url: string; textOnly?: boolean };
   info?: WorkInfo;
@@ -42,7 +44,7 @@ export interface Work {
   solution?: string;
   // "pc-mobile"이면 첫 이미지는 PC(넓게), 둘째는 모바일(좁게)로 나란히
   // "pc-mobile": PC(넓게)+모바일(좁게) / "phones": 앱 화면 여러 장을 나란히
-  // "cover-grid": 제안서 페이지들을 작게 한 줄에 4개씩 (표지 포함)
+  // "cover-grid": 표지만 크게, 나머지 페이지는 그 아래 작게 한 줄로
   layout?: "pc-mobile" | "phones" | "cover-grid";
   // 이미지 위에 크게 보여 줄 대표 이미지 (로고 등)
   hero?: { src: string; alt: string };
@@ -129,6 +131,7 @@ export const works: Work[] = [
     name: "(주)우성산업기술 · WOOSUNG Industries",
     desc: "CI 로고 디자인과 회사 서식(폴더·명함) 어플리케이션",
     thumb: "/works/brand/woosung-folder.jpg",
+    thumbCard: { bg: "#F1F1F1", logo: "/works/brand/woosung-logo.jpg" },
     info: {
       client: "(주)우성산업기술",
       role: "CI 디자인 · 어플리케이션 디자인",
@@ -288,6 +291,7 @@ export const works: Work[] = [
     name: "지오이스트 · GOEST",
     desc: "AI 솔루션·SI 기업 홈페이지 디자인",
     thumb: "/works/web/goest-hero.jpg",
+    thumbCard: { bg: "#FFFFFF", logo: "/works/brand/goest-logo.png" },
     link: { label: "www.goest.co.kr", url: "https://www.goest.co.kr" },
     info: {
       client: "지오이스트 (GOEST)",
@@ -313,6 +317,7 @@ export const works: Work[] = [
     name: "하나은행 · 준법시스템 HiCS",
     desc: "하나은행 내부통제 준법시스템(Hana Internal Control System) 대시보드형 웹 UI 디자인 · WebSquare 기반",
     thumb: "/works/web/hics-banner.jpg",
+    thumbCard: { bg: "#FFFFFF", logo: "/works/web/hics-logo.png", sub: "하나은행 준법시스템", color: "#2C2C2C" },
     info: {
       client: "하나은행",
       year: "2024",
@@ -342,6 +347,7 @@ export const works: Work[] = [
     name: "LG전자 · ThinQ Voice 신규 페이지",
     desc: "LG ThinQ Voice Command Book 모바일웹 신규 제작 및 LG전자 반응형 신규 페이지 디자인",
     thumb: "/works/web/lg-thumb.jpg",
+    thumbCard: { bg: "#A50034", color: "#FFFFFF", text: "LG ThinQ", sub: "Voice Command Book" },
     info: {
       client: "LG전자",
       role: "모바일웹 · 반응형 웹 UI 디자인",
@@ -379,6 +385,7 @@ export const works: Work[] = [
     name: "국가교육위원회 · 국민의견플랫폼",
     desc: "국민 참여형 공공 플랫폼 PC·모바일 반응형 디자인",
     thumb: "/works/web/nec-thumb.jpg",
+    thumbCard: { bg: "#17C3B2", color: "#FFFFFF", text: "국민의견플랫폼", sub: "국가교육위원회" },
     info: {
       client: "국가교육위원회",
       role: "웹·모바일 UI 디자인",
@@ -407,6 +414,7 @@ export const works: Work[] = [
     name: "MODUVA · 모두바 공식 홈페이지",
     desc: "캐릭터·로고·웹앱 디자인 스튜디오 모바일 퍼스트 홈페이지 · 기획부터 디자인·퍼블리싱·배포까지",
     thumb: "/works/web/moduva-og.jpg",
+    thumbCard: { bg: "#F7667A", color: "#FFFFFF", text: "MODUVA", sub: "모두바 공식 홈페이지" },
     link: { label: "moduva.pages.dev", url: "https://moduva.pages.dev" },
     info: {
       client: "MODUVA (자체 브랜드)",
@@ -473,6 +481,7 @@ export const works: Work[] = [
     name: "NH 오늘농사 · 네이티브 앱 4차 고도화",
     desc: "농협 영농 지원 앱 '오늘농사' 네이티브 앱 4차 고도화 · 앱 UI 디자인",
     thumb: "/works/app/nh-onong-thumb.jpg",
+    thumbCard: { bg: "#426DD7", color: "#FFFFFF", text: "오늘농사", sub: "NH 네이티브 앱 4차 고도화" },
     info: {
       client: "NH농협 · 오늘농사 (NH오늘의농업)",
       year: "2025",
@@ -504,6 +513,7 @@ export const works: Work[] = [
     name: "NH 오늘농사 · UXUI 제안서",
     desc: "오늘농사 앱 4차 고도화를 위한 UXUI 제안 · 벤치마킹, 홈·전체메뉴 구성안",
     thumb: "/works/app/nh-onong-proposal-thumb.jpg",
+    thumbCard: { bg: "#4DAB76", color: "#FFFFFF", text: "오늘농사 UXUI 제안", sub: "2025 NH오늘의농업" },
     info: {
       client: "NH농협 · 오늘농사 (NH오늘의농업)",
       year: "2025",
@@ -538,6 +548,7 @@ export const works: Work[] = [
     name: "우리은행 · 우리WON뱅킹",
     desc: "우리WON뱅킹 앱 시작 온보딩과 적금 상품 가입·예상금리 화면 UI 디자인",
     thumb: "/works/app/woori-thumb.jpg",
+    thumbCard: { bg: "#E8F1FD", color: "#0032A0", text: "우리WON뱅킹", sub: "우리은행" },
     info: {
       client: "우리은행",
       role: "앱 UI/UX 디자인",

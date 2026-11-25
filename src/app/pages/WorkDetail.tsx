@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Link, Navigate, useParams } from "react-router";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Download } from "lucide-react";
 import { getCategory, getWork, getWorksByCategory } from "../data/projects";
+import { WorkThumb } from "../components/WorkThumb";
 import { GoestBrandSheet } from "../components/GoestBrandSheet";
 
 // 3단계: 작업 상세 페이지 (/works/:cat/:item)
@@ -141,16 +142,23 @@ export const WorkDetail = () => {
               ))}
             </div>
           ) : work.layout === "cover-grid" ? (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {work.images.map((img, iIdx) => (
+            <div className="space-y-4">
+              {work.images[0] && (
+                <div className="bg-zinc-50 overflow-hidden">
+                  <img src={work.images[0].src} alt={work.images[0].alt} loading="lazy" className="w-full h-auto block" />
+                </div>
+              )}
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
+                {work.images.slice(1).map((img, iIdx) => (
                   <figure key={iIdx} className="flex flex-col">
                     <div className="bg-zinc-50 overflow-hidden">
                       <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
                     </div>
-                    <figcaption className="mt-1.5 text-[10px] font-bold text-gray-500 leading-snug">{img.alt}</figcaption>
+                    <figcaption className="mt-1 text-[9px] font-bold text-gray-500 leading-snug">{img.alt}</figcaption>
                   </figure>
                 ))}
               </div>
+            </div>
           ) : work.layout === "pc-mobile" ? (
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,3fr)_minmax(0,1fr)] gap-4 items-start">
               {work.images.map((img, iIdx) => (
@@ -320,12 +328,9 @@ export const WorkDetail = () => {
             {moreWorks.map((w) => (
               <Link key={w.slug} to={`/works/${category.slug}/${w.slug}`} className="group block">
                 <div className="relative overflow-hidden bg-black aspect-[4/3]">
-                  <img
-                    src={w.thumb}
-                    alt={w.name}
-                    loading="lazy"
-                    className="absolute inset-0 w-full h-full object-cover object-top opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                  />
+                  <div className="absolute inset-0 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                    <WorkThumb work={w} />
+                  </div>
                 </div>
                 <div className="mt-3 text-sm font-black tracking-tight leading-snug group-hover:text-[#05D920] transition-colors">
                   {w.name}

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { Link, Navigate, useParams } from "react-router";
 import { ArrowLeft, ArrowRight, Download } from "lucide-react";
+import { WorkThumb } from "../components/WorkThumb";
 import { categories, freeTemplates, getCategory, getWorksByCategory } from "../data/projects";
 
 // 최소로 보여 줄 칸 수 (작업이 적으면 나머지는 '준비 중' 칸)
@@ -133,12 +134,7 @@ export const WorkList = () => {
         {list.map((w, i) => (
           <Link key={w.slug} to={`/works/${category.slug}/${w.slug}`} className="group block">
             <div className="aspect-[4/3] bg-zinc-100 overflow-hidden mb-3">
-              <img
-                src={w.thumb}
-                alt={w.name}
-                loading="lazy"
-                className="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-500"
-              />
+              <WorkThumb work={w} className="group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="text-[10px] font-mono text-[#05D920] mb-1">{String(i + 1).padStart(2, "0")}</div>
             <h3 className="text-sm md:text-base font-bold leading-snug group-hover:text-[#05D920] transition-colors">
