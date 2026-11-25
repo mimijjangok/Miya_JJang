@@ -70,6 +70,14 @@ export const Works = () => {
             index={idx}
           />
         ))}
+        {/* 모션 프롬프트 배너 */}
+        <ProjectCard
+          title="Motion Prompt"
+          category="클로드 모션 프롬프트 12"
+          image="/works/motion-banner.jpg"
+          index={allProjects.length}
+          href="/motion-prompt"
+        />
       </div>
     </div>
   );

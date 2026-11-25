@@ -9,12 +9,13 @@ interface ProjectCardProps {
   category: string;
   image: string;
   index: number;
+  href?: string;
 }
 
 // 배너를 누르면 그 분류의 작업 목록(/works/:category)으로 이동합니다.
-export const ProjectCard = ({ title, category, image, index }: ProjectCardProps) => {
+export const ProjectCard = ({ title, category, image, index, href }: ProjectCardProps) => {
   const slug = getCategoryByTitle(title)?.slug;
-  const to = slug ? `/works/${slug}` : '/works';
+  const to = href ?? (slug ? `/works/${slug}` : '/works');
 
   return (
     <Link to={to} className="block" aria-label={`${title} 상세 보기`}>

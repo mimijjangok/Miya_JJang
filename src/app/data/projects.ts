@@ -251,8 +251,7 @@ export const works: Work[] = [
     category: "brand-identity",
     name: "바로Check · BAROCHECK",
     desc: "출퇴근 체크 앱 바로Check 로고 · 심볼 · 앱 아이콘 디자인",
-    thumb: "/works/app/barocheck-logo.jpg",
-    thumbCard: { bg: "#111111", logo: "/works/app/barocheck-logo.jpg" },
+    thumb: "/works/brand/barocheck-thumb.jpg",
     info: {
       client: "세찬아이앤씨 (Sechan I&C)",
       year: "2025",
