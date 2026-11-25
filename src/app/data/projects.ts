@@ -492,6 +492,41 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "olympus-korea",
+    category: "web-platform",
+    name: "올림푸스코리아 · Olympus Korea 메인",
+    desc: "올림푸스코리아 메인 페이지 플래시 이미지 작업 및 모션 플래시",
+    thumb: "/works/web/olympus-main.jpg",
+    thumbCard: { bg: "#14208C", color: "#FFFFFF", text: "OLYMPUS", sub: "올림푸스코리아 메인" },
+    info: {
+      client: "올림푸스코리아 (Olympus Korea)",
+      year: "2008",
+      role: "플래시 이미지 작업 · 모션 플래시",
+      target: "DSLR · 컴팩트 카메라 고객",
+      expression: "플래시 메인 비주얼 · 모션 플래시 · 프로모션 페이지",
+      concept: "카메라 제품과 인물 사진이 펼쳐지는 앨범형 메인 비주얼과 버블 모션으로 DSLR · 컴팩트 카메라를 소개",
+      colors: [
+        { name: "NAVY", hex: "#14208C" },
+        { name: "LAVENDER", hex: "#B9A3D6" },
+        { name: "PURPLE", hex: "#3A1E5C" },
+      ],
+      tools: "Photoshop · Flash",
+    },
+    overview: "올림푸스코리아 메인 페이지의 플래시 이미지와 모션 플래시를 작업했습니다. 메인 비주얼과 DSLR 버전, E-30 출시 프로모션 페이지와 이메일 뉴스레터를 디자인했습니다.",
+    hero: { src: "/works/web/olympus-main.jpg", alt: "올림푸스코리아 메인 페이지 · DSLR 메인" },
+    images: [],
+    extras: [
+      {
+        title: "PROMOTION",
+        desc: "E-30 출시 프로모션 페이지와 이메일 뉴스레터",
+        images: [
+          { src: "/works/web/olympus-e30.jpg", alt: "올림푸스 E-30 출시 프로모션 페이지", caption: "E-30 출시 프로모션" },
+          { src: "/works/web/olympus-newsletter.jpg", alt: "올림푸스 E-30 이메일 뉴스레터", caption: "이메일 뉴스레터" },
+        ],
+      },
+    ],
+  },
+  {
     slug: "lg-thinq-voice",
     category: "web-platform",
     name: "LG전자 · ThinQ Voice 신규 페이지",
