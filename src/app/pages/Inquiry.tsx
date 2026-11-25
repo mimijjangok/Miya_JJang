@@ -8,7 +8,7 @@ const TYPES = ["캐릭터 제작", "로고 · 브랜딩", "홈페이지", "앱",
 const SCOPES = ["디자인만", "퍼블만", "개발만", "기획만"];
 const BUDGETS = ["미정", "100만원 이하", "100 ~ 300만원", "300 ~ 500만원", "500 ~ 1,000만원", "1,000만원 이상"];
 const mailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const EMAIL = "mimijjangok@gmail.com";
+const EMAIL = "moduva@naver.com";
 
 const Opt = ({ on, children, onClick }: { on: boolean; children: React.ReactNode; onClick: () => void }) => (
   <button
