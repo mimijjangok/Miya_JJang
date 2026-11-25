@@ -53,7 +53,7 @@ export interface Work {
   layout?: "pc-mobile" | "phones" | "cover-grid";
   // 이미지 위에 크게 보여 줄 대표 이미지 (로고 등)
   // small: 로고를 작게 가운데 표시
-  hero?: { src: string; alt: string; small?: boolean };
+  hero?: { src: string; alt: string; small?: boolean; medium?: boolean };
   images: { src: string; alt: string }[];
   // 고객사 소개 (로고 시트 아래에 표시)
   about?: { title: string; lead: string; body: string[]; facts?: { label: string; value: string }[] };
@@ -382,7 +382,7 @@ export const works: Work[] = [
     },
     overview: "2017 웹어워드 금융 부문 대상을 받은 KB국민은행 웹·앱·모바일웹 디자인입니다. 국민은행의 고급스럽고 친근한 이미지를 컨셉으로, 상품 배너에는 친근한 일러스트를 쓰고 메뉴는 간결하고 심플하게 정리했습니다.",
     icon: "/works/app/kb-star-icon.png",
-    hero: { src: "/works/web/kb-mockup.png", alt: "KB국민은행 모바일 메인 화면 목업" },
+    hero: { src: "/works/web/kb-mockup.png", alt: "KB국민은행 모바일 메인 화면 목업", medium: true },
     images: [],
     extras: [
       {

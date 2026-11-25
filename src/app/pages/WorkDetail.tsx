@@ -124,11 +124,11 @@ export const WorkDetail = () => {
             </div>
           )}
           {work.hero && (
-            <div className={`overflow-hidden mb-6 ${work.hero.small ? "flex justify-start py-4" : ""}`}>
+            <div className={`overflow-hidden mb-6 ${work.hero.small ? "flex justify-start py-4" : work.hero.medium ? "flex justify-center" : ""}`}>
               <img
                 src={work.hero.src}
                 alt={work.hero.alt}
-                className={work.hero.small ? "block w-auto max-w-[220px] md:max-w-[260px] h-auto" : "w-full h-auto block"}
+                className={work.hero.small ? "block w-auto max-w-[220px] md:max-w-[260px] h-auto" : work.hero.medium ? "block w-full max-w-[480px] h-auto" : "w-full h-auto block"}
               />
             </div>
           )}
