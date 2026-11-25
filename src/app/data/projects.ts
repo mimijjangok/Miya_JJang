@@ -42,7 +42,8 @@ export interface Work {
   solution?: string;
   // "pc-mobile"이면 첫 이미지는 PC(넓게), 둘째는 모바일(좁게)로 나란히
   // "pc-mobile": PC(넓게)+모바일(좁게) / "phones": 앱 화면 여러 장을 나란히
-  layout?: "pc-mobile" | "phones";
+  // "cover-grid": 첫 이미지는 크게, 나머지 페이지는 작게 한 줄에 4개씩
+  layout?: "pc-mobile" | "phones" | "cover-grid";
   // 이미지 위에 크게 보여 줄 대표 이미지 (로고 등)
   hero?: { src: string; alt: string };
   images: { src: string; alt: string }[];
@@ -520,6 +521,7 @@ export const works: Work[] = [
     overview: "오늘농사 네이티브 앱 4차 고도화에 앞서 작성한 UXUI 제안서입니다. 뱅킹/PAY 앱과 기타 생활 서비스 앱을 벤치마킹하고, 홈 구성(배너상단 중심 / 바로가기 중심·큰글씨)과 전체메뉴 구조를 비교·제안했습니다.",
     challenge: "다양한 연령의 농업인이 쓰는 앱인 만큼, 최신 앱의 사용 패턴을 따르면서도 큰 글씨와 단순한 구조로 누구나 쉽게 쓸 수 있는 방향을 찾는 것이 과제였습니다.",
     solution: "NH 콕뱅크·KB STAR·신한 쏠 등 뱅킹 앱과 맘모스커피·점신 등 생활 앱의 홈·메뉴 패턴을 정리하고, 배너 중심안과 큰글씨 바로가기 중심안을 나란히 제시해 의사결정을 돕도록 구성했습니다.",
+    layout: "cover-grid",
     images: [
       { src: "/works/app/nh-onong-p1.jpg", alt: "2025 NH오늘의농업 UXUI 제안 표지" },
       { src: "/works/app/nh-onong-p2.jpg", alt: "벤치마킹 A 뱅킹/PAY 1" },
