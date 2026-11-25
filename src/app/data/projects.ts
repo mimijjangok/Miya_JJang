@@ -224,6 +224,7 @@ export const works: Work[] = [
           { src: "/works/brand/absr-ppt-cover.png", alt: "ABSR 제품소개서 표지", caption: "표지" },
           { src: "/works/brand/absr-ppt-p1.png", alt: "ABSR 제품소개서 Product Overview · 보안장비간 로그 상관관계 분석", caption: "Product Overview 01" },
           { src: "/works/brand/absr-ppt-p2.png", alt: "ABSR 제품소개서 Product Overview · Bot 트래픽 비율 증가", caption: "Product Overview 01" },
+          { src: "/works/brand/absr-ppt-thanks.png", alt: "ABSR 제품소개서 마지막 장 · 감사합니다", caption: "Closing" },
         ],
       },
     ],
