@@ -50,7 +50,9 @@ export const WorkDetail = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="pt-28 pb-20 px-6 md:px-12 max-w-7xl mx-auto text-black"
+      onContextMenu={(e) => { if ((e.target as HTMLElement).closest(".img-protect")) e.preventDefault(); }}
+      onDragStart={(e) => { if ((e.target as HTMLElement).closest(".img-protect")) e.preventDefault(); }}
+      className={`pt-28 pb-20 px-6 md:px-12 max-w-7xl mx-auto text-black ${work.category === "brand-identity" ? "img-protect" : ""}`}
     >
       {/* 상단 제목 바 */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b-2 border-black pb-6 mb-10">

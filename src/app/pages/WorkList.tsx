@@ -32,6 +32,8 @@ export const WorkList = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
+      onContextMenu={(e) => { if ((e.target as HTMLElement).closest(".img-protect")) e.preventDefault(); }}
+      onDragStart={(e) => { if ((e.target as HTMLElement).closest(".img-protect")) e.preventDefault(); }}
       className="pt-28 pb-20 px-6 md:px-12 max-w-7xl mx-auto text-black"
     >
       {/* 분류 제목 */}
@@ -143,7 +145,7 @@ export const WorkList = () => {
       </div>
 
       {/* 썸네일 목록 */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-10">
+      <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-10 ${category.slug === "brand-identity" ? "img-protect" : ""}`}>
         {list.map((w, i) => (
           w.noDetail ? (
             // 상세 페이지 없음: 썸네일만 표시 (클릭 안 됨)
@@ -181,6 +183,14 @@ export const WorkList = () => {
           </div>
         ))}
       </div>
+
+      {category.slug === "brand-identity" && (
+        <div className="mt-14 border-t border-zinc-200 pt-6 text-[11px] leading-relaxed text-gray-400">
+          <p className="font-bold text-gray-500 mb-1">COPYRIGHT NOTICE</p>
+          <p>이 페이지의 모든 로고·심볼·CI/BI 디자인은 MI3___LEE(김미례)가 디자인한 작업물로, 각 작업의 저작권은 디자이너 또는 해당 기업에 있습니다.</p>
+          <p>포트폴리오 열람 목적으로만 게시하며, 무단 복제·캡처·다운로드·배포 및 상업적 이용을 금지합니다.</p>
+        </div>
+      )}
 
       {/* 다음 분류 */}
       <Link
