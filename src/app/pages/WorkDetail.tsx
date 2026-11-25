@@ -4,6 +4,7 @@ import { Link, Navigate, useParams } from "react-router";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Download, MessageCircle } from "lucide-react";
 import { getCategory, getWork, getWorksByCategory } from "../data/projects";
 import { WorkThumb } from "../components/WorkThumb";
+import { CopyrightNotice } from "../components/CopyrightNotice";
 import { GoestBrandSheet } from "../components/GoestBrandSheet";
 
 // 3단계: 작업 상세 페이지 (/works/:cat/:item)
@@ -52,7 +53,7 @@ export const WorkDetail = () => {
       transition={{ duration: 0.6 }}
       onContextMenu={(e) => { if ((e.target as HTMLElement).closest(".img-protect")) e.preventDefault(); }}
       onDragStart={(e) => { if ((e.target as HTMLElement).closest(".img-protect")) e.preventDefault(); }}
-      className={`pt-28 pb-20 px-6 md:px-12 max-w-7xl mx-auto text-black ${work.category === "brand-identity" ? "img-protect" : ""}`}
+      className={`pt-28 pb-20 px-6 md:px-12 max-w-7xl mx-auto text-black img-protect`}
     >
       {/* 상단 제목 바 */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b-2 border-black pb-6 mb-10">
@@ -420,6 +421,8 @@ export const WorkDetail = () => {
           Start a Project →
         </Link>
       </div>
+
+      <CopyrightNotice className="mt-10" subject={work.category === "brand-identity" ? "로고·심볼·CI/BI 디자인" : "디자인·이미지"} />
     </motion.div>
   );
 };
