@@ -22,7 +22,7 @@ export const WorkThumb = ({ work, className = "" }: { work: Work; className?: st
       {c.logo ? (
         <img src={c.logo} alt={work.name} loading="lazy" className="max-w-[62%] max-h-[42%] object-contain" />
       ) : (
-        <div className="text-2xl md:text-4xl font-black tracking-tighter leading-tight">{c.text}</div>
+        <div className="text-2xl md:text-4xl font-black tracking-tighter leading-tight break-keep">{c.text}</div>
       )}
       {c.sub && <div className="mt-2 md:mt-3 text-[10px] md:text-xs font-bold opacity-70">{c.sub}</div>}
     </div>
