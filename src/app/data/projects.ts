@@ -122,21 +122,11 @@ export const categories: Category[] = [
     solution: "인포그래픽과 다이어그램 중심의 레이아웃을 구성하고, 핵심 메시지가 강조되는 타이포그래피 위계(Hierarchy)를 적용해 설득력을 극대화했습니다.",
   },
   {
-    slug: "design-leadership",
-    title: "Design Leadership",
-    category: "PMPL 리딩",
-    image: "https://images.unsplash.com/photo-1765405016361-5881d4f8982b",
-    subtitle: "Section 06 / PMPL Leading & Management",
-    description: "프로젝트 전반의 디자인 방향성을 리딩하고, 크로스펑셔널 팀과의 유기적인 협업을 이끌어낸 디자인 리더십 케이스입니다.",
-    challenge: "다양한 직군의 팀원들과 일관된 목표를 공유하고, 타이트한 일정 속에서도 최상의 크리에이티브 퀄리티를 타협 없이 유지하는 것이 도전이었습니다.",
-    solution: "체계적인 디자인 스프린트 프로세스를 도입하고 원활한 커뮤니케이션 허브 역할을 수행하여 프로젝트를 성공적으로 완수했습니다.",
-  },
-  {
     slug: "ai-dx",
     title: "AI & Digital Transformation",
     category: "AI UX 전략 및 DX",
     image: "https://images.unsplash.com/photo-1622631407413-bfb7d4aec3b0",
-    subtitle: "Section 07 / AI UX Strategy & DX",
+    subtitle: "Section 06 / AI UX Strategy & DX",
     description: "최신 생성형 인공지능 기술과 디자인 프로세스를 융합하여, 복잡한 데이터와 워크플로우를 직관적이고 아름다운 사용자 경험으로 재정의한 프로젝트입니다.",
     challenge: "기존의 경직된 업무 환경에서 인공지능 솔루션을 도입할 때 사용자가 느끼는 진입 장벽을 낮추고, 시각적인 거부감 없이 자연스럽게 업무에 스며들도록 하는 것이 가장 큰 과제였습니다.",
     solution: "미니멀리즘 인터페이스와 고도화된 타이포그래피 시스템을 적용하여 복잡한 알고리즘 결과를 한눈에 파악할 수 있도록 설계하고, 핵심 포인트 컬러로 시인성을 극대화했습니다.",
@@ -605,11 +595,10 @@ export const works: Work[] = [
     name: "NH 오늘농사 · 네이티브 앱 4차 고도화",
     desc: "농협 영농 지원 앱 '오늘농사' 네이티브 앱 4차 고도화 · 앱 UI 디자인",
     thumb: "/works/app/nh-onong-thumb.jpg",
-    thumbCard: { bg: "#426DD7", color: "#FFFFFF", text: "오늘농사", sub: "NH 네이티브 앱 4차 고도화" },
     info: {
       client: "NH농협 · 오늘농사 (NH오늘의농업)",
       year: "2025",
-      role: "앱 UI 디자인",
+      role: "100% 디자인 · 아이콘 일러스트",
       target: "농업인 · 귀농·귀촌 희망자",
       expression: "모바일 UI · 카드형 바로가기 · 일러스트 아이콘",
       concept: "블루와 그린을 중심으로 시세·영농일지·혜택 등 농업인의 일상 서비스를 카드형 바로가기로 정돈한 영농 지원 앱",
@@ -675,7 +664,7 @@ export const works: Work[] = [
     thumbCard: { bg: "#B0F24C", color: "#00302E", text: "나무증권", sub: "NH투자증권 MTS" },
     info: {
       client: "NH투자증권",
-      role: "앱 UI 디자인",
+      role: "나무앱 UXUI · 운영 리더",
       target: "나무증권 개인 투자자 · 절세·연금 관심 고객",
       expression: "카드형 대시보드 · 진행 바 · 탭 UI",
       concept: "라임 그린 포인트와 컬러 카드로 양도소득세·금융소득세·연금 자산을 한눈에 정리하고, 절세 상품과 상담으로 자연스럽게 이어지는 자산관리 화면",
@@ -937,7 +926,7 @@ export const works: Work[] = [
   },
   {
     slug: "shinhan-invest",
-    category: "design-leadership",
+    category: "web-platform",
     name: "신한금융투자 · 웹/앱 사이트 운영 PL",
     desc: "2016 신한금융투자 웹·앱 사이트 운영 PL · 프로모션 · 이벤트 · 마이크로사이트 · 사이트 개선",
     thumb: "/works/web/shinhan-mockup.png",
@@ -968,17 +957,18 @@ export const works: Work[] = [
     extras: [
       {
         title: "APP",
-        desc: "S check 앱 스플래시 · 아이콘, 신한 i smart 로그인 화면",
+        desc: "S check 앱 스플래시 · 아이콘",
+        withFeatures: true,
         images: [
           { src: "/works/web/shinhan-scheck.png", alt: "S check 앱 스플래시와 아이콘", caption: "S check" },
-          { src: "/works/web/shinhan-ismart.png", alt: "신한 i smart 로그인 화면", caption: "신한 i smart" },
         ],
       },
       {
         title: "MICROSITE",
-        desc: "빅데이터로 주가의 흐름을 예측하는 S캐치 서비스 사이트",
+        desc: "빅데이터로 주가의 흐름을 예측하는 S캐치 서비스 사이트와 신한 i smart 로그인 화면",
         images: [
           { src: "/works/web/shinhan-scatch.png", alt: "S캐치 빅데이터 추천 마이크로사이트", caption: "S캐치 · 빅데이터 추천" },
+          { src: "/works/web/shinhan-ismart.png", alt: "신한 i smart 로그인 화면", caption: "신한 i smart" },
         ],
       },
     ],

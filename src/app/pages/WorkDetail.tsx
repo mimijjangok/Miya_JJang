@@ -137,7 +137,7 @@ export const WorkDetail = () => {
             <div className={`grid grid-cols-2 gap-4 bg-zinc-100 p-4 md:p-6 ${work.images.length === 5 ? "md:grid-cols-5" : work.images.length === 3 ? "md:grid-cols-3 md:px-16 lg:px-24" : work.images.length === 2 ? "md:px-24 lg:px-32" : "md:grid-cols-4"}`}>
               {work.images.map((img, iIdx) => (
                 <figure key={iIdx} className="flex flex-col">
-                  <div className="rounded-[18px] overflow-hidden bg-white">
+                  <div className="overflow-hidden bg-white">
                     <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
                   </div>
                   <figcaption className="mt-3 text-sm md:text-base font-medium text-gray-600 text-center">
@@ -194,7 +194,7 @@ export const WorkDetail = () => {
               {ex.desc && <p className="text-sm text-gray-500 mt-1 mb-6">{ex.desc}</p>}
               <div className={`grid gap-6 ${ex.cols === 4 ? "grid-cols-2 md:grid-cols-4" : ex.cols === 3 ? "grid-cols-2 md:grid-cols-3" : "grid-cols-1 sm:grid-cols-2"}`}>
                 {ex.images.map((img) => (
-                  <figure key={img.src} className="flex flex-col items-center">
+                  <figure key={img.src} className="flex flex-col items-center justify-center">
                     <img
                       src={img.src}
                       alt={img.alt}
