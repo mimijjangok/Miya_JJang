@@ -989,6 +989,14 @@ export const works: Work[] = [
         ],
       },
       {
+        title: "EVENT",
+        desc: "2016 새해 · 크리스마스 시즌 인사 모바일 이벤트 페이지",
+        images: [
+          { src: "/works/web/shinhan-newyear.jpg", alt: "신한금융투자 2016 새해 인사 페이지", caption: "Happy New Year 2016" },
+          { src: "/works/web/shinhan-christmas.jpg", alt: "신한금융투자 크리스마스 인사 페이지", caption: "Merry Christmas" },
+        ],
+      },
+      {
         title: "MICROSITE",
         desc: "빅데이터로 주가의 흐름을 예측하는 S캐치 서비스 사이트와 신한 i smart 로그인 화면",
         images: [
