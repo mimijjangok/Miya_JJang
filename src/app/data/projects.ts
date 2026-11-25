@@ -251,7 +251,7 @@ export const works: Work[] = [
   },
   {
     slug: "barocheck-brand",
-    copyright: "© 바로Check\n본 로고·CI·BI의 권리는 바로Check에 있으며, 디자이너의 작업 이력 소개 목적으로만 게시합니다. 무단 복제·배포 및 사용을 금지합니다.",
+    copyright: "© MI3___LEE\n바로Check 로고·심볼·앱 아이콘은 저작권을 보유한 MI3___LEE의 오리지널 디자인입니다. 무단 복제·배포 및 상업적 이용을 금지합니다.",
     category: "brand-identity",
     name: "바로Check · BAROCHECK",
     desc: "출퇴근 체크 앱 바로Check 로고 · 심볼 · 앱 아이콘 디자인",
