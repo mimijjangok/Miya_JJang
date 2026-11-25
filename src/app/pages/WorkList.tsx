@@ -83,7 +83,7 @@ export const WorkList = () => {
                 src={w.thumb}
                 alt={w.name}
                 loading="lazy"
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="text-[10px] font-mono text-[#05D920] mb-1">{String(i + 1).padStart(2, "0")}</div>
