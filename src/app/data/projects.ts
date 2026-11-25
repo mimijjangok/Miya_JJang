@@ -126,6 +126,7 @@ export const categories: Category[] = [
 export const works: Work[] = [
   {
     slug: "woosung",
+    copyright: "© (주)우성산업기술\n본 로고·CI·BI의 권리는 (주)우성산업기술에 있으며, 디자이너의 작업 이력 소개 목적으로만 게시합니다. 무단 복제·배포 및 사용을 금지합니다.",
     category: "brand-identity",
     name: "(주)우성산업기술 · WOOSUNG Industries",
     desc: "CI 로고 디자인과 회사 서식(폴더·명함) 어플리케이션",
@@ -151,6 +152,7 @@ export const works: Work[] = [
   },
   {
     slug: "goest-brand",
+    copyright: "© (주)지오이스트\n본 로고·CI·BI의 권리는 (주)지오이스트에 있으며, 디자이너의 작업 이력 소개 목적으로만 게시합니다. 무단 복제·배포 및 사용을 금지합니다.",
     category: "brand-identity",
     name: "지오이스트 · GOEST",
     desc: "로고 및 브랜딩 (심볼·국문·영문 로고, 앱 아이콘, PPT)",
@@ -200,6 +202,7 @@ export const works: Work[] = [
   },
   {
     slug: "atogrit",
+    copyright: "© 아토그릿(ATOGRIT)\n본 로고·CI·BI의 권리는 아토그릿(ATOGRIT)에 있으며, 디자이너의 작업 이력 소개 목적으로만 게시합니다. 무단 복제·배포 및 사용을 금지합니다.",
     category: "brand-identity",
     name: "아토그릿 · ATOGRIT",
     desc: "ATOGRIT 로고 디자인 · THE BACKBONE OF BUSINESS",
@@ -210,6 +213,7 @@ export const works: Work[] = [
   },
   {
     slug: "absr",
+    copyright: "© (주)지오이스트\n본 로고·CI·BI의 권리는 (주)지오이스트에 있으며, 디자이너의 작업 이력 소개 목적으로만 게시합니다. 무단 복제·배포 및 사용을 금지합니다.",
     category: "brand-identity",
     name: "지오이스트 ABSR · AI 솔루션 로고",
     desc: "AI 보안 솔루션 ABSR(Anti-Bot Security Resource) 제품 로고 · 가로형/세로형, 다크/라이트 버전",
@@ -247,6 +251,7 @@ export const works: Work[] = [
   },
   {
     slug: "barocheck-brand",
+    copyright: "© 바로Check\n본 로고·CI·BI의 권리는 바로Check에 있으며, 디자이너의 작업 이력 소개 목적으로만 게시합니다. 무단 복제·배포 및 사용을 금지합니다.",
     category: "brand-identity",
     name: "바로Check · BAROCHECK",
     desc: "출퇴근 체크 앱 바로Check 로고 · 심볼 · 앱 아이콘 디자인",
@@ -281,6 +286,7 @@ export const works: Work[] = [
   },
   {
     slug: "sechan",
+    copyright: "© (주)세찬아이앤씨\n본 로고·CI·BI의 권리는 (주)세찬아이앤씨에 있으며, 디자이너의 작업 이력 소개 목적으로만 게시합니다. 무단 복제·배포 및 사용을 금지합니다.",
     category: "brand-identity",
     name: "(주)세찬아이앤씨 · SECHAN I&C",
     desc: "공공기관 유지보수 및 웹/앱 사이트 제작·개발 기업 CI 로고 · 국문/영문, 가로형/세로형, 컬러 배경 버전",
@@ -738,6 +744,7 @@ export const works: Work[] = [
     name: "LG전자 · ThinQ Voice 신규 페이지",
     desc: "LG ThinQ Voice Command Book 모바일웹 신규 제작 및 LG전자 반응형 신규 페이지 디자인",
     thumb: "/works/web/lg-thumb.jpg",
+    icon: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/54/ac/f4/54acf431-c39c-d720-549f-d98306c2a9ae/Placeholder.mill/512x512bb.jpg",
     thumbCard: { bg: "#A50034", color: "#FFFFFF", text: "LG ThinQ", sub: "Voice Command Book" },
     info: {
       client: "LG전자",
