@@ -333,17 +333,17 @@ export const WorkDetail = () => {
             )}
             <Link
               to={`/works/${category.slug}`}
-              className="flex items-center justify-center gap-2 w-full border border-black py-4 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-colors"
+              className="flex items-center justify-center gap-2 w-full border border-black py-4 text-sm md:text-[15px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-colors"
             >
-              <ArrowLeft size={12} /> 목록으로
+              <ArrowLeft size={16} /> 목록으로
             </Link>
             <a
               href="/portfolio.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full py-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500 hover:text-black transition-colors"
+              className="flex items-center justify-center gap-2 w-full py-3 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 hover:text-black transition-colors"
             >
-              <Download size={12} /> Portfolio PDF
+              <Download size={14} /> Portfolio PDF
             </a>
           </div>
         </aside>
