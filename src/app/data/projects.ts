@@ -152,7 +152,7 @@ export const works: Work[] = [
   },
   {
     slug: "goest-brand",
-    copyright: "© (주)지오이스트\n본 로고·CI·BI의 권리는 (주)지오이스트에 있으며, 디자이너의 작업 이력 소개 목적으로만 게시합니다. 무단 복제·배포 및 사용을 금지합니다.",
+    copyright: "© MI3___LEE\n지오이스트 로고·심볼·앱 아이콘은 저작권을 보유한 MI3___LEE의 오리지널 디자인입니다. 무단 복제·배포 및 상업적 이용을 금지합니다.",
     category: "brand-identity",
     name: "지오이스트 · GOEST",
     desc: "로고 및 브랜딩 (심볼·국문·영문 로고, 앱 아이콘, PPT)",
@@ -213,7 +213,7 @@ export const works: Work[] = [
   },
   {
     slug: "absr",
-    copyright: "© (주)지오이스트\n본 로고·CI·BI의 권리는 (주)지오이스트에 있으며, 디자이너의 작업 이력 소개 목적으로만 게시합니다. 무단 복제·배포 및 사용을 금지합니다.",
+    copyright: "© MI3___LEE\nABSR 로고는 저작권을 보유한 MI3___LEE의 오리지널 디자인입니다. 무단 복제·배포 및 상업적 이용을 금지합니다.",
     category: "brand-identity",
     name: "지오이스트 ABSR · AI 솔루션 로고",
     desc: "AI 보안 솔루션 ABSR(Anti-Bot Security Resource) 제품 로고 · 가로형/세로형, 다크/라이트 버전",
