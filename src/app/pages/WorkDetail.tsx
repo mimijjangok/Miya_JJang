@@ -124,7 +124,7 @@ export const WorkDetail = () => {
             </div>
           )}
           {work.hero && (
-            <div className={`overflow-hidden mb-6 ${work.hero.small ? "flex justify-center py-6" : ""}`}>
+            <div className={`overflow-hidden mb-6 ${work.hero.small ? "flex justify-start py-4" : ""}`}>
               <img
                 src={work.hero.src}
                 alt={work.hero.alt}
