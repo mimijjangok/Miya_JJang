@@ -63,7 +63,7 @@ export interface Work {
   custom?: "goest-brand";
   // 이미지 아래 추가 섹션 (작은 원본은 원래 크기로 선명하게)
   // withFeatures: 이미지 옆 빈칸에 특징(features) 텍스트 표시
-  extras?: { title: string; desc?: string; withFeatures?: boolean; cols?: 3 | 4; square?: "cover" | "contain"; images: { src: string; alt: string; caption?: string }[] }[];
+  extras?: { title: string; desc?: string; withFeatures?: boolean; cols?: 3 | 4; square?: "cover" | "contain"; uniform?: boolean; images: { src: string; alt: string; caption?: string }[] }[];
   // 컬러 시스템 (이미지 아래에 색상 칩으로 표시)
   // 앱 아이콘 (제목 왼쪽에 작게 표시)
   icon?: string;
@@ -438,19 +438,20 @@ export const works: Work[] = [
       {
         title: "WEB",
         desc: "PC 웹 메인 · 로그인 화면",
-        cols: 3,
         images: [
           { src: "/works/web/hana-web-main.png", alt: "KEB하나은행 PC 메인 화면", caption: "PC 메인" },
           { src: "/works/web/hana-web-login.png", alt: "KEB하나은행 로그인 화면", caption: "로그인" },
-          { src: "/works/web/hana-m-main.png", alt: "KEB하나은행 모바일웹 메인 화면", caption: "모바일웹 메인" },
         ],
       },
       {
-        title: "APP",
-        desc: "시간대·요일에 따라 바뀌는 메인 인사 화면",
+        title: "APP · MOBILE WEB",
+        desc: "시간대·요일에 따라 바뀌는 메인 인사 화면과 모바일웹 메인",
+        cols: 3,
+        uniform: true,
         images: [
           { src: "/works/web/hana-app-morning.png", alt: "앱 메인 · 좋은 아침입니다", caption: "아침 인사" },
           { src: "/works/web/hana-app-weekend.png", alt: "앱 메인 · 기다렸던 주말", caption: "주말 인사" },
+          { src: "/works/web/hana-m-main.png", alt: "KEB하나은행 모바일웹 메인 화면", caption: "모바일웹 메인" },
         ],
       },
     ],

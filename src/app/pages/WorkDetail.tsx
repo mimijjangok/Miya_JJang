@@ -209,7 +209,7 @@ export const WorkDetail = () => {
                         src={img.src}
                         alt={img.alt}
                         loading="lazy"
-                        className="block w-auto max-w-full h-auto"
+                        className={ex.uniform ? "block w-full h-auto" : "block w-auto max-w-full h-auto"}
                       />
                     )}
                     {img.caption && (
