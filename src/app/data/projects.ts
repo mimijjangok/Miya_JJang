@@ -14,6 +14,17 @@ export interface ProjectCase {
   images: { src: string; alt: string }[];
 }
 
+export interface ProjectInfo {
+  client?: string;
+  year?: string;
+  role?: string;
+  target?: string;      // 타겟층
+  expression?: string;  // 표현방법
+  concept?: string;     // 디자인 컨셉
+  colors?: { name: string; hex: string }[]; // 주색상
+  tools?: string;
+}
+
 export interface ProjectDetail {
   subtitle: string;
   description: string;
@@ -24,6 +35,10 @@ export interface ProjectDetail {
   link?: { label: string; url: string };
   // 실제 작업 사례 (이미지는 public/works 폴더)
   cases?: ProjectCase[];
+  // GDWEB 스타일 오른쪽 정보 패널
+  info?: ProjectInfo;
+  // 목록 카드에 쓸 실제 작업 썸네일 (없으면 기본 이미지)
+  thumb?: string;
 }
 
 export interface Project {
@@ -47,6 +62,19 @@ export const projects: Project[] = [
 export const projectDetails: Record<string, ProjectDetail> = {
   "Brand Identity System": {
     subtitle: "Section 01 / Brand Architecture & CIBI",
+    thumb: "/works/brand/woosung-folder.jpg",
+    info: {
+      client: "(주)우성산업기술",
+      role: "CI 디자인 · 어플리케이션 디자인",
+      target: "B2B 거래처 · 협력사",
+      expression: "로고타입 · 서식 어플리케이션",
+      concept: "겹쳐진 W 이니셜과 오렌지·네이비 대비로 신뢰감 있는 산업기술 기업 이미지",
+      colors: [
+        { name: "ORANGE", hex: "#F7941D" },
+        { name: "NAVY", hex: "#2E3192" },
+      ],
+      tools: "Illustrator · Photoshop",
+    },
     cases: [
       {
         name: "(주)우성산업기술 · WOOSUNG Industries",
@@ -70,6 +98,20 @@ export const projectDetails: Record<string, ProjectDetail> = {
   "Web Platform Design": {
     subtitle: "Section 02 / Web Homepage Renewal",
     link: { label: "www.goest.co.kr", url: "https://www.goest.co.kr" },
+    thumb: "/works/web/goest-hero.jpg",
+    info: {
+      client: "지오이스트 (GOEST)",
+      role: "웹 디자인 · UI 디자인",
+      target: "기업 IT 담당자 · B2B 고객",
+      expression: "타이포그래피 · 그래픽",
+      concept: "큰 영문 타이포와 선명한 블루로 AI·SI 기술 기업의 혁신과 신뢰를 표현",
+      colors: [
+        { name: "BLUE", hex: "#3B4AF0" },
+        { name: "WHITE", hex: "#FFFFFF" },
+        { name: "NAVY", hex: "#0B0F3B" },
+      ],
+      tools: "Figma · Photoshop",
+    },
     cases: [
       {
         name: "지오이스트 · GOEST",
