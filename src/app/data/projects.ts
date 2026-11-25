@@ -83,30 +83,20 @@ export const categories: Category[] = [
   },
   {
     slug: "web-platform",
-    title: "Web Platform Design",
-    category: "웹 홈페이지",
+    title: "Web & App UIUX",
+    category: "웹 · 앱 UIUX",
     image: "https://images.unsplash.com/photo-1761792654327-b32d0be2a96b",
-    subtitle: "Section 02 / Web Homepage Renewal",
-    description: "사용자 중심의 정보 구조(IA) 설계와 미니멀한 UI를 결합하여, 브랜드 경험을 극대화한 반응형 웹 플랫폼 디자인입니다.",
-    challenge: "복잡하게 얽혀 있던 방대한 콘텐츠를 사용자가 직관적으로 탐색할 수 있도록 단순화하고, 로딩 속도와 시각적 몰입감을 동시에 잡아야 했습니다.",
-    solution: "여백의 미를 살린 레이아웃과 부드러운 마이크로 인터랙션을 도입하여 정보 전달력을 높이고 사용자의 체류 시간을 극대화했습니다.",
-  },
-  {
-    slug: "mobile-ux",
-    title: "Mobile User Experience",
-    category: "앱 디자인 UIUX",
-    image: "https://images.unsplash.com/photo-1622212993957-6d4631a0ba8b",
-    subtitle: "Section 03 / App UI/UX Design",
-    description: "모바일 환경에 최적화된 제스처와 직관적인 네비게이션으로 사용자의 일상에 자연스럽게 스며드는 모바일 앱 경험을 설계했습니다.",
-    challenge: "다양한 모바일 화면 비율에서도 일관된 조작감을 제공하고, 복잡한 기능들을 가벼운 터치 한 번에 접근할 수 있도록 하는 UX 설계가 필요했습니다.",
-    solution: "엄지손가락의 움직임 반경을 고려한 히트맵 기반 UI 배치를 적용하고, 직관적인 피드백 애니메이션으로 사용성(Usability)을 대폭 개선했습니다.",
+    subtitle: "Section 02 / Web & App UI/UX Design",
+    description: "사용자 중심의 정보 구조(IA) 설계와 미니멀한 UI를 결합한 반응형 웹 플랫폼과, 모바일 환경에 최적화된 앱 경험을 함께 설계했습니다.",
+    challenge: "복잡한 콘텐츠와 기능을 웹과 모바일 어디서든 직관적으로 탐색할 수 있도록 단순화하고, 다양한 화면 비율에서도 일관된 경험을 제공해야 했습니다.",
+    solution: "여백을 살린 레이아웃과 부드러운 마이크로 인터랙션, 엄지 동선을 고려한 모바일 UI 배치로 정보 전달력과 사용성을 함께 높였습니다.",
   },
   {
     slug: "character",
     title: "Character Design",
     category: "캐릭터",
     image: "/works/character/goods-collection.jpg",
-    subtitle: "Section 04 / Original Character & Goods",
+    subtitle: "Section 03 / Original Character & Goods",
     description: "MODUVA 크리에이티브 스튜디오의 오리지널 캐릭터 아기별·모루·모디와 디자이너 캐릭터 MIYA를 기획하고, 굿즈와 홈페이지까지 이어지게 디자인했습니다.",
     challenge: "캐릭터마다 성격과 컬러를 분명히 나누면서도, 한 스튜디오의 캐릭터 가족으로 보이도록 통일된 분위기를 만드는 것이 과제였습니다.",
     solution: "둥근 실루엣과 3D 질감, 헤드폰·M 후드티 같은 공통 요소로 세계관을 묶고, 노랑·파랑·오렌지 대표색으로 캐릭터를 구분해 굿즈와 웹 배너에 바로 쓸 수 있게 정리했습니다.",
@@ -116,7 +106,7 @@ export const categories: Category[] = [
     title: "Strategic Documentation",
     category: "제안문서",
     image: "https://images.unsplash.com/photo-1693045181676-57199422ee66",
-    subtitle: "Section 05 / Proposal & Strategy",
+    subtitle: "Section 04 / Proposal & Strategy",
     description: "비즈니스의 핵심 가치와 실행 전략을 설득력 있는 스토리텔링과 구조화된 시각 자료로 풀어낸 제안서 디자인입니다.",
     challenge: "방대한 비즈니스 로직과 기술적 내용을 클라이언트가 한눈에 이해하고 공감할 수 있도록 시각적으로 명쾌하게 압축하는 것이 과제였습니다.",
     solution: "인포그래픽과 다이어그램 중심의 레이아웃을 구성하고, 핵심 메시지가 강조되는 타이포그래피 위계(Hierarchy)를 적용해 설득력을 극대화했습니다.",
@@ -126,7 +116,7 @@ export const categories: Category[] = [
     title: "AI & Digital Transformation",
     category: "AI UX 전략 및 DX",
     image: "https://images.unsplash.com/photo-1622631407413-bfb7d4aec3b0",
-    subtitle: "Section 06 / AI UX Strategy & DX",
+    subtitle: "Section 05 / AI UX Strategy & DX",
     description: "최신 생성형 인공지능 기술과 디자인 프로세스를 융합하여, 복잡한 데이터와 워크플로우를 직관적이고 아름다운 사용자 경험으로 재정의한 프로젝트입니다.",
     challenge: "기존의 경직된 업무 환경에서 인공지능 솔루션을 도입할 때 사용자가 느끼는 진입 장벽을 낮추고, 시각적인 거부감 없이 자연스럽게 업무에 스며들도록 하는 것이 가장 큰 과제였습니다.",
     solution: "미니멀리즘 인터페이스와 고도화된 타이포그래피 시스템을 적용하여 복잡한 알고리즘 결과를 한눈에 파악할 수 있도록 설계하고, 핵심 포인트 컬러로 시인성을 극대화했습니다.",
@@ -707,7 +697,7 @@ export const works: Work[] = [
   },
   {
     slug: "barocheck",
-    category: "mobile-ux",
+    category: "web-platform",
     name: "바로Check · 출퇴근 체크 앱",
     desc: "BAROCHECK가맹점 출퇴근시스템",
     thumb: "/works/app/barocheck-logo.jpg",
@@ -741,7 +731,7 @@ export const works: Work[] = [
   },
   {
     slug: "nh-onong",
-    category: "mobile-ux",
+    category: "web-platform",
     name: "NH 오늘농사 · 네이티브 앱 4차 고도화",
     desc: "농협 영농 지원 앱 '오늘농사' 네이티브 앱 4차 고도화 · 앱 UI 디자인",
     thumb: "/works/app/nh-onong-thumb.jpg",
@@ -773,7 +763,7 @@ export const works: Work[] = [
   },
   {
     slug: "nh-onong-proposal",
-    category: "mobile-ux",
+    category: "web-platform",
     name: "NH 오늘농사 · UXUI 제안서",
     desc: "오늘농사 앱 4차 고도화를 위한 UXUI 제안 · 벤치마킹, 홈·전체메뉴 구성안",
     thumb: "/works/app/nh-onong-proposal-thumb.jpg",
@@ -808,7 +798,7 @@ export const works: Work[] = [
   },
   {
     slug: "namu",
-    category: "mobile-ux",
+    category: "web-platform",
     name: "NH투자증권 · 나무증권",
     desc: "나무증권 MTS 앱 MY세금 · MY연금 화면 UI 디자인",
     thumb: "/works/app/namu-icon.png",
@@ -835,7 +825,7 @@ export const works: Work[] = [
   },
   {
     slug: "posco-dx",
-    category: "mobile-ux",
+    category: "web-platform",
     name: "POSCO DX",
     desc: "포스코DX 앱 UI/UX 디자인",
     thumb: "",
@@ -845,7 +835,7 @@ export const works: Work[] = [
   },
   {
     slug: "woori-won",
-    category: "mobile-ux",
+    category: "web-platform",
     name: "우리은행 · 우리WON뱅킹",
     desc: "우리WON뱅킹 앱 시작 온보딩과 적금 상품 가입·예상금리 화면 UI 디자인",
     thumb: "/works/app/woori-thumb.jpg",
@@ -1080,11 +1070,13 @@ export const works: Work[] = [
   },
 ];
 
-export const getCategory = (slug?: string) => categories.find((c) => c.slug === slug);
+export const getCategory = (slug?: string) =>
+  categories.find((c) => c.slug === (slug === "mobile-ux" ? "web-platform" : slug));
 export const getCategoryByTitle = (title: string) => categories.find((c) => c.title === title);
 export const getWorksByCategory = (slug: string) => works.filter((w) => w.category === slug);
+// 앱 디자인(mobile-ux)은 웹·앱 UIUX(web-platform)로 합쳐짐 — 예전 주소도 열리게
 export const getWork = (cat?: string, slug?: string) =>
-  works.find((w) => w.category === cat && w.slug === slug);
+  works.find((w) => w.category === (cat === "mobile-ux" ? "web-platform" : cat) && w.slug === slug);
 
 // ─────────────────────────────────────────────
 // 무료 템플릿 (제안문서 목록 위 FREE TEMPLATES 코너)

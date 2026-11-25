@@ -17,6 +17,7 @@ export const WorkList = () => {
     window.scrollTo(0, 0);
   }, [cat]);
 
+  if (cat === "mobile-ux") return <Navigate to="/works/web-platform" replace />;
   if (!category) return <Navigate to="/works" replace />;
 
   const list = getWorksByCategory(category.slug);

@@ -85,15 +85,26 @@ export const Home = () => {
             아이디어에서 브랜드까지, 생각을 새로운 가치로 완성합니다.
           </p>
           
-          <Link to="/experience-value">
-            <motion.button 
-              whileHover={{ scale: 1.05, backgroundColor: '#000000', color: '#ffffff' }}
-              whileTap={{ scale: 0.95 }}
-              className="px-12 py-5 bg-transparent border-2 border-black text-black font-bold rounded-none flex items-center gap-4 group transition-all shrink-0"
-            >
-              EXPERIENCE VALUE <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-            </motion.button>
-          </Link>
+          <div className="flex flex-col gap-4 shrink-0">
+            <Link to="/motion-prompt">
+              <motion.button 
+                whileHover={{ scale: 1.05, backgroundColor: '#000000', color: '#ffffff' }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full px-12 py-5 bg-transparent border-2 border-black text-black font-bold rounded-none flex items-center justify-center gap-4 group transition-all shrink-0"
+              >
+                MOTION PROMPT <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+              </motion.button>
+            </Link>
+            <Link to="/experience-value">
+              <motion.button 
+                whileHover={{ scale: 1.05, backgroundColor: '#000000', color: '#ffffff' }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full px-12 py-5 bg-transparent border-2 border-black text-black font-bold rounded-none flex items-center justify-center gap-4 group transition-all shrink-0"
+              >
+                EXPERIENCE VALUE <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+              </motion.button>
+            </Link>
+          </div>
         </motion.div>
       </motion.section>
 

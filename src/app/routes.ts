@@ -8,6 +8,7 @@ import { WorkDetail } from "./pages/WorkDetail";
 import { DesignValue } from "./pages/DesignValue";
 import { ExperienceValue } from "./pages/ExperienceValue";
 import { Contact } from "./pages/Contact";
+import { MotionPrompt } from "./pages/MotionPrompt";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ export const router = createBrowserRouter([
       { path: "design-value", Component: DesignValue },
       { path: "experience-value", Component: ExperienceValue },
       { path: "contact", Component: Contact },
+      { path: "motion-prompt", Component: MotionPrompt },
     ],
   },
 ]);
