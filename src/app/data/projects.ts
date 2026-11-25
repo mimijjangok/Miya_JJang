@@ -60,7 +60,7 @@ export interface Work {
   custom?: "goest-brand";
   // 이미지 아래 추가 섹션 (작은 원본은 원래 크기로 선명하게)
   // withFeatures: 이미지 옆 빈칸에 특징(features) 텍스트 표시
-  extras?: { title: string; desc?: string; withFeatures?: boolean; images: { src: string; alt: string; caption?: string }[] }[];
+  extras?: { title: string; desc?: string; withFeatures?: boolean; cols?: 3; images: { src: string; alt: string; caption?: string }[] }[];
   // 컬러 시스템 (이미지 아래에 색상 칩으로 표시)
   // 앱 아이콘 (제목 왼쪽에 작게 표시)
   icon?: string;
@@ -459,6 +459,25 @@ export const works: Work[] = [
       { src: "/works/web/moduva-about.jpg", alt: "MODUVA 소개 화면" },
       { src: "/works/web/moduva-webapp.jpg", alt: "MODUVA 홈페이지·앱 서비스 화면" },
     ],
+    extras: [
+      {
+        title: "DEVICE MOCKUP",
+        desc: "PC · 태블릿 · 모바일 반응형 화면",
+        cols: 3,
+        images: [
+          { src: "/works/web/moduva-device-desktop.png", alt: "MODUVA 홈페이지 PC 화면", caption: "PC" },
+          { src: "/works/web/moduva-device-tablet.png", alt: "MODUVA 홈페이지 태블릿 화면", caption: "Tablet" },
+          { src: "/works/web/moduva-device-mobile.png", alt: "MODUVA 홈페이지 모바일 화면", caption: "Mobile" },
+        ],
+      },
+      {
+        title: "BRAND GOODS",
+        desc: "MODUVA 로고를 적용한 브랜드 문구 세트",
+        images: [
+          { src: "/works/web/moduva-brand-goods.png", alt: "MODUVA 노트·명함 박스·펜 브랜드 굿즈", caption: "노트 · 명함 · 펜" },
+        ],
+      },
+    ],
   },
   {
     slug: "barocheck",
@@ -559,6 +578,33 @@ export const works: Work[] = [
       { src: "/works/app/nh-onong-p5.jpg", alt: "홈 구성 제안 · 배너상단 중심" },
       { src: "/works/app/nh-onong-p6.jpg", alt: "홈 구성 제안 · 바로가기 중심(큰글씨)" },
       { src: "/works/app/nh-onong-p7.jpg", alt: "전체메뉴 구성 제안" },
+    ],
+  },
+  {
+    slug: "namu",
+    category: "mobile-ux",
+    name: "NH투자증권 · 나무증권",
+    desc: "나무증권 MTS 앱 MY세금 · MY연금 화면 UI 디자인",
+    thumb: "/works/app/namu-icon.png",
+    thumbCard: { bg: "#B0F24C", color: "#00302E", text: "나무증권", sub: "NH투자증권 MTS" },
+    info: {
+      client: "NH투자증권",
+      role: "앱 UI 디자인",
+      target: "나무증권 개인 투자자 · 절세·연금 관심 고객",
+      expression: "카드형 대시보드 · 진행 바 · 탭 UI",
+      concept: "라임 그린 포인트와 컬러 카드로 양도소득세·금융소득세·연금 자산을 한눈에 정리하고, 절세 상품과 상담으로 자연스럽게 이어지는 자산관리 화면",
+      colors: [
+        { name: "LIME", hex: "#8CC63F" },
+        { name: "TEAL", hex: "#5BC2C2" },
+        { name: "DARK GREEN", hex: "#00302E" },
+      ],
+    },
+    overview: "NH투자증권 나무증권 앱의 MY세금·MY연금 화면을 디자인했습니다. 소득별 세금 현황과 절세 상품, 연금 자산과 수익률을 카드와 그래프로 정리했습니다.",
+    icon: "/works/app/namu-icon.png",
+    layout: "phones",
+    images: [
+      { src: "/works/app/namu-tax.jpg", alt: "나무증권 MY세금 화면" },
+      { src: "/works/app/namu-pension.jpg", alt: "나무증권 MY연금 화면" },
     ],
   },
   {
@@ -738,6 +784,18 @@ export const works: Work[] = [
         title: "GOODS",
         desc: "모디를 활용한 굿즈 디자인",
         images: [
+          { src: "/works/character/modi-goods-set.png", alt: "모디 에코백·키링·파우치 세트", caption: "에코백 · 키링 · 파우치 세트" },
+        ],
+      },
+      {
+        title: "GOODS COLLECTION",
+        cols: 3,
+        images: [
+          { src: "/works/character/modi-wink-ecobag.png", alt: "모디 윙크 에코백", caption: "윙크 에코백" },
+          { src: "/works/character/modi-wink-mug.png", alt: "모디 윙크 머그컵", caption: "윙크 머그컵" },
+          { src: "/works/character/modi-m-note.png", alt: "모디 M 하드커버 노트", caption: "M 하드커버 노트" },
+          { src: "/works/character/modi-ecobag.png", alt: "모디 에코백", caption: "에코백" },
+          { src: "/works/character/modi-springnote.png", alt: "모디 스프링 노트", caption: "스프링 노트" },
           { src: "/works/character/modi-mug.png", alt: "모디 머그컵", caption: "머그컵" },
         ],
       },

@@ -133,7 +133,7 @@ export const WorkDetail = () => {
             </div>
           )}
           {work.layout === "phones" ? (
-            <div className={`grid grid-cols-2 gap-4 bg-zinc-100 p-4 md:p-6 ${work.images.length === 5 ? "md:grid-cols-5" : work.images.length === 3 ? "md:grid-cols-3 md:px-16 lg:px-24" : "md:grid-cols-4"}`}>
+            <div className={`grid grid-cols-2 gap-4 bg-zinc-100 p-4 md:p-6 ${work.images.length === 5 ? "md:grid-cols-5" : work.images.length === 3 ? "md:grid-cols-3 md:px-16 lg:px-24" : work.images.length === 2 ? "md:px-24 lg:px-32" : "md:grid-cols-4"}`}>
               {work.images.map((img, iIdx) => (
                 <figure key={iIdx} className="flex flex-col">
                   <div className="rounded-[18px] overflow-hidden bg-white">
@@ -191,7 +191,7 @@ export const WorkDetail = () => {
             <div key={ex.title} className="mt-10 border border-zinc-200 p-6 md:p-10">
               <h3 className="text-xl md:text-2xl font-bold tracking-tight">{ex.title}</h3>
               {ex.desc && <p className="text-sm text-gray-500 mt-1 mb-6">{ex.desc}</p>}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className={`grid gap-6 ${ex.cols === 3 ? "grid-cols-2 md:grid-cols-3" : "grid-cols-1 sm:grid-cols-2"}`}>
                 {ex.images.map((img) => (
                   <figure key={img.src} className="flex flex-col items-center">
                     <img
