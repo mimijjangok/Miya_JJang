@@ -79,16 +79,31 @@ export const ProjectDetail = () => {
         <div className="min-w-0 space-y-6">
           {hasCases ? (
             detail.cases!.map((c, cIdx) => (
-              <div key={cIdx} className="space-y-6">
+              <div key={cIdx} className="space-y-6 pb-10 border-b border-zinc-200 last:border-0 last:pb-0">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-1">
                   <h2 className="text-xl md:text-2xl font-black tracking-tighter">{c.name}</h2>
                   {c.desc && <p className="text-sm text-gray-500">{c.desc}</p>}
                 </div>
-                {c.images.map((img, iIdx) => (
-                  <div key={iIdx} className="bg-zinc-50 border border-zinc-200 overflow-hidden">
-                    <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
+                {c.layout === "pc-mobile" ? (
+                  <div className="grid grid-cols-1 md:grid-cols-[minmax(0,3fr)_minmax(0,1fr)] gap-4 items-start">
+                    {c.images.map((img, iIdx) => (
+                      <div key={iIdx}>
+                        <div className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-2">
+                          {iIdx === 0 ? "PC" : "Mobile"}
+                        </div>
+                        <div className="bg-zinc-50 border border-zinc-200 overflow-hidden">
+                          <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                ) : (
+                  c.images.map((img, iIdx) => (
+                    <div key={iIdx} className="bg-zinc-50 border border-zinc-200 overflow-hidden">
+                      <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-auto block" />
+                    </div>
+                  ))
+                )}
               </div>
             ))
           ) : (

@@ -11,6 +11,8 @@ export interface ProjectCase {
   desc?: string;
   // true면 이미지를 한 줄에 하나씩 크게 보여 줌 (웹 화면 캡처 등)
   wide?: boolean;
+  // "pc-mobile"이면 PC 화면(넓게)과 모바일 화면(좁게)을 나란히
+  layout?: "pc-mobile";
   images: { src: string; alt: string }[];
 }
 
@@ -100,7 +102,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     link: { label: "www.goest.co.kr", url: "https://www.goest.co.kr" },
     thumb: "/works/web/goest-hero.jpg",
     info: {
-      client: "지오이스트 (GOEST)",
+      client: "지오이스트 (GOEST) · 국가교육위원회",
       role: "웹 디자인 · UI 디자인",
       target: "기업 IT 담당자 · B2B 고객",
       expression: "타이포그래피 · 그래픽",
@@ -120,6 +122,15 @@ export const projectDetails: Record<string, ProjectDetail> = {
         images: [
           { src: "/works/web/goest-hero.jpg", alt: "지오이스트 홈페이지 메인 화면" },
           { src: "/works/web/goest-solution.jpg", alt: "지오이스트 홈페이지 솔루션 섹션" },
+        ],
+      },
+      {
+        name: "국가교육위원회 · 국민의견플랫폼",
+        desc: "국민 참여형 공공 플랫폼 PC·모바일 반응형 디자인",
+        layout: "pc-mobile",
+        images: [
+          { src: "/works/web/nec-pc.jpg", alt: "국민의견플랫폼 PC 메인 화면" },
+          { src: "/works/web/nec-mobile.jpg", alt: "국민의견플랫폼 모바일 메인 화면" },
         ],
       },
     ],
