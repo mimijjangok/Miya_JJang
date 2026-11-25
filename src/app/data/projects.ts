@@ -148,7 +148,7 @@ export const works: Work[] = [
     category: "brand-identity",
     name: "지오이스트 · GOEST",
     desc: "로고 및 브랜딩 (심볼·국문·영문 로고, 앱 아이콘, PPT)",
-    thumb: "/works/brand/goest-logo.png",
+    thumb: "/works/brand/goest-thumb.jpg",
     link: { label: "www.goest.co.kr", url: "https://www.goest.co.kr" },
     info: {
       client: "지오이스트 (GOEST)",
