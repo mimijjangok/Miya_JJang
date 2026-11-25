@@ -218,6 +218,43 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "sechan",
+    category: "brand-identity",
+    name: "(주)세찬아이앤씨 · SECHAN I&C",
+    desc: "공공기관 유지보수 및 웹/앱 사이트 제작·개발 기업 CI 로고 · 국문/영문, 가로형/세로형, 컬러 배경 버전",
+    thumb: "/works/brand/sechan-thumb.jpg",
+    info: {
+      client: "(주)세찬아이앤씨 (Sechan I&C Corp.)",
+      role: "CI 로고 디자인",
+      target: "공공기관 · B2G/B2B 고객",
+      expression: "심볼마크 · 로고타입 · 컬러 시스템",
+      concept: "육각형 안에서 맞물리는 S 이니셜과 바이올렛·시안·오렌지 띠로 공공 시스템을 안정적으로 잇고 만드는 IT 기업을 표현",
+      colors: [
+        { name: "VIOLET", hex: "#2B02BC" },
+        { name: "BLUE", hex: "#2424C7" },
+        { name: "CYAN", hex: "#00D0FF" },
+        { name: "ORANGE", hex: "#FF4800" },
+      ],
+      tools: "Illustrator",
+    },
+    overview: "공공기관 유지보수와 웹/앱 사이트 제작·개발을 하는 (주)세찬아이앤씨의 CI 로고입니다. 국문·영문 로고타입, 가로형·세로형 조합, 화이트·컬러 배경 버전까지 정리했습니다.",
+    images: [
+      { src: "/works/brand/sechan-logo.png", alt: "(주)세찬아이앤씨 국문·영문 로고" },
+      { src: "/works/brand/sechan-versions.png", alt: "SECHAN 로고 · 화이트/컬러 배경, 세로형 버전" },
+    ],
+    palette: [
+      {
+        group: "Brand Colors",
+        colors: [
+          { name: "VIOLET", hex: "#2B02BC" },
+          { name: "BLUE", hex: "#2424C7" },
+          { name: "CYAN", hex: "#00D0FF" },
+          { name: "ORANGE", hex: "#FF4800" },
+        ],
+      },
+    ],
+  },
+  {
     slug: "goest",
     category: "web-platform",
     name: "지오이스트 · GOEST",
