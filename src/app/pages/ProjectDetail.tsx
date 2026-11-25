@@ -57,7 +57,7 @@ export const ProjectDetail = () => {
             href={detail.link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 mt-8 bg-black text-white px-6 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-[#05D920] hover:text-black transition-colors"
+            className="group inline-flex items-center gap-3 mt-8 bg-black text-white px-6 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-[#05D920] hover:text-black transition-colors"
           >
             Visit Website
             <span className="font-mono normal-case tracking-normal text-[#05D920] group-hover:text-black">{detail.link.label}</span>
