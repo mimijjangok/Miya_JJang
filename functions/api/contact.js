@@ -47,7 +47,7 @@ async function sendEmail(d, env) {
     headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       from: MAIL_FROM || 'MI3 Portfolio <onboarding@resend.dev>',
-      to: [NOTIFY_EMAIL],
+      to: NOTIFY_EMAIL.split(',').map((x) => x.trim()).filter(Boolean), // 쉼표로 여러 주소 가능
       reply_to: d.email,
       subject: `[포트폴리오 의뢰] ${d.name} · ${d.types.join(', ')}${d.ref ? ' · ' + d.ref : ''}`,
       text: buildText(d),
