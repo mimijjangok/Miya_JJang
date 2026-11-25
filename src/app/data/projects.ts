@@ -291,7 +291,7 @@ export const works: Work[] = [
     name: "지오이스트 · GOEST",
     desc: "AI 솔루션·SI 기업 홈페이지 디자인",
     thumb: "/works/web/goest-hero.jpg",
-    thumbCard: { bg: "#FFFFFF", logo: "/works/brand/goest-logo.png" },
+    thumbCard: { bg: "#3B4AF0", color: "#FFFFFF", text: "GOEST", sub: "지오이스트 홈페이지" },
     link: { label: "www.goest.co.kr", url: "https://www.goest.co.kr" },
     info: {
       client: "지오이스트 (GOEST)",
@@ -449,6 +449,7 @@ export const works: Work[] = [
     name: "바로Check · 출퇴근 체크 앱",
     desc: "BAROCHECK가맹점 출퇴근시스템",
     thumb: "/works/app/barocheck-logo.jpg",
+    thumbCard: { bg: "#111111", logo: "/works/app/barocheck-logo.jpg" },
     info: {
       client: "세찬아이앤씨 (Sechan I&C)",
       year: "2025",
