@@ -100,12 +100,12 @@ export const MotionPrompt = () => {
           <Link
             key={c.slug}
             to={`/works/${c.slug}`}
-            className="px-4 py-2 text-[11px] font-bold border transition-colors border-zinc-300 text-gray-600 hover:border-black hover:text-black"
+            className="px-5 py-2.5 text-[13px] md:text-sm font-bold border transition-colors border-zinc-300 text-gray-600 hover:border-black hover:text-black"
           >
             {c.category}
           </Link>
         ))}
-        <span className="px-4 py-2 text-[11px] font-bold border bg-black text-white border-black">모션 프롬프트</span>
+        <span className="px-5 py-2.5 text-[13px] md:text-sm font-bold border bg-black text-white border-black">모션 프롬프트</span>
       </div>
 
       {/* 준비물 · 바꿔 쓰기 */}

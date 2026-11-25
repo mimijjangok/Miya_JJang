@@ -62,7 +62,7 @@ export const WorkList = () => {
           <Link
             key={c.slug}
             to={`/works/${c.slug}`}
-            className={`px-4 py-2 text-[11px] font-bold border transition-colors ${
+            className={`px-5 py-2.5 text-[13px] md:text-sm font-bold border transition-colors ${
               c.slug === category.slug
                 ? "bg-black text-white border-black"
                 : "border-zinc-300 text-gray-600 hover:border-black hover:text-black"
@@ -73,7 +73,7 @@ export const WorkList = () => {
         ))}
         <Link
           to="/motion-prompt"
-          className="px-4 py-2 text-[11px] font-bold border transition-colors border-zinc-300 text-gray-600 hover:border-black hover:text-black"
+          className="px-5 py-2.5 text-[13px] md:text-sm font-bold border transition-colors border-zinc-300 text-gray-600 hover:border-black hover:text-black"
         >
           모션 프롬프트
         </Link>

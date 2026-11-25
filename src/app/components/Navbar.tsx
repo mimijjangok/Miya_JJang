@@ -8,11 +8,11 @@ export const Navbar = () => {
       <NavLink to="/" className="text-2xl font-black tracking-tighter text-black uppercase">
       MI3<span className="text-[#05D920]">___</span>Lee
       </NavLink>
-      <div className="flex gap-10 items-center">
+      <div className="flex gap-6 md:gap-12 items-center">
         <NavLink 
           to="/" 
           className={({ isActive }) => 
-            `text-[11px] font-black tracking-[0.2em] transition-colors hover:text-[#05D920] ${isActive ? 'text-[#05D920]' : 'text-black'}`
+            `text-[13px] md:text-sm font-black tracking-[0.2em] transition-colors hover:text-[#05D920] ${isActive ? 'text-[#05D920]' : 'text-black'}`
           }
         >
           HOME
@@ -20,7 +20,7 @@ export const Navbar = () => {
         <NavLink 
           to="/works" 
           className={({ isActive }) => 
-            `text-[11px] font-black tracking-[0.2em] transition-colors hover:text-[#05D920] ${isActive ? 'text-[#05D920]' : 'text-black'}`
+            `text-[13px] md:text-sm font-black tracking-[0.2em] transition-colors hover:text-[#05D920] ${isActive ? 'text-[#05D920]' : 'text-black'}`
           }
         >
           WORKS
@@ -28,7 +28,7 @@ export const Navbar = () => {
         <NavLink 
           to="/about" 
           className={({ isActive }) => 
-            `text-[11px] font-black tracking-[0.2em] transition-colors hover:text-[#05D920] ${isActive ? 'text-[#05D920]' : 'text-black'}`
+            `text-[13px] md:text-sm font-black tracking-[0.2em] transition-colors hover:text-[#05D920] ${isActive ? 'text-[#05D920]' : 'text-black'}`
           }
         >
           ABOUT
