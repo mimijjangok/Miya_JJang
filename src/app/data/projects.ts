@@ -52,6 +52,8 @@ export interface Work {
   // 이미지 아래 추가 섹션 (작은 원본은 원래 크기로 선명하게)
   extras?: { title: string; desc?: string; images: { src: string; alt: string; caption?: string }[] }[];
   // 컬러 시스템 (이미지 아래에 색상 칩으로 표시)
+  // 앱 아이콘 (제목 왼쪽에 작게 표시)
+  icon?: string;
   palette?: { group: string; colors: { name: string; hex: string }[] }[];
 }
 
@@ -408,7 +410,7 @@ export const works: Work[] = [
     overview: "NH농협의 영농 지원 앱 '오늘농사(NH오늘의농업)' 네이티브 앱 4차 고도화 작업입니다. 스플래시·홈·시세정보 등 실제 서비스 화면을 디자인했습니다.",
     challenge: "날씨·시세·영농일지·혜택 등 성격이 다른 서비스가 많아, 스마트폰 사용이 익숙하지 않은 농업인도 원하는 기능을 빠르게 찾을 수 있도록 홈과 메뉴 구조를 정리하는 것이 과제였습니다.",
     solution: "홈 상단에 이벤트 배너와 지역 날씨를 두고, 주요 서비스는 큰 글씨와 일러스트 아이콘을 쓴 카드형 바로가기로 배치했습니다. 시세정보는 내 작물 탭과 경락정보·출하물량·가격전망 탭으로 나눠 필요한 정보를 한눈에 확인하도록 구성했습니다.",
-    hero: { src: "/works/app/nh-onong-hero.png", alt: "NH 오늘농사 앱 아이콘" },
+    icon: "/works/app/nh-onong-icon.png",
     layout: "phones",
     images: [
       { src: "/works/app/nh-onong-splash.png", alt: "오늘농사 스플래시 화면" },

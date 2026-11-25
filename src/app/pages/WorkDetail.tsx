@@ -61,7 +61,16 @@ export const WorkDetail = () => {
             </Link>
           </div>
           <div className="text-[11px] font-mono uppercase tracking-widest text-[#05D920] mb-2">{category.category}</div>
-          <h1 className="text-3xl md:text-5xl font-black tracking-tighter leading-tight">{work.name}</h1>
+          <div className="flex items-center gap-4">
+            {work.icon && (
+              <img
+                src={work.icon}
+                alt={`${work.name} 앱 아이콘`}
+                className="w-12 h-12 md:w-16 md:h-16 shrink-0 object-contain"
+              />
+            )}
+            <h1 className="text-3xl md:text-5xl font-black tracking-tighter leading-tight">{work.name}</h1>
+          </div>
           {work.desc && <p className="text-sm md:text-base text-gray-600 mt-3">{work.desc}</p>}
         </div>
         {work.link && (
