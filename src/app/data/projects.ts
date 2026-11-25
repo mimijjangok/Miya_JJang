@@ -269,6 +269,17 @@ export const works: Work[] = [
         ],
       },
     ],
+    extras: [
+      {
+        title: "PPT · 재난관리자원 통합관리 시스템 제안서",
+        desc: "2025년 한국지역정보개발원(KLID) 재난관리자원 통합관리 시스템 유지관리 및 기술지원 제안 프레젠테이션",
+        images: [
+          { src: "/works/brand/sechan-ppt-cover.png", alt: "재난관리자원 통합관리 시스템 제안서 표지", caption: "표지" },
+          { src: "/works/brand/sechan-ppt-toc.png", alt: "재난관리자원 통합관리 시스템 제안서 목차", caption: "목차" },
+          { src: "/works/brand/sechan-ppt-p1.png", alt: "재난관리자원 통합관리 시스템 제안서 · 사업 범위에 대한 이해", caption: "사업 범위에 대한 이해" },
+        ],
+      },
+    ],
   },
   {
     slug: "goest",
