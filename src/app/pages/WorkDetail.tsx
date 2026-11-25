@@ -5,7 +5,6 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Download, MessageCircle } from "lu
 import { getCategory, getWork, getWorksByCategory } from "../data/projects";
 import { WorkThumb } from "../components/WorkThumb";
 import { CopyrightNotice } from "../components/CopyrightNotice";
-import { Watermark } from "../components/Watermark";
 import { GoestBrandSheet } from "../components/GoestBrandSheet";
 
 // 3단계: 작업 상세 페이지 (/works/:cat/:item)
@@ -89,7 +88,7 @@ export const WorkDetail = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-10 lg:gap-14">
         {/* 왼쪽: 작업 이미지 */}
-        <div className="min-w-0 relative">
+        <div className="min-w-0">
           {work.category === "brand-identity" && <Watermark size={260} opacity={0.18} />}
           {work.custom === "goest-brand" && <GoestBrandSheet />}
 
