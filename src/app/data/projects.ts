@@ -336,6 +336,43 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "lg-thinq-voice",
+    category: "web-platform",
+    name: "LG전자 · ThinQ Voice 신규 페이지",
+    desc: "LG ThinQ Voice Command Book 모바일웹 신규 제작 및 LG전자 반응형 신규 페이지 디자인",
+    thumb: "/works/web/lg-thumb.jpg",
+    info: {
+      client: "LG전자",
+      role: "모바일웹 · 반응형 웹 UI 디자인",
+      target: "LG ThinQ 사용자 · 글로벌 LG전자 고객",
+      expression: "반응형 레이아웃 · 카드 UI · 아이콘",
+      concept: "LG 레드 포인트와 간결한 화이트 카드로, 리모컨·핸즈프리·AI 스피커별 음성 명령을 누구나 쉽게 찾아보는 디지털 보이스 커맨드북",
+      colors: [
+        { name: "LG RED", hex: "#A50034" },
+        { name: "CHARCOAL", hex: "#2F3237" },
+        { name: "WHITE", hex: "#FFFFFF" },
+      ],
+      tools: "Sketch",
+    },
+    overview: "LG ThinQ 음성 명령을 기기와 기능별로 찾아볼 수 있는 Digital Voice Command Book 모바일웹을 새로 만들고, 그 밖에 개발되는 LG전자 신규 페이지를 반응형으로 디자인했습니다.",
+    layout: "phones",
+    images: [
+      { src: "/works/web/lg-thinq-start.jpg", alt: "ThinQ 시작 화면" },
+      { src: "/works/web/lg-thinq-controller.jpg", alt: "ThinQ 컨트롤러 선택 화면" },
+      { src: "/works/web/lg-thinq-function.jpg", alt: "ThinQ 기능별 음성 명령 화면" },
+    ],
+    extras: [
+      {
+        title: "반응형 · LG전자 신규 페이지",
+        desc: "모바일웹 외에 개발된 LG전자 메인·OLED 제품 상세 신규 페이지 (반응형)",
+        images: [
+          { src: "/works/web/lg-main.jpg", alt: "LG전자 메인 신규 페이지", caption: "메인" },
+          { src: "/works/web/lg-oled.jpg", alt: "LG OLED 제품 상세 신규 페이지", caption: "OLED 제품 상세" },
+        ],
+      },
+    ],
+  },
+  {
     slug: "nec-platform",
     category: "web-platform",
     name: "국가교육위원회 · 국민의견플랫폼",
