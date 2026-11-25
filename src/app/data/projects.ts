@@ -192,6 +192,32 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "absr",
+    category: "brand-identity",
+    name: "지오이스트 ABSR · AI 솔루션 로고",
+    desc: "AI 보안 솔루션 ABSR(Anti-Bot Security Resource) 제품 로고 · 가로형/세로형, 다크/라이트 버전",
+    thumb: "/works/brand/absr-thumb.jpg",
+    info: {
+      client: "지오이스트 (GOEST)",
+      role: "제품 로고 디자인",
+      target: "기업 보안 담당자 · B2B 고객",
+      expression: "심볼마크 · 로고타입 · 그라데이션",
+      concept: "흩어진 데이터가 이어지는 유기적 형태의 심볼과 블루→퍼플 그라데이션, 오렌지 점으로 '탐지되는 봇'을 표현한 AI 보안 솔루션 로고",
+      colors: [
+        { name: "BLUE", hex: "#0A6CFF" },
+        { name: "PURPLE", hex: "#7A12C8" },
+        { name: "ORANGE", hex: "#FF4B2B" },
+        { name: "NAVY", hex: "#1A0B78" },
+      ],
+      tools: "Illustrator",
+    },
+    overview: "지오이스트의 AI 기반 크롤러 트래픽 탐지·차단 솔루션 ABSR(Anti-Bot Security Resource)의 제품 로고입니다. 가로형·세로형 조합과 다크·라이트 배경 버전, 슬로건 포함·미포함 버전까지 정리했습니다.",
+    images: [
+      { src: "/works/brand/absr-logo-v1.jpg", alt: "ABSR 로고 · 슬로건 포함 버전" },
+      { src: "/works/brand/absr-logo-v2.jpg", alt: "ABSR 로고 · 심볼+로고타입 버전" },
+    ],
+  },
+  {
     slug: "goest",
     category: "web-platform",
     name: "지오이스트 · GOEST",
