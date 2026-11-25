@@ -320,8 +320,34 @@ export const works: Work[] = [
     ],
     extras: [
       {
+        title: "APP ICON",
+        desc: "세찬아이앤씨 심볼 앱 아이콘과 WIOTP · CAF LeSS 서비스 아이콘",
+        uniform: true,
+        images: [
+          { src: "/works/brand/sechan-app-icons.jpg", alt: "세찬아이앤씨 · WIOTP · CAF LeSS 앱 아이콘" },
+        ],
+      },
+      {
+        title: "APPLICATION",
+        desc: "명함 · 티셔츠 · 노트 · 봉투 어플리케이션",
+        uniform: true,
+        images: [
+          { src: "/works/brand/sechan-card-pattern.jpg", alt: "세찬아이앤씨 패턴 명함", caption: "명함" },
+          { src: "/works/brand/sechan-tshirt.jpg", alt: "세찬아이앤씨 티셔츠", caption: "티셔츠" },
+        ],
+      },
+      {
+        title: "STATIONERY",
+        uniform: true,
+        images: [
+          { src: "/works/brand/sechan-stationery.jpg", alt: "세찬아이앤씨 노트 · 연필 · 봉투", caption: "노트 · 연필 · 봉투" },
+        ],
+      },
+      {
         title: "PPT · 재난관리자원 통합관리 시스템 제안서",
         desc: "2025년 한국지역정보개발원(KLID) 재난관리자원 통합관리 시스템 유지관리 및 기술지원 제안 프레젠테이션",
+        cols: 3,
+        uniform: true,
         images: [
           { src: "/works/brand/sechan-ppt-cover.png", alt: "재난관리자원 통합관리 시스템 제안서 표지", caption: "표지" },
           { src: "/works/brand/sechan-ppt-toc.png", alt: "재난관리자원 통합관리 시스템 제안서 목차", caption: "목차" },

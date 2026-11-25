@@ -194,7 +194,7 @@ export const WorkDetail = () => {
               {ex.desc && <p className="text-sm text-gray-500 mt-1 mb-8">{ex.desc}</p>}
               <div className={`grid gap-6 ${ex.cols === 4 ? "grid-cols-2 md:grid-cols-4" : ex.cols === 3 ? "grid-cols-2 md:grid-cols-3" : "grid-cols-1 sm:grid-cols-2"}`}>
                 {ex.images.map((img) => (
-                  <figure key={img.src} className={`flex flex-col items-center ${ex.square ? "" : "justify-center"}`}>
+                  <figure key={img.src} className={`flex flex-col items-center ${ex.square ? "" : "justify-center"} ${ex.uniform && ex.images.length === 1 && !ex.withFeatures ? "col-span-full" : ""}`}>
                     {ex.square ? (
                       <div className="w-full aspect-square bg-zinc-50 overflow-hidden flex items-center justify-center">
                         <img
