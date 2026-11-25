@@ -27,7 +27,7 @@ const PromptCard = ({ p, index }: { p: (typeof motionPrompts)[number]; index: nu
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, delay: (index % 3) * 0.06 }}
-      className="flex flex-col"
+      className="group flex flex-col"
     >
       <MotionCanvas id={p.no} />
       <div className="pt-4">
@@ -36,7 +36,7 @@ const PromptCard = ({ p, index }: { p: (typeof motionPrompts)[number]; index: nu
             <span className="text-[10px] font-mono text-[#05D920] tracking-widest shrink-0">{p.no}</span>
             <h3 className="text-lg md:text-xl font-bold tracking-tight truncate">{p.title}</h3>
           </div>
-          <div className="flex items-center gap-3 shrink-0 text-[10px] text-gray-400">
+          <div className={`flex items-center gap-3 shrink-0 text-[10px] text-gray-400 transition-opacity duration-300 ${open || copied ? "" : "md:opacity-0 md:group-hover:opacity-100 md:focus-within:opacity-100"}`}>
             <button onClick={() => setOpen((v) => !v)} className="hover:text-black transition-colors">
               {open ? "접기" : "프롬프트"}
             </button>
