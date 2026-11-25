@@ -29,23 +29,32 @@ const PromptCard = ({ p, index }: { p: (typeof motionPrompts)[number]; index: nu
       transition={{ duration: 0.6, delay: (index % 3) * 0.06 }}
       className="group flex flex-col"
     >
-      <MotionCanvas id={p.no} />
+      <div className="relative">
+        <MotionCanvas id={p.no} />
+        <div
+          className={`absolute top-3 right-3 flex items-center gap-1.5 transition-opacity duration-300 ${
+            open || copied ? "opacity-100" : "opacity-100 md:opacity-0 md:group-hover:opacity-100 md:focus-within:opacity-100"
+          }`}
+        >
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur text-white text-[10px] font-semibold hover:bg-black transition-colors"
+          >
+            {open ? "접기" : "프롬프트"}
+          </button>
+          <button
+            onClick={copy}
+            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/85 backdrop-blur text-black text-[10px] font-semibold hover:bg-white transition-colors"
+          >
+            {copied ? <Check size={10} /> : <Copy size={10} />}
+            {copied ? "복사됨" : "복사"}
+          </button>
+        </div>
+      </div>
       <div className="pt-4">
-        <div className="flex items-baseline justify-between gap-3">
-          <div className="flex items-baseline gap-3 min-w-0">
-            <span className="text-[10px] font-mono text-[#05D920] tracking-widest shrink-0">{p.no}</span>
-            <h3 className="text-lg md:text-xl font-bold tracking-tight truncate">{p.title}</h3>
-          </div>
-          <div className={`flex items-center gap-3 shrink-0 text-[10px] text-gray-400 transition-opacity duration-300 ${open || copied ? "" : "md:opacity-0 md:group-hover:opacity-100 md:focus-within:opacity-100"}`}>
-            <button onClick={() => setOpen((v) => !v)} className="hover:text-black transition-colors">
-              {open ? "접기" : "프롬프트"}
-            </button>
-            <span className="text-gray-300">·</span>
-            <button onClick={copy} className="inline-flex items-center gap-1 hover:text-black transition-colors">
-              {copied ? <Check size={10} /> : <Copy size={10} />}
-              {copied ? "복사됨" : "복사"}
-            </button>
-          </div>
+        <div className="flex items-baseline gap-3 min-w-0">
+          <span className="text-[10px] font-mono text-[#05D920] tracking-widest shrink-0">{p.no}</span>
+          <h3 className="text-lg md:text-xl font-bold tracking-tight truncate">{p.title}</h3>
         </div>
         <p className="text-sm text-gray-500 leading-relaxed break-keep mt-1">{p.subtitle}</p>
         {open && (
