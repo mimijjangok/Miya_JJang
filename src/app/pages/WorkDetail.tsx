@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Link, Navigate, useParams } from "react-router";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Download } from "lucide-react";
 import { getCategory, getWork, getWorksByCategory } from "../data/projects";
+import { GoestBrandSheet } from "../components/GoestBrandSheet";
 
 // 3단계: 작업 상세 페이지 (/works/:cat/:item)
 // GDWEB 선정작 페이지처럼: 위 제목·주소 / 왼쪽 큰 작업 이미지 / 오른쪽 고정 정보 패널
@@ -77,6 +78,7 @@ export const WorkDetail = () => {
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-10 lg:gap-14">
         {/* 왼쪽: 작업 이미지 */}
         <div className="min-w-0">
+          {work.custom === "goest-brand" && <GoestBrandSheet />}
           {work.layout === "pc-mobile" ? (
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,3fr)_minmax(0,1fr)] gap-4 items-start">
               {work.images.map((img, iIdx) => (
@@ -99,6 +101,29 @@ export const WorkDetail = () => {
               ))}
             </div>
           )}
+
+          {/* 추가 섹션 (PPT 등) — 작은 원본은 원래 크기 이상으로 늘리지 않음 */}
+          {work.extras?.map((ex) => (
+            <div key={ex.title} className="mt-10 border border-zinc-200 p-6 md:p-10">
+              <h3 className="text-xl md:text-2xl font-black tracking-tighter">{ex.title}</h3>
+              {ex.desc && <p className="text-sm text-gray-500 mt-1 mb-6">{ex.desc}</p>}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {ex.images.map((img) => (
+                  <figure key={img.src} className="flex flex-col items-center">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      className="block w-auto max-w-full h-auto border border-zinc-200 shadow-sm"
+                    />
+                    {img.caption && (
+                      <figcaption className="mt-2 text-[11px] font-bold text-gray-500">{img.caption}</figcaption>
+                    )}
+                  </figure>
+                ))}
+              </div>
+            </div>
+          ))}
 
           {/* 컬러 시스템 */}
           {work.palette && work.palette.length > 0 && (

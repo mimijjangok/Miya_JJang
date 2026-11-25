@@ -42,6 +42,10 @@ export interface Work {
   // "pc-mobile"이면 첫 이미지는 PC(넓게), 둘째는 모바일(좁게)로 나란히
   layout?: "pc-mobile";
   images: { src: string; alt: string }[];
+  // 특별 컴포넌트로 그리는 시트 (선명한 벡터 로고 등)
+  custom?: "goest-brand";
+  // 이미지 아래 추가 섹션 (작은 원본은 원래 크기로 선명하게)
+  extras?: { title: string; desc?: string; images: { src: string; alt: string; caption?: string }[] }[];
   // 컬러 시스템 (이미지 아래에 색상 칩으로 표시)
   palette?: { group: string; colors: { name: string; hex: string }[] }[];
 }
@@ -138,24 +142,33 @@ export const works: Work[] = [
     slug: "goest-brand",
     category: "brand-identity",
     name: "지오이스트 · GOEST",
-    desc: "로고 및 브랜딩 (심볼·국문·영문 로고, 앱 아이콘, 컬러 시스템)",
+    desc: "로고 및 브랜딩 (심볼·국문·영문 로고, 앱 아이콘, 컬러 시스템, PPT)",
     thumb: "/works/brand/goest-logo.png",
     link: { label: "www.goest.co.kr", url: "https://www.goest.co.kr" },
     info: {
       client: "지오이스트 (GOEST)",
       role: "로고 디자인 · 브랜드 아이덴티티",
       target: "기업 IT 담당자 · B2B 고객",
-      expression: "심볼마크 · 로고타입 · 컬러 시스템",
+      expression: "심볼마크 · 로고타입 · 컬러 시스템 · PPT",
       concept: "G 이니셜을 원형 흐름으로 감싼 심볼과 선명한 블루로 AI·SI 기술 기업의 연결과 신뢰를 표현",
       colors: [
         { name: "BLUE", hex: "#3268F4" },
         { name: "BLACK", hex: "#0A0A0A" },
         { name: "WHITE", hex: "#FFFFFF" },
       ],
-      tools: "Illustrator · Figma",
+      tools: "Illustrator · Figma · PowerPoint",
     },
-    images: [
-      { src: "/works/brand/goest-logo.png", alt: "지오이스트 심볼·국문·영문 로고와 앱 아이콘" },
+    custom: "goest-brand",
+    images: [],
+    extras: [
+      {
+        title: "PPT · 회사소개서 / 제품소개서",
+        desc: "브랜드 컬러와 심볼을 적용한 회사소개·제품소개 프레젠테이션 표지",
+        images: [
+          { src: "/works/brand/goest-ppt-company.png", alt: "지오이스트 회사소개서 표지", caption: "회사소개서" },
+          { src: "/works/brand/goest-ppt-product.png", alt: "지오이스트 제품소개서(ABSR) 표지", caption: "제품소개서 · ABSR" },
+        ],
+      },
     ],
     palette: [
       {
