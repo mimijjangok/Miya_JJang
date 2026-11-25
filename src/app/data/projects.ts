@@ -854,13 +854,13 @@ export const works: Work[] = [
   {
     slug: "woori-won",
     category: "web-platform",
-    name: "우리은행 · 우리WON뱅킹",
+    name: "우리은행 · 우리WON뱅킹 모바일 뱅킹 UIUX 개선 프로젝트",
     desc: "우리WON뱅킹 앱 시작 온보딩과 적금 상품 가입·예상금리 화면 UI 디자인",
     thumb: "/works/app/woori-thumb.jpg",
     thumbCard: { bg: "#E8F1FD", color: "#0032A0", text: "우리WON뱅킹", sub: "우리은행" },
     info: {
       client: "우리은행",
-      role: "앱 UI/UX 디자인",
+      role: "웹 · 앱 UI/UX 디자인",
       target: "우리은행 개인 고객 · 신규 앱 사용자",
       expression: "일러스트 온보딩 · 카드 UI · 금리 그래프",
       concept: "밝은 블루와 가벼운 3D 일러스트로 결제·디지털OTP·오픈뱅킹 기능을 쉽게 소개하고, 우대금리를 막대 그래프로 한눈에 보여 주는 친근한 금융 경험",
@@ -869,6 +869,7 @@ export const works: Work[] = [
         { name: "NAVY", hex: "#0B3A8F" },
         { name: "SKY", hex: "#7BC4EA" },
       ],
+      tools: "Photoshop · Illustrator · Sketch · ProtoPie · Zeplin",
     },
     overview: "우리은행 모바일 앱 우리WON뱅킹의 시작 온보딩 화면과 적금 상품 가입 페이지, 예상금리 안내 UI를 디자인했습니다.",
     icon: "/works/app/woori-won-icon.png",
