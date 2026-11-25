@@ -562,8 +562,8 @@ export const works: Work[] = [
         title: "상품 가입 · 예상금리 UI",
         desc: "롯데카드 제휴 적금 상품 상세 페이지와 고객 유형별 우대금리를 그래프로 보여 주는 예상금리 컴포넌트",
         images: [
-          { src: "/works/app/woori-product.jpg", alt: "적금 상품 상세 페이지", caption: "상품 상세" },
-          { src: "/works/app/woori-rate.jpg", alt: "예상금리 우대금리 그래프", caption: "예상금리" },
+          { src: "/works/app/woori-product.png", alt: "적금 상품 상세 페이지", caption: "상품 상세" },
+          { src: "/works/app/woori-rate.png", alt: "예상금리 우대금리 그래프", caption: "예상금리" },
         ],
       },
     ],
