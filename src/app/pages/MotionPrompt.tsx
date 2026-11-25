@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { ArrowLeft, Check, Copy, Download } from "lucide-react";
 import { MotionCanvas } from "../components/motion/MotionCanvas";
 import { motionPrep, motionPrompts, motionTips } from "../data/motionPrompts";
+import { categories } from "../data/projects";
 
 // 클로드 모션 프롬프트 12종: 프롬프트대로 만든 모션을 위에서 재생, 아래에 아주 작은 보기·복사
 const PromptCard = ({ p, index }: { p: (typeof motionPrompts)[number]; index: number }) => {
@@ -91,6 +92,20 @@ export const MotionPrompt = () => {
             스타일별 프롬프트 12종과, 각 프롬프트대로 만든 3초 모션입니다. 외부 AI 영상 서비스 없이 코드만으로 그렸어요. 프롬프트를 Claude Code에 붙여 넣으면 같은 모션을 mp4로 만들 수 있어요.
           </p>
         </div>
+      </div>
+
+      {/* 분류 탭 */}
+      <div className="flex flex-wrap gap-2 mb-10 -mt-2">
+        {categories.map((c) => (
+          <Link
+            key={c.slug}
+            to={`/works/${c.slug}`}
+            className="px-4 py-2 text-[11px] font-bold border transition-colors border-zinc-300 text-gray-600 hover:border-black hover:text-black"
+          >
+            {c.category}
+          </Link>
+        ))}
+        <span className="px-4 py-2 text-[11px] font-bold border bg-black text-white border-black">모션 프롬프트</span>
       </div>
 
       {/* 준비물 · 바꿔 쓰기 */}
