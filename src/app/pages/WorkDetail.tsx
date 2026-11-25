@@ -61,16 +61,7 @@ export const WorkDetail = () => {
             </Link>
           </div>
           <div className="text-[11px] font-mono uppercase tracking-widest text-[#05D920] mb-2">{category.category}</div>
-          <div className="flex items-center gap-4">
-            {work.icon && (
-              <img
-                src={work.icon}
-                alt={`${work.name} 앱 아이콘`}
-                className="w-12 h-12 md:w-16 md:h-16 shrink-0 object-contain"
-              />
-            )}
-            <h1 className="text-3xl md:text-5xl font-black tracking-tighter leading-tight">{work.name}</h1>
-          </div>
+          <h1 className="text-3xl md:text-5xl font-black tracking-tighter leading-tight">{work.name}</h1>
           {work.desc && <p className="text-sm md:text-base text-gray-600 mt-3">{work.desc}</p>}
         </div>
         {work.link?.textOnly && (
@@ -120,6 +111,20 @@ export const WorkDetail = () => {
           {work.hero && (
             <div className="bg-zinc-50 border border-zinc-200 overflow-hidden mb-6">
               <img src={work.hero.src} alt={work.hero.alt} className="w-full h-auto block" />
+            </div>
+          )}
+          {/* 앱 아이콘: 앱스토어처럼 썸네일 위에 크게 */}
+          {work.icon && (
+            <div className="flex items-center gap-5 md:gap-8 mb-6">
+              <img
+                src={work.icon}
+                alt={`${work.name} 앱 아이콘`}
+                className="w-24 h-24 md:w-36 md:h-36 shrink-0 object-contain rounded-[22%]"
+              />
+              <div className="min-w-0">
+                <div className="text-xl md:text-3xl font-black tracking-tighter leading-tight">{work.name}</div>
+                {work.info?.client && <div className="text-sm md:text-base text-gray-500 mt-1">{work.info.client}</div>}
+              </div>
             </div>
           )}
           {work.layout === "phones" ? (
