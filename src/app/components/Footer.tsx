@@ -23,6 +23,9 @@ export const Footer = () => {
           <p className="text-black/40 text-[10px] font-bold tracking-[0.1em]">
             © 2026 MI3___Lee PORTFOLIO. ALL RIGHTS RESERVED.
           </p>
+          <p className="text-black/40 text-[10px] font-medium mt-1">
+            사이트의 모든 디자인·이미지는 무단 복제·캡처·다운로드·배포를 금지하며, 무단 복제·사용 시 법적 문제가 발생할 수 있습니다.
+          </p>
         </div>
       </div>
     </footer>
