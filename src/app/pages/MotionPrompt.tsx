@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { ArrowLeft, Check, Copy, Download } from "lucide-react";
+import { ArrowLeft, Check, Copy } from "lucide-react";
 import { MotionCanvas } from "../components/motion/MotionCanvas";
 import { motionPrep, motionPrompts, motionTips } from "../data/motionPrompts";
 import { categories } from "../data/projects";
@@ -150,13 +150,6 @@ export const MotionPrompt = () => {
       {/* 프롬프트 12종 */}
       <div className="flex items-center justify-between mb-6">
         <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">Total {String(motionPrompts.length).padStart(2, "0")}</div>
-        <a
-          href="/motion-prompt.pdf"
-          download
-          className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] hover:text-[#05D920] transition-colors"
-        >
-          <Download size={12} /> PDF 다운로드
-        </a>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 items-start">
         {motionPrompts.map((p, i) => (

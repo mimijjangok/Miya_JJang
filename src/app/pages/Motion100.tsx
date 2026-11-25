@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router";
 import { ArrowLeft, ArrowUpRight, Check, Copy } from "lucide-react";
 import { MotionCanvas } from "../components/motion/MotionCanvas";
-import { motion100, MOTION100_URL, MOTION100_CREDIT, MOTION100_COMMON, Motion100Item } from "../data/motion100";
+import { motion100, MOTION100_URL, MOTION100_CREDIT, Motion100Item } from "../data/motion100";
 import { categories } from "../data/projects";
 
 // 클로드 모션그래픽 한글 프롬프트 100 중 10개를 직접 만든 결과
@@ -12,7 +12,7 @@ const Card = ({ p, index }: { p: Motion100Item; index: number }) => {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
     try {
-      await navigator.clipboard.writeText(`${p.prompt}\n\n${MOTION100_COMMON}`);
+      await navigator.clipboard.writeText(p.prompt);
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);
     } catch {
@@ -61,7 +61,6 @@ const Card = ({ p, index }: { p: Motion100Item; index: number }) => {
 };
 
 export const Motion100 = () => {
-  const [showCommon, setShowCommon] = useState(false);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -105,20 +104,6 @@ export const Motion100 = () => {
           모션 프롬프트
         </Link>
         <span className="px-5 py-2.5 text-[13px] md:text-sm font-bold border bg-black text-white border-black">모션 100</span>
-      </div>
-
-      {/* 공통 블록 */}
-      <div className="bg-zinc-50 p-6 md:p-8 mb-12">
-        <div className="flex items-center justify-between gap-4">
-          <div>
-            <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-2">모든 프롬프트 뒤에 붙이는 공통 블록</div>
-            <p className="text-sm text-gray-600 break-keep">복사 버튼을 누르면 프롬프트 뒤에 이 블록이 함께 복사돼요.</p>
-          </div>
-          <button onClick={() => setShowCommon((v) => !v)} className="shrink-0 px-3 py-1.5 rounded-full border border-zinc-300 text-[11px] font-semibold hover:border-black transition-colors">
-            {showCommon ? "접기" : "보기"}
-          </button>
-        </div>
-        {showCommon && <pre className="mt-4 text-[11px] leading-relaxed text-gray-600 whitespace-pre-wrap break-keep font-sans">{MOTION100_COMMON}</pre>}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 items-start">

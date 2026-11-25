@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { Link, Navigate, useParams } from "react-router";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Download } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Download, MessageCircle } from "lucide-react";
 import { getCategory, getWork, getWorksByCategory } from "../data/projects";
 import { WorkThumb } from "../components/WorkThumb";
 import { GoestBrandSheet } from "../components/GoestBrandSheet";
@@ -330,6 +330,14 @@ export const WorkDetail = () => {
               >
                 Visit Website <ArrowUpRight size={14} />
               </a>
+            )}
+            {category.slug === "character" && (
+              <Link
+                to="/contact"
+                className="flex items-center justify-center gap-2 w-full bg-[#05D920] text-black py-4 text-sm md:text-[15px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition-colors"
+              >
+                <MessageCircle size={16} /> 캐릭터 문의
+              </Link>
             )}
             <Link
               to={`/works/${category.slug}`}
