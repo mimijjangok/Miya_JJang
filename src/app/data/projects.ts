@@ -622,6 +622,33 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "wiotp",
+    category: "web-platform",
+    name: "WIOTP · 골프 앱",
+    desc: "골프모드 · 마이페이지 · 르까프 쇼핑몰을 담은 WIOTP 골프 앱 기획 · UI 디자인",
+    thumb: "/works/app/wiotp-home.png",
+    thumbCard: { bg: "#24282C", color: "#FFFFFF", text: "WIOTP", sub: "골프 앱 · 기획 80% · 디자인 100%" },
+    info: {
+      client: "세찬아이앤씨 (Sechan I&C) · CAF LeSS",
+      role: "기획 80% · 디자인 100%",
+      target: "골프 센서를 쓰는 골퍼",
+      expression: "다크 UI · 카드형 메뉴 · 앱 아이콘",
+      concept: "어두운 배경 위 청록·연두 등고선 그래픽과 카드형 메뉴로 골프 코스 느낌을 살린 골프 앱",
+      colors: [
+        { name: "CHARCOAL", hex: "#24282C" },
+        { name: "TEAL", hex: "#1E8FA6" },
+        { name: "GREEN", hex: "#5DBB2F" },
+      ],
+      tools: "Figma · Photoshop · Illustrator",
+    },
+    overview: "골프 센서와 연동되는 WIOTP 앱입니다. 실전·연습 게임을 고르는 골프모드, 프로필과 설정을 담은 마이페이지, 르까프 쇼핑몰 배너까지 한 화면에서 이어지도록 기획하고 디자인했습니다.",
+    icon: "/works/app/wiotp-icon.png",
+    layout: "phones",
+    images: [
+      { src: "/works/app/wiotp-home.png", alt: "WIOTP 앱 홈 화면 · 골프모드 · 마이페이지 · 르까프 쇼핑몰" },
+    ],
+  },
+  {
     slug: "kb-bank",
     category: "web-platform",
     name: "KB국민은행 · 웹/앱/모바일웹",
