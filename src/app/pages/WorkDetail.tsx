@@ -231,6 +231,11 @@ export const WorkDetail = () => {
               </div>
             </div>
           )}
+
+          {/* 저작권 안내 (아주 작고 연하게) */}
+          {work.copyright && (
+            <p className="mt-8 text-[10px] leading-relaxed text-gray-400 whitespace-pre-line">{work.copyright}</p>
+          )}
         </div>
 
         {/* 오른쪽: 고정 정보 패널 */}
@@ -240,6 +245,23 @@ export const WorkDetail = () => {
               <div className="py-5 border-b border-zinc-200">
                 <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-2">Design Concept</div>
                 <p className="text-sm font-medium leading-relaxed">{info.concept}</p>
+              </div>
+            )}
+
+            {work.features && work.features.length > 0 && (
+              <div className="py-5 border-b border-zinc-200">
+                <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-3">Features</div>
+                <ol className="space-y-3">
+                  {work.features.map((f, i) => (
+                    <li key={f.title} className="grid grid-cols-[24px_1fr] gap-2 text-sm">
+                      <span className="text-[10px] font-mono text-[#05D920] pt-1">{String(i + 1).padStart(2, "0")}</span>
+                      <div>
+                        <div className="font-bold">{f.title}</div>
+                        {f.desc && <div className="text-xs text-gray-500 leading-relaxed mt-0.5">{f.desc}</div>}
+                      </div>
+                    </li>
+                  ))}
+                </ol>
               </div>
             )}
 

@@ -40,6 +40,10 @@ export interface Work {
   link?: { label: string; url: string; textOnly?: boolean };
   info?: WorkInfo;
   overview?: string;
+  // 특징 몇 가지 (오른쪽 정보 패널, Design Concept 아래)
+  features?: { title: string; desc?: string }[];
+  // 저작권 안내 (본문 맨 아래 아주 작고 연하게)
+  copyright?: string;
   challenge?: string;
   solution?: string;
   // "pc-mobile"이면 첫 이미지는 PC(넓게), 둘째는 모바일(좁게)로 나란히
@@ -615,7 +619,13 @@ export const works: Work[] = [
       ],
       tools: "AI 이미지 생성 · Photoshop",
     },
-    overview: "MODUVA의 대표 캐릭터 아기별(BABY STAR)입니다. 저작권을 보유한 오리지널 캐릭터로, 홈페이지 메인과 캐릭터 페이지, 쿠션·머그·에코백 등 굿즈로 활용했습니다. 캐릭터는 직접 기획했고, 캐릭터 이미지는 AI를 활용해 제작했습니다.",
+    overview: "MODUVA의 대표 캐릭터 아기별(BABY STAR)입니다. 저작권을 보유한 오리지널 캐릭터로, 홈페이지 메인과 캐릭터 페이지, 쿠션·머그·에코백 등 굿즈로 활용했습니다.",
+    features: [
+      { title: "별나라에서 태어난 아기별", desc: "별나라에서 가장 작은 별로 태어났지만 누구보다 환하게 반짝여요." },
+      { title: "행복과 응원을 전하는 하루", desc: "사람들에게 반짝 인사를 건네고 작은 응원을 나눠 줘요." },
+      { title: "친구들과 함께하는 모험", desc: "호기심이 많아 매일이 작은 모험이에요." },
+    ],
+    copyright: "© MODUVA CREATIVE STUDIO\n아기별(BABY STAR)은 저작권을 보유한 모두바 오리지널 캐릭터입니다. 무단 복제·배포 및 상업적 이용을 금지합니다.\n캐릭터 이미지는 AI를 활용해 제작되었습니다.",
     images: [],
     extras: [
       {
@@ -657,7 +667,13 @@ export const works: Work[] = [
       ],
       tools: "AI 이미지 생성 · Photoshop",
     },
-    overview: "게임 유튜버 캐릭터 모루(MORU)입니다. 저작권을 보유한 오리지널 캐릭터로, 3D 캐릭터와 2D 일러스트 버전을 함께 만들어 폰케이스·키링 등 굿즈로 활용했습니다. 캐릭터는 직접 기획했고, 캐릭터 이미지는 AI를 활용해 제작했습니다.",
+    overview: "게임 유튜버 캐릭터 모루(MORU)입니다. 저작권을 보유한 오리지널 캐릭터로, 3D 캐릭터와 2D 일러스트 버전을 함께 만들어 폰케이스·키링 등 굿즈로 활용했습니다.",
+    features: [
+      { title: "게임 유튜버", desc: "게임을 하며 시청자와 함께 웃고 떠드는 게임 유튜버예요." },
+      { title: "영상 편집 달인", desc: "컷 편집부터 자막까지, 영상 편집 실력이 아주 뛰어나요." },
+      { title: "파랑 사랑, 고기 사랑", desc: "가장 좋아하는 색은 파랑, 가장 좋아하는 음식은 고기예요." },
+    ],
+    copyright: "© MODUVA CREATIVE STUDIO\n모루(MORU)는 저작권을 보유한 모두바 오리지널 캐릭터입니다. 무단 복제·배포 및 상업적 이용을 금지합니다.\n캐릭터 이미지는 AI를 활용해 제작되었습니다.",
     images: [],
     extras: [
       {
@@ -681,7 +697,7 @@ export const works: Work[] = [
     slug: "modi",
     category: "character",
     name: "모디 · MODI",
-    desc: "헤드폰을 쓴 고양이 캐릭터 · MODUVA 캐릭터샵 배너 캐릭터",
+    desc: "헤드폰을 낀 하얀 고양이 · 모두바의 안내 캐릭터",
     thumb: "/works/character/modi-main.png",
     thumbCard: { bg: "#FFE8D2", logo: "/works/character/modi-main.png", sub: "모디 MODI", color: "#B4520A" },
     info: {
@@ -690,7 +706,7 @@ export const works: Work[] = [
       role: "캐릭터 기획 · 디자인 · 굿즈 디자인",
       target: "캐릭터 굿즈를 좋아하는 10~30대",
       expression: "3D 캐릭터 · 2D 일러스트 · 굿즈 목업",
-      concept: "하얀 고양이에 오렌지 M 후드티와 헤드폰을 더해, 윙크하는 장난기 있는 표정으로 MODUVA의 친근한 분위기를 표현",
+      concept: "하얀 털에 주황 포인트 귀를 가진 고양이. 헤드폰·M 후드티·윙크를 시그니처로, 모두바의 굿즈와 브랜드를 소개하는 친근한 안내 캐릭터",
       colors: [
         { name: "ORANGE", hex: "#F7931E" },
         { name: "WHITE", hex: "#FFFFFF" },
@@ -698,7 +714,13 @@ export const works: Work[] = [
       ],
       tools: "AI 이미지 생성 · Photoshop",
     },
-    overview: "MODUVA 캐릭터샵 배너와 굿즈에 쓰인 고양이 캐릭터 모디(MODI)입니다. 캐릭터는 직접 기획했고, 캐릭터 이미지는 AI를 활용해 제작했습니다.",
+    overview: "MODUVA 캐릭터샵 배너와 굿즈에 쓰인 고양이 캐릭터 모디(MODI)입니다.",
+    features: [
+      { title: "헤드폰", desc: "고객의 이야기에 귀 기울여요. 어떤 아이디어든 끝까지 들어요." },
+      { title: "M 후드티", desc: "가슴의 M은 MODUVA의 M. 모두바의 얼굴이자 브랜드의 상징이에요." },
+      { title: "윙크", desc: "언제나 밝고 친근하게, 윙크 한 번으로 분위기를 풀어 줘요." },
+    ],
+    copyright: "© MODUVA CREATIVE STUDIO\n캐릭터 이미지는 AI를 활용해 제작되었습니다.",
     images: [],
     extras: [
       {
@@ -731,7 +753,12 @@ export const works: Work[] = [
       ],
       tools: "AI 이미지 생성 · Photoshop",
     },
-    overview: "MODUVA 홈페이지의 디자이너 소개 페이지에 쓰인 MIYA 캐릭터입니다. 캐릭터는 직접 기획했고, 캐릭터 이미지는 AI를 활용해 제작했습니다.",
+    overview: "MODUVA 홈페이지의 디자이너 소개 페이지에 쓰인 MIYA 캐릭터입니다.",
+    features: [
+      { title: "Creative Designer", desc: "20년 차 · 브랜딩 · 캐릭터 · UX/UI" },
+      { title: "캐릭터 디자이너", desc: "모두바 오리지널 캐릭터 아기별·모루를 만들었어요." },
+    ],
+    copyright: "© MODUVA CREATIVE STUDIO\n캐릭터 이미지는 AI를 활용해 제작되었습니다.",
     images: [],
     extras: [
       {
