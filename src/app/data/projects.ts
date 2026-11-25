@@ -248,3 +248,44 @@ export const getCategoryByTitle = (title: string) => categories.find((c) => c.ti
 export const getWorksByCategory = (slug: string) => works.filter((w) => w.category === slug);
 export const getWork = (cat?: string, slug?: string) =>
   works.find((w) => w.category === cat && w.slug === slug);
+
+// ─────────────────────────────────────────────
+// 무료 템플릿 (제안문서 목록 위 FREE TEMPLATES 코너)
+// 파일은 public/templates 폴더에 넣고 여기에 한 줄씩 추가
+// ─────────────────────────────────────────────
+export interface FreeTemplate {
+  slug: string;
+  category: string; // 보여 줄 분류 (Category.slug)
+  name: string;
+  desc: string;
+  pages: string;
+  format: string;
+  cover: string;
+  preview: string;
+  file: string;
+}
+
+export const freeTemplates: FreeTemplate[] = [
+  {
+    slug: "proposal",
+    category: "strategic-documentation",
+    name: "프로젝트 제안서 템플릿",
+    desc: "표지·목차·개요·현황 분석·전략·일정·예산·기대 효과·마무리까지 제안서 흐름을 그대로 담은 템플릿",
+    pages: "10p",
+    format: "PPTX · 16:9",
+    cover: "/templates/proposal-cover.jpg",
+    preview: "/templates/proposal-pages.jpg",
+    file: "/templates/MI3_Free_Proposal_Template.pptx",
+  },
+  {
+    slug: "company",
+    category: "strategic-documentation",
+    name: "회사소개서 템플릿",
+    desc: "회사 소개·비전·핵심 가치·사업 영역·성과·연혁·고객사·연락처로 구성한 회사소개서 템플릿",
+    pages: "10p",
+    format: "PPTX · 16:9",
+    cover: "/templates/company-cover.jpg",
+    preview: "/templates/company-pages.jpg",
+    file: "/templates/MI3_Free_Company_Profile_Template.pptx",
+  },
+];

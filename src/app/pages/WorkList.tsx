@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { Link, Navigate, useParams } from "react-router";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { categories, getCategory, getWorksByCategory } from "../data/projects";
+import { ArrowLeft, ArrowRight, Download } from "lucide-react";
+import { categories, freeTemplates, getCategory, getWorksByCategory } from "../data/projects";
 
 // 최소로 보여 줄 칸 수 (작업이 적으면 나머지는 '준비 중' 칸)
 const MIN_SLOTS = 8;
@@ -22,6 +22,7 @@ export const WorkList = () => {
   const empty = Math.max(0, MIN_SLOTS - list.length);
   const idx = categories.findIndex((c) => c.slug === category.slug);
   const nextCat = categories[(idx + 1) % categories.length];
+  const templates = freeTemplates.filter((t) => t.category === category.slug);
 
   return (
     <motion.div
@@ -69,6 +70,59 @@ export const WorkList = () => {
           </Link>
         ))}
       </div>
+
+      {/* 무료 템플릿 코너 */}
+      {templates.length > 0 && (
+        <section className="mb-16 bg-black text-white p-6 md:p-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+            <div>
+              <div className="text-[11px] font-mono uppercase tracking-widest text-[#05D920] mb-2">Free Templates</div>
+              <h2 className="text-2xl md:text-4xl font-black tracking-tighter">무료 템플릿 다운로드</h2>
+              <p className="text-sm text-zinc-400 mt-2">바로 고쳐 쓸 수 있는 PPT 템플릿을 무료로 나눕니다.</p>
+            </div>
+            <p className="text-[11px] text-zinc-500 leading-relaxed md:text-right">
+              개인·상업적 사용 가능<br />템플릿 파일 자체의 재판매·재배포 금지
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {templates.map((t) => (
+              <div key={t.slug} className="bg-zinc-900 border border-zinc-800 flex flex-col">
+                <div className="aspect-video overflow-hidden bg-zinc-800 group">
+                  <img src={t.cover} alt={`${t.name} 표지`} loading="lazy" className="w-full h-full object-cover group-hover:hidden" />
+                  <img src={t.preview} alt={`${t.name} 내지 미리보기`} loading="lazy" className="w-full h-full object-cover hidden group-hover:block" />
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-zinc-500 mb-2">
+                    <span>{t.format}</span>
+                    <span>·</span>
+                    <span>{t.pages}</span>
+                  </div>
+                  <h3 className="text-lg font-bold">{t.name}</h3>
+                  <p className="text-xs text-zinc-400 mt-1 leading-relaxed flex-1">{t.desc}</p>
+                  <a
+                    href={t.file}
+                    download
+                    className="mt-5 inline-flex items-center justify-center gap-2 bg-[#05D920] text-black py-3 text-[11px] font-black uppercase tracking-[0.2em] hover:bg-white transition-colors"
+                  >
+                    <Download size={14} /> 무료 다운로드
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-col md:flex-row md:items-center justify-between gap-3 border-t border-zinc-800 pt-6">
+            <p className="text-sm text-zinc-300">우리 회사에 맞춘 제안서·회사소개서가 필요하신가요?</p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#05D920] hover:text-white transition-colors"
+            >
+              맞춤 제작 문의하기 <ArrowRight size={14} />
+            </Link>
+          </div>
+        </section>
+      )}
 
       <div className="flex items-center justify-between mb-4 text-[11px] font-mono uppercase tracking-widest text-gray-500">
         <span>Total {String(list.length).padStart(2, "0")}</span>
