@@ -373,6 +373,51 @@ export const works: Work[] = [
       { src: "/works/app/barocheck-menu.png", alt: "바로Check 메뉴 화면" },
     ],
   },
+  {
+    slug: "nh-onong",
+    category: "mobile-ux",
+    name: "NH 오늘농사 · 네이티브 앱 4차 고도화",
+    desc: "농협 영농 지원 앱 '오늘농사' 네이티브 앱 4차 고도화 · UXUI 제안 및 앱 UI 디자인",
+    thumb: "/works/app/nh-onong-thumb.jpg",
+    info: {
+      client: "NH농협 · 오늘농사 (NH오늘의농업)",
+      year: "2025",
+      role: "UXUI 제안 · 앱 UI 디자인",
+      target: "농업인 · 귀농·귀촌 희망자",
+      expression: "모바일 UI · 카드형 바로가기 · 벤치마킹",
+      concept: "블루와 그린을 중심으로 시세·영농일지·혜택 등 농업인의 일상 서비스를 카드형 바로가기로 정돈한 영농 지원 앱",
+      colors: [
+        { name: "BLUE", hex: "#426DD7" },
+        { name: "GREEN", hex: "#A0D046" },
+        { name: "WHITE", hex: "#FFFFFF" },
+      ],
+      tools: "Figma",
+    },
+    overview: "NH농협의 영농 지원 앱 '오늘농사(NH오늘의농업)' 네이티브 앱 4차 고도화 작업입니다. 국내 뱅킹·PAY 앱과 생활 서비스 앱을 벤치마킹해 홈 구성(배너 상단 중심 / 바로가기 중심·큰글씨)과 전체메뉴 구조를 제안하고, 스플래시·홈·시세정보 화면을 디자인했습니다.",
+    challenge: "날씨·시세·영농일지·혜택 등 성격이 다른 서비스가 많아, 스마트폰 사용이 익숙하지 않은 농업인도 원하는 기능을 빠르게 찾을 수 있도록 홈과 메뉴 구조를 정리하는 것이 과제였습니다.",
+    solution: "홈 상단에 이벤트 배너와 지역 날씨를 두고, 주요 서비스는 큰 글씨와 일러스트 아이콘을 쓴 카드형 바로가기로 배치했습니다. 시세정보는 내 작물 탭과 경락정보·출하물량·가격전망 탭으로 나눠 필요한 정보를 한눈에 확인하도록 구성했습니다.",
+    hero: { src: "/works/app/nh-onong-p1.jpg", alt: "2025 NH오늘의농업 UXUI 제안 표지" },
+    layout: "phones",
+    images: [
+      { src: "/works/app/nh-onong-splash.png", alt: "오늘농사 스플래시 화면" },
+      { src: "/works/app/nh-onong-home.png", alt: "오늘농사 홈 화면" },
+      { src: "/works/app/nh-onong-price.png", alt: "오늘농사 시세/정보 화면" },
+    ],
+    extras: [
+      {
+        title: "UXUI 제안 · 벤치마킹",
+        desc: "뱅킹/PAY·생활 서비스 앱 벤치마킹과 홈·전체메뉴 구성 제안",
+        images: [
+          { src: "/works/app/nh-onong-p2.jpg", alt: "벤치마킹 A 뱅킹/PAY 1", caption: "A. 뱅킹/PAY" },
+          { src: "/works/app/nh-onong-p3.jpg", alt: "벤치마킹 A 뱅킹/PAY 2", caption: "A. 뱅킹/PAY" },
+          { src: "/works/app/nh-onong-p4.jpg", alt: "벤치마킹 B 기타", caption: "B. 기타 서비스" },
+          { src: "/works/app/nh-onong-p5.jpg", alt: "홈 구성 제안 배너상단 중심", caption: "홈 구성 · 배너상단 중심" },
+          { src: "/works/app/nh-onong-p6.jpg", alt: "홈 구성 제안 바로가기 중심(큰글씨)", caption: "홈 구성 · 바로가기 중심(큰글씨)" },
+          { src: "/works/app/nh-onong-p7.jpg", alt: "전체메뉴 구성 제안", caption: "전체메뉴" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getCategory = (slug?: string) => categories.find((c) => c.slug === slug);

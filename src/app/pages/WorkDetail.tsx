@@ -111,7 +111,7 @@ export const WorkDetail = () => {
             </div>
           )}
           {work.layout === "phones" ? (
-            <div className={`grid grid-cols-2 gap-4 bg-zinc-100 border border-zinc-200 p-4 md:p-6 ${work.images.length === 5 ? "md:grid-cols-5" : "md:grid-cols-4"}`}>
+            <div className={`grid grid-cols-2 gap-4 bg-zinc-100 border border-zinc-200 p-4 md:p-6 ${work.images.length === 5 ? "md:grid-cols-5" : work.images.length === 3 ? "md:grid-cols-3 md:px-16 lg:px-24" : "md:grid-cols-4"}`}>
               {work.images.map((img, iIdx) => (
                 <figure key={iIdx} className="flex flex-col">
                   <div className="rounded-[18px] overflow-hidden border border-zinc-300 bg-white shadow-sm">
