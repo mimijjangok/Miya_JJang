@@ -126,7 +126,7 @@ export const categories: Category[] = [
 export const works: Work[] = [
   {
     slug: "woosung",
-    copyright: "© (주)우성산업기술\n본 로고·CI·BI의 권리는 (주)우성산업기술에 있으며, 디자이너의 작업 이력 소개 목적으로만 게시합니다. 무단 복제·배포 및 사용을 금지합니다.",
+    copyright: "© MI3___LEE\n우성산업기술 CI 로고는 MI3___LEE의 오리지널 디자인으로, (주)우성산업기술에서 사용하지 않는 경우 저작권은 MI3___LEE에게 있습니다. 무단 복제·배포 및 상업적 이용을 금지합니다.",
     category: "brand-identity",
     name: "(주)우성산업기술 · WOOSUNG Industries",
     desc: "CI 로고 디자인과 회사 서식(폴더·명함) 어플리케이션",
