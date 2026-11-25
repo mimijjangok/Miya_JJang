@@ -142,7 +142,7 @@ export const works: Work[] = [
     slug: "goest-brand",
     category: "brand-identity",
     name: "지오이스트 · GOEST",
-    desc: "로고 및 브랜딩 (심볼·국문·영문 로고, 앱 아이콘, 컬러 시스템, PPT)",
+    desc: "로고 및 브랜딩 (심볼·국문·영문 로고, 앱 아이콘, PPT)",
     thumb: "/works/brand/goest-logo.png",
     link: { label: "www.goest.co.kr", url: "https://www.goest.co.kr" },
     info: {
@@ -167,49 +167,6 @@ export const works: Work[] = [
         images: [
           { src: "/works/brand/goest-ppt-company.png", alt: "지오이스트 회사소개서 표지", caption: "회사소개서" },
           { src: "/works/brand/goest-ppt-product.png", alt: "지오이스트 제품소개서(ABSR) 표지", caption: "제품소개서 · ABSR" },
-        ],
-      },
-    ],
-    palette: [
-      {
-        group: "Primary",
-        colors: [
-          { name: "Blue", hex: "#3268F4" },
-          { name: "Black", hex: "#0A0A0A" },
-          { name: "White", hex: "#FFFFFF" },
-        ],
-      },
-      {
-        group: "Color Palette",
-        colors: [
-          { name: "Black", hex: "#000000" },
-          { name: "Blue", hex: "#3268F4" },
-          { name: "Light Blue", hex: "#4F8FF3" },
-          { name: "Red", hex: "#D33334" },
-        ],
-      },
-      {
-        group: "Gray Scale",
-        colors: [
-          { name: "G900", hex: "#1A1A1A" },
-          { name: "G800", hex: "#3B3B3B" },
-          { name: "G700", hex: "#5D5D5D" },
-          { name: "G600", hex: "#808080" },
-          { name: "G500", hex: "#9C9C9C" },
-          { name: "G400", hex: "#C5C5C5" },
-          { name: "G300", hex: "#DEDEDE" },
-          { name: "G100", hex: "#F2F2F2" },
-        ],
-      },
-      {
-        group: "Blue Scale",
-        colors: [
-          { name: "B900", hex: "#050133" },
-          { name: "B700", hex: "#2744CA" },
-          { name: "B500", hex: "#4F8FF3" },
-          { name: "B300", hex: "#8BBAFA" },
-          { name: "B100", hex: "#DBEAFD" },
-          { name: "B50", hex: "#F4F8FE" },
         ],
       },
     ],
