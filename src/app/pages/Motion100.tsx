@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { ArrowLeft, ArrowUpRight, Check, Copy } from "lucide-react";
+import { ArrowLeft, Check, Copy } from "lucide-react";
 import { MotionCanvas } from "../components/motion/MotionCanvas";
-import { motion100, MOTION100_URL, MOTION100_CREDIT, Motion100Item } from "../data/motion100";
+import { motion100, Motion100Item } from "../data/motion100";
 import { categories } from "../data/projects";
 
 // 클로드 모션그래픽 한글 프롬프트 100 중 10개를 직접 만든 결과
@@ -86,9 +86,6 @@ export const Motion100 = () => {
             <p className="text-base md:text-lg text-zinc-500 leading-relaxed break-keep">
               「클로드 모션그래픽 한글 프롬프트 100」에서 21개를 골라 프롬프트대로 직접 만들어 본 결과예요. [이름] 칸은 포트폴리오에 있는 작업 이름으로 채웠어요.
             </p>
-            <a href={MOTION100_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-4 text-xs font-bold hover:text-[#05D920] transition-colors">
-              출처 · {MOTION100_CREDIT} <ArrowUpRight size={12} />
-            </a>
           </div>
         </div>
       </div>
