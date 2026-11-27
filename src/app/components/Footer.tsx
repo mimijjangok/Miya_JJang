@@ -16,9 +16,10 @@ export const Footer = () => {
         
         <div className="flex flex-col md:items-end gap-6">
           <div className="flex gap-10 text-[10px] font-black text-black tracking-[0.3em] uppercase">
-            <a href="#" className="hover:text-[#05D920] transition-colors">BEHANCE</a>
-            <a href="#" className="hover:text-[#05D920] transition-colors">DRIBBBLE</a>
-            <a href="#" className="hover:text-[#05D920] transition-colors">LINKEDIN</a>
+            {/* 빈 링크(#) 대신 실제로 열리는 자료로 연결 */}
+            <a href="/resume.pdf" download className="hover:text-[#05D920] transition-colors">RESUME</a>
+            <a href="/portfolio.pdf" download className="hover:text-[#05D920] transition-colors">PORTFOLIO</a>
+            <a href="/contact" className="hover:text-[#05D920] transition-colors">CONTACT</a>
           </div>
           <p className="text-black/40 text-[10px] font-bold tracking-[0.1em]">
             © 2026 MI3___Lee PORTFOLIO. ALL RIGHTS RESERVED.

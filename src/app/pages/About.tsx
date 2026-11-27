@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { Mail, Instagram, Linkedin, Github, Download } from 'lucide-react';
+import { Mail, Github, Download } from 'lucide-react';
 
 export const About = () => {
   return (
@@ -46,10 +46,13 @@ export const About = () => {
           <div className="grid grid-cols-2 gap-8 border-t-2 border-black pt-12">
             <div>
               <h3 className="text-[#05D920] font-bold mb-4 uppercase text-xs tracking-[0.2em]">Experience</h3>
-              <ul className="space-y-3 text-black text-sm font-medium">
-                <li>Senior Designer at TechFlow</li>
-                <li>UX Consultant for Startups</li>
-                <li>Digital Art Director</li>
+              <ul className="space-y-3 text-black text-sm font-medium break-keep">
+                <li>KB국민은행 웹·앱·모바일웹<br /><span className="text-black/50 text-xs">2017 웹어워드 금융 부문 대상</span></li>
+                <li>NH투자증권 나무증권<br /><span className="text-black/50 text-xs">앱 UXUI · 운영 리더</span></li>
+                <li>신한금융투자 웹/앱<br /><span className="text-black/50 text-xs">사이트 운영 PL</span></li>
+                <li>NH 오늘농사 네이티브 앱<br /><span className="text-black/50 text-xs">4차 고도화 디자인 100%</span></li>
+                <li>하나은행 · 우리은행 · POSCO DX · 삼성SDS · 국가교육위원회</li>
+                <li>지오이스트 AI 홈페이지 · 대시보드</li>
               </ul>
             </div>
                         <div>
@@ -77,22 +80,21 @@ export const About = () => {
             <div>
               <h3 className="text-black font-bold mb-6 uppercase text-xs tracking-[0.2em]">Contact & Social</h3>
               <div className="flex gap-8">
-                <motion.a whileHover={{ scale: 1.2, color: '#05D920' }} href="#" className="text-black transition-colors"><Mail size={20} /></motion.a>
-                <motion.a whileHover={{ scale: 1.2, color: '#05D920' }} href="#" className="text-black transition-colors"><Instagram size={20} /></motion.a>
-                <motion.a whileHover={{ scale: 1.2, color: '#05D920' }} href="#" className="text-black transition-colors"><Linkedin size={20} /></motion.a>
-                <motion.a whileHover={{ scale: 1.2, color: '#05D920' }} href="#" className="text-black transition-colors"><Github size={20} /></motion.a>
+                {/* 실제 주소가 있는 채널만 노출 (인스타·링크드인 주소가 생기면 여기에 추가) */}
+                <motion.a whileHover={{ scale: 1.2, color: '#05D920' }} href="mailto:mimijjangok@naver.com" aria-label="이메일 보내기" className="text-black transition-colors"><Mail size={20} /></motion.a>
+                <motion.a whileHover={{ scale: 1.2, color: '#05D920' }} href="https://github.com/mimijjangok" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-black transition-colors"><Github size={20} /></motion.a>
               </div>
             </div>
 
             <div className="flex flex-col items-start md:items-end gap-3">
               <a 
-                href="#" 
-                onClick={(e) => { e.preventDefault(); alert('이력서 PDF 다운로드 준비 중입니다.'); }}
+                href="/resume.pdf"
+                download
                 className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white hover:bg-[#05D920] hover:text-black transition-all font-black uppercase text-xs tracking-widest"
               >
                 Download Resume <Download size={14} />
               </a>
-              <p className="text-[10px] font-bold text-black/30 tracking-[0.2em] uppercase">Last Update: Feb 2026</p>
+              <p className="text-[10px] font-bold text-black/30 tracking-[0.2em] uppercase">Last Update: Nov 2026</p>
             </div>
           </div>
         </motion.div>

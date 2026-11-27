@@ -4,21 +4,25 @@ import { ProjectCard } from '../components/ProjectCard';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
 
+// 메인 대표작 3개 — 실제 작업물 (상세 페이지로 바로 연결)
 const projects = [
   {
-    title: "Brand Identity System",
+    title: "KB Kookmin Bank",
+    category: "웹·앱 UIUX · 2017 웹어워드 금융 대상",
+    image: "/works/web/kb-mockup.png",
+    href: "/works/web-platform/kb-bank"
+  },
+  {
+    title: "NH 오늘농사 App",
+    category: "네이티브 앱 4차 고도화",
+    image: "/works/app/nh-onong-thumb.jpg",
+    href: "/works/web-platform/nh-onong"
+  },
+  {
+    title: "GOEST Brand",
     category: "기업브랜딩 CIBI",
-    image: "https://images.unsplash.com/photo-1586830746542-19b25c53497f"
-  },
-  {
-    title: "Web Platform Design",
-    category: "웹 홈페이지",
-    image: "https://images.unsplash.com/photo-1761792654327-b32d0be2a96b"
-  },
-  {
-    title: "Mobile User Experience",
-    category: "앱 디자인 UIUX",
-    image: "https://images.unsplash.com/photo-1622212993957-6d4631a0ba8b"
+    image: "/works/brand/goest-thumb.jpg",
+    href: "/works/brand-identity/goest-brand"
   }
 ];
 
@@ -129,11 +133,11 @@ export const Home = () => {
           <div className="flex gap-20">
             <div className="border-l-2 border-black pl-8">
               <p className="text-4xl font-light text-black tracking-tighter">20+</p>
-              <p className="text-[10px] text-black font-bold uppercase tracking-[0.2em] mt-2 opacity-50">Experience</p>
+              <p className="text-[10px] text-black font-bold uppercase tracking-[0.2em] mt-2 opacity-50">Years Experience</p>
             </div>
             <div className="border-l-2 border-black pl-8">
-              <p className="text-4xl font-light text-black tracking-tighter">100%</p>
-              <p className="text-[10px] text-black font-bold uppercase tracking-[0.2em] mt-2 opacity-50">AI Driven</p>
+              <p className="text-4xl font-light text-black tracking-tighter">2017</p>
+              <p className="text-[10px] text-black font-bold uppercase tracking-[0.2em] mt-2 opacity-50">Web Award Grand Prize</p>
             </div>
           </div>
         </motion.div>
@@ -185,6 +189,7 @@ export const Home = () => {
                 title={project.title}
                 category={project.category}
                 image={project.image}
+                href={project.href}
                 index={idx}
               />
             </motion.div>
