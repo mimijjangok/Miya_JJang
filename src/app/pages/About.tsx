@@ -4,7 +4,7 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Mail, Instagram, Linkedin, Palette, MessageCircle, FileText, Download } from 'lucide-react';
 
 // 디자이너 연락·채널 목록
-// 주소(href)를 채우면 화면에 나타나고, 비워 두면 숨겨집니다.
+// 아이콘만 표시. 주소(href)를 채우면 클릭해서 이동, 비워 두면 아이콘만 보임.
 const socials = [
   { label: 'Email', href: 'mailto:mimijjangok@naver.com', Icon: Mail, external: false },
   { label: 'Project Inquiry', href: '/contact', Icon: MessageCircle, external: false },
@@ -90,18 +90,27 @@ export const About = () => {
           <div className="pt-12 border-t-2 border-black flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div>
               <h3 className="text-black font-bold mb-6 uppercase text-xs tracking-[0.2em]">Contact & Social</h3>
-              <div className="flex flex-wrap gap-x-8 gap-y-4">
-                {socials.filter(s => s.href).map(({ label, href, Icon, external }) => (
-                  <motion.a
-                    key={label}
-                    whileHover={{ color: '#05D920' }}
-                    href={href}
-                    {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    className="flex items-center gap-2 text-black transition-colors text-[11px] font-bold uppercase tracking-[0.15em]"
-                  >
-                    <Icon size={18} /> {label}
-                  </motion.a>
-                ))}
+              <div className="flex flex-wrap gap-8">
+                {socials.map(({ label, href, Icon, external }) =>
+                  href ? (
+                    <motion.a
+                      key={label}
+                      whileHover={{ scale: 1.2, color: '#05D920' }}
+                      href={href}
+                      aria-label={label}
+                      title={label}
+                      {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      className="text-black transition-colors"
+                    >
+                      <Icon size={20} />
+                    </motion.a>
+                  ) : (
+                    // 주소가 아직 없는 채널: 아이콘만 표시 (클릭되지 않음)
+                    <span key={label} title={label} aria-label={label} className="text-black">
+                      <Icon size={20} />
+                    </span>
+                  )
+                )}
               </div>
             </div>
 
