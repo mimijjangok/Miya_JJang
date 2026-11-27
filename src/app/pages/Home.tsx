@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { ProjectCard } from '../components/ProjectCard';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
@@ -55,7 +55,26 @@ const lineReveal = {
   }
 };
 
+// 메인 배너 아래 흐르는 클라이언트 이름
+const clients = [
+  "KB국민은행",
+  "하나은행",
+  "우리은행",
+  "NH농협",
+  "NH투자증권",
+  "신한금융투자",
+  "현대카드",
+  "삼성SDS",
+  "POSCO DX",
+  "LG전자",
+  "LG유플러스",
+  "국가교육위원회",
+  "올림푸스코리아",
+  "지오이스트",
+];
+
 export const Home = () => {
+  const reduceMotion = useReducedMotion();
   return (
     <div className="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto overflow-hidden">
       {/* Hero Section */}
@@ -107,6 +126,26 @@ export const Home = () => {
           </div>
         </motion.div>
       </motion.section>
+
+      {/* Clients Marquee — 함께한 클라이언트 이름이 옆으로 흐름 */}
+      <section aria-label="Clients" className="-mt-24 mb-40 border-y border-black/10 py-8 overflow-hidden relative">
+        <p className="sr-only">함께한 클라이언트: {clients.join(', ')}</p>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-linear-to-r from-white to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-white to-transparent z-10" />
+        <motion.div
+          aria-hidden="true"
+          className="flex w-max whitespace-nowrap"
+          animate={reduceMotion ? undefined : { x: ['0%', '-50%'] }}
+          transition={{ duration: 40, ease: 'linear', repeat: Infinity }}
+        >
+          {[...clients, ...clients].map((name, i) => (
+            <span key={i} className="flex items-center text-2xl md:text-4xl font-black tracking-tighter text-black/80 uppercase">
+              <span className="px-8 md:px-12">{name}</span>
+              <span className="w-2 h-2 bg-[#05D920] shrink-0" />
+            </span>
+          ))}
+        </motion.div>
+      </section>
 
       {/* Philosophy Section */}
       <motion.section 
