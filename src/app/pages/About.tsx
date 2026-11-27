@@ -109,7 +109,7 @@ export const About = () => {
               <a 
                 href="/resume.pdf"
                 download
-                className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white hover:bg-[#05D920] hover:text-black transition-all font-black uppercase text-xs tracking-widest"
+                className="inline-flex items-center gap-3 whitespace-nowrap px-8 py-4 bg-black text-white hover:bg-[#05D920] hover:text-black transition-all font-black uppercase text-xs tracking-widest"
               >
                 Download Resume <Download size={14} />
               </a>
