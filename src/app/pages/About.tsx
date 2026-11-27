@@ -1,7 +1,18 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { Mail, Github, Download } from 'lucide-react';
+import { Mail, Instagram, Linkedin, Palette, MessageCircle, FileText, Download } from 'lucide-react';
+
+// 디자이너 연락·채널 목록
+// 주소(href)를 채우면 화면에 나타나고, 비워 두면 숨겨집니다.
+const socials = [
+  { label: 'Email', href: 'mailto:mimijjangok@naver.com', Icon: Mail, external: false },
+  { label: 'Project Inquiry', href: '/contact', Icon: MessageCircle, external: false },
+  { label: 'Portfolio PDF', href: '/portfolio.pdf', Icon: FileText, external: true },
+  { label: 'Instagram', href: '', Icon: Instagram, external: true },   // 예: https://instagram.com/아이디
+  { label: 'Behance', href: '', Icon: Palette, external: true },       // 예: https://behance.net/아이디 (노트폴리오도 가능)
+  { label: 'LinkedIn', href: '', Icon: Linkedin, external: true },     // 예: https://linkedin.com/in/아이디
+];
 
 export const About = () => {
   return (
@@ -79,10 +90,18 @@ export const About = () => {
           <div className="pt-12 border-t-2 border-black flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div>
               <h3 className="text-black font-bold mb-6 uppercase text-xs tracking-[0.2em]">Contact & Social</h3>
-              <div className="flex gap-8">
-                {/* 실제 주소가 있는 채널만 노출 (인스타·링크드인 주소가 생기면 여기에 추가) */}
-                <motion.a whileHover={{ scale: 1.2, color: '#05D920' }} href="mailto:mimijjangok@naver.com" aria-label="이메일 보내기" className="text-black transition-colors"><Mail size={20} /></motion.a>
-                <motion.a whileHover={{ scale: 1.2, color: '#05D920' }} href="https://github.com/mimijjangok" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-black transition-colors"><Github size={20} /></motion.a>
+              <div className="flex flex-wrap gap-x-8 gap-y-4">
+                {socials.filter(s => s.href).map(({ label, href, Icon, external }) => (
+                  <motion.a
+                    key={label}
+                    whileHover={{ color: '#05D920' }}
+                    href={href}
+                    {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    className="flex items-center gap-2 text-black transition-colors text-[11px] font-bold uppercase tracking-[0.15em]"
+                  >
+                    <Icon size={18} /> {label}
+                  </motion.a>
+                ))}
               </div>
             </div>
 
