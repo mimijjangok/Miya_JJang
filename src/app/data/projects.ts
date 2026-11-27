@@ -376,6 +376,62 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "moduva-brand",
+    copyright: "© MODUVA CREATIVE STUDIO · Design by MI3___LEE\n로고 시안 일부는 AI를 활용해 제작했습니다. 무단 복제·배포 및 상업적 이용을 금지합니다.",
+    category: "brand-identity",
+    name: "MODUVA · 모두바 로고",
+    desc: "크리에이티브 디자인 스튜디오 MODUVA의 워드마크와 M 심볼 · 반쪽 해 O를 살린 로고 정리",
+    thumb: "/works/brand/moduva-lockup.png",
+    thumbCard: { bg: "#F6F5F2", logo: "/works/brand/moduva-wordmark.png" },
+    link: { label: "moduva.pages.dev", url: "https://moduva.pages.dev" },
+    info: {
+      client: "MODUVA (자체 브랜드)",
+      year: "2026",
+      role: "로고 디자인 · 브랜드 컬러",
+      target: "로고·캐릭터·홈페이지가 필요한 소상공인 · 스타트업",
+      expression: "워드마크 · 심볼마크 · 앱 아이콘",
+      concept: "O의 위쪽 절반은 코랄, 아래쪽 절반은 브라운으로 나눴습니다. 위는 떠오른 아이디어, 아래는 그 아이디어를 결과물로 만드는 작업을 뜻하고, 슬로건 'Make Your Idea Real.'을 글자 하나에 담았습니다.",
+      colors: [
+        { name: "CORAL", hex: "#F25C6B" },
+        { name: "DEEP BROWN", hex: "#302B27" },
+        { name: "WARM IVORY", hex: "#F5F2EB" },
+      ],
+      tools: "Illustrator · Figma · AI Claude",
+    },
+    overview: "MODUVA 크리에이티브 스튜디오의 로고입니다. 사이트와 굿즈에 쓰던 워드마크의 반쪽 해 O는 그대로 살리고, M·O·D·U·V·A 여섯 글자를 같은 높이와 두께, 정확한 각도로 다시 그렸습니다. 굿즈와 앱 아이콘에 쓸 M 심볼은 세 가지 방향으로 정리했습니다.",
+    features: [
+      { title: "반쪽 해 O", desc: "코랄과 브라운으로 나눈 O 하나로 아이디어와 그것을 만드는 작업을 함께 보여 줍니다." },
+      { title: "반반 타일 심볼", desc: "O의 배색을 타일 전체로 키우고 흰 M을 올려, 16px 파비콘에서도 알아볼 수 있게 했습니다." },
+      { title: "직접 그린 글자", desc: "기성 폰트를 쓰지 않고 글자를 패스로 그려 두께와 글자 사이 간격을 맞췄습니다." },
+    ],
+    hero: { src: "/works/brand/moduva-lockup.png", alt: "MODUVA 반반 타일 심볼과 워드마크 가로형 조합" },
+    images: [
+      { src: "/works/brand/moduva-wordmark.png", alt: "MODUVA 워드마크 · 반쪽 해 O" },
+    ],
+    extras: [
+      {
+        title: "SYMBOL",
+        desc: "기존 M을 다시 짠 기본형, O의 배색을 옮긴 반반 타일(대표안), M과 O를 붙인 MO(모)",
+        cols: 3,
+        uniform: true,
+        images: [
+          { src: "/works/brand/moduva-symbol-a.png", alt: "MODUVA 심볼 A · 정돈한 M", caption: "A · 정돈한 M" },
+          { src: "/works/brand/moduva-symbol-b.png", alt: "MODUVA 심볼 B · 반반 타일", caption: "B · 반반 타일 (대표안)" },
+          { src: "/works/brand/moduva-symbol-c.png", alt: "MODUVA 심볼 C · MO", caption: "C · MO (모)" },
+        ],
+      },
+      {
+        title: "LOGO STUDY",
+        desc: "M을 블록과 라인으로 풀어 본 탐색 시안 · 'Creative Design Studio'와 슬로건 'Make Your Idea Real.' 조합 (AI 활용 시안)",
+        uniform: true,
+        images: [
+          { src: "/works/brand/moduva-logo-block.jpg", alt: "MODUVA 블록형 M 로고 시안", caption: "블록형 M" },
+          { src: "/works/brand/moduva-logo-line.jpg", alt: "MODUVA 라인형 M 로고 시안", caption: "라인형 M · Make Your Idea Real." },
+        ],
+      },
+    ],
+  },
+  {
     slug: "moduva",
     category: "web-platform",
     name: "MODUVA · 모두바 공식 홈페이지",
@@ -418,6 +474,18 @@ export const works: Work[] = [
           { src: "/works/web/moduva-device-desktop.png", alt: "MODUVA 홈페이지 PC 화면", caption: "PC" },
           { src: "/works/web/moduva-device-tablet.png", alt: "MODUVA 홈페이지 태블릿 화면", caption: "Tablet" },
           { src: "/works/web/moduva-device-mobile.png", alt: "MODUVA 홈페이지 모바일 화면", caption: "Mobile" },
+        ],
+      },
+      {
+        title: "UI CONCEPT",
+        desc: "굿즈 · 브랜딩 · 웹앱 · 패키지 서비스별 메인 화면과 디자인 의뢰 화면 시안 (AI를 활용해 제작한 컨셉 이미지)",
+        uniform: true,
+        images: [
+          { src: "/works/web/moduva-concept-category-a.jpg", alt: "MODUVA 서비스별 메인 화면 시안 · 굿즈 브랜딩 웹앱 패키지", caption: "서비스별 메인 · A" },
+          { src: "/works/web/moduva-concept-category-b.jpg", alt: "MODUVA 서비스별 메인과 포트폴리오 화면 시안", caption: "서비스별 메인 · B" },
+          { src: "/works/web/moduva-concept-app-ui.jpg", alt: "MODUVA 카테고리별 앱 메인 UI 시안", caption: "카테고리별 앱 메인" },
+          { src: "/works/web/moduva-concept-request.jpg", alt: "MODUVA 디자인 의뢰 상담 화면 시안", caption: "디자인 의뢰 상담" },
+          { src: "/works/web/moduva-concept-app-home.jpg", alt: "MODUVA 앱 홈 화면 시안", caption: "앱 홈" },
         ],
       },
       {
