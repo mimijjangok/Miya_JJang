@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { Mail, Instagram, Linkedin, Palette, MessageCircle, FileText, Download } from 'lucide-react';
+import { Mail, Instagram, Github, MessageCircle, FileText, Download } from 'lucide-react';
 
 // 디자이너 연락·채널 목록
 // 아이콘만 표시. 주소(href)를 채우면 클릭해서 이동, 비워 두면 아이콘만 보임.
@@ -9,9 +9,8 @@ const socials = [
   { label: 'Email', href: 'mailto:mimijjangok@naver.com', Icon: Mail, external: false },
   { label: 'Project Inquiry', href: '/contact', Icon: MessageCircle, external: false },
   { label: 'Portfolio PDF', href: '/portfolio.pdf', Icon: FileText, external: true },
-  { label: 'Instagram', href: '', Icon: Instagram, external: true },   // 예: https://instagram.com/아이디
-  { label: 'Behance', href: '', Icon: Palette, external: true },       // 예: https://behance.net/아이디 (노트폴리오도 가능)
-  { label: 'LinkedIn', href: '', Icon: Linkedin, external: true },     // 예: https://linkedin.com/in/아이디
+  { label: 'Instagram', href: '', Icon: Instagram, external: true }, // 링크 없이 아이콘만
+  { label: 'GitHub', href: '', Icon: Github, external: true },       // 링크 없이 아이콘만
 ];
 
 export const About = () => {
