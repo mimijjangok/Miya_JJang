@@ -342,6 +342,19 @@ export const WorkDetail = () => {
                 <MessageCircle size={16} /> 캐릭터 문의
               </Link>
             )}
+            {work.cta && (
+              <div>
+                <a
+                  href={work.cta.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-[#05D920] text-black border border-black py-4 text-sm md:text-[15px] font-bold tracking-[0.2em] hover:bg-black hover:text-white transition-colors"
+                >
+                  {work.cta.label} <ArrowUpRight size={16} />
+                </a>
+                {work.cta.note && <p className="text-[11px] text-gray-500 text-center mt-2">{work.cta.note}</p>}
+              </div>
+            )}
             <Link
               to={`/works/${category.slug}`}
               className="flex items-center justify-center gap-2 w-full border border-black py-4 text-sm md:text-[15px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-colors"

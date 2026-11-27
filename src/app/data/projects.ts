@@ -41,6 +41,8 @@ export interface Work {
   thumbCard?: { bg: string; color?: string; logo?: string; text?: string; sub?: string; border?: boolean };
   // textOnly: 사이트가 열리지 않을 때 주소만 글자로 표시 (클릭·바로가기 버튼 없음)
   link?: { label: string; url: string; textOnly?: boolean };
+  // 상세 페이지 "목록으로" 위에 보이는 실행 버튼 (note: 버튼 아래 작은 안내)
+  cta?: { label: string; url: string; note?: string };
   info?: WorkInfo;
   overview?: string;
   // 특징 몇 가지 (오른쪽 정보 패널, Design Concept 아래)
@@ -382,6 +384,7 @@ export const works: Work[] = [
     desc: "이미지 한 장으로 릴스 콘티, AI 영상 프롬프트, 편집 순서표까지 만드는 웹앱",
     thumb: "/works/ai/reels-board-main.jpg",
     icon: "/works/ai/reels-board-icon.png",
+    cta: { label: "보드 열기", url: "https://claude.ai/artifact/ADhEUEMtYy9dZ4AcYX1125", note: "초대된 사용자 전용 · Claude 로그인 필요" },
     info: {
       client: "자체 프로젝트",
       year: "2026",
