@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { Link, Navigate, useParams } from "react-router";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Download, MessageCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Copy, Download, MessageCircle, Share2 } from "lucide-react";
 import { getCategory, getWork, getWorksByCategory } from "../data/projects";
 import { WorkThumb } from "../components/WorkThumb";
 import { CopyrightNotice } from "../components/CopyrightNotice";
@@ -19,6 +19,7 @@ export const WorkDetail = () => {
       return localStorage.getItem("mi3lee-owner") === "1";
     } catch { return false; }
   });
+  const [copied, setCopied] = React.useState(false);
   const { cat, item } = useParams();
   const category = getCategory(cat);
   const work = getWork(cat, item);
@@ -361,7 +362,29 @@ export const WorkDetail = () => {
                 >
                   {work.cta.label} <ArrowUpRight size={16} />
                 </a>
-                {work.cta.note && <p className="text-[11px] text-gray-500 text-center mt-2">{work.cta.note}</p>}
+                <div className="grid grid-cols-2 gap-2 mt-2">
+                  <a
+                    href={work.cta.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 border border-black py-3 text-[13px] font-bold hover:bg-black hover:text-white transition-colors"
+                  >
+                    <Share2 size={14} /> 공유 설정
+                  </a>
+                  <button
+                    type="button"
+                    onClick={async () => {
+                      try { await navigator.clipboard.writeText(work.cta!.url); setCopied(true); setTimeout(() => setCopied(false), 2000); }
+                      catch { window.prompt("링크를 복사하세요", work.cta!.url); }
+                    }}
+                    className="flex items-center justify-center gap-2 border border-black py-3 text-[13px] font-bold hover:bg-black hover:text-white transition-colors"
+                  >
+                    <Copy size={14} /> {copied ? "복사했어요" : "링크 복사"}
+                  </button>
+                </div>
+                <p className="text-[11px] text-gray-500 text-center mt-2 leading-relaxed">
+                  {work.cta.note}<br />공유 설정: 보드가 열리면 오른쪽 위 '공유'에서 이메일로 초대하거나 링크 공개를 켜세요.
+                </p>
               </div>
             )}
             <Link
