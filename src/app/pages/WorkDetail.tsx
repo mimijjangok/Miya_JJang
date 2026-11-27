@@ -10,6 +10,15 @@ import { GoestBrandSheet } from "../components/GoestBrandSheet";
 // 3단계: 작업 상세 페이지 (/works/:cat/:item)
 // GDWEB 선정작 페이지처럼: 위 제목·주소 / 왼쪽 큰 작업 이미지 / 오른쪽 고정 정보 패널
 export const WorkDetail = () => {
+  // 주인 전용 버튼: 주소 끝에 ?owner=1 을 붙여 한 번 열면 그 브라우저에서만 계속 보임 (?owner=0 으로 해제)
+  const [isOwner] = React.useState(() => {
+    try {
+      const q = new URLSearchParams(window.location.search).get("owner");
+      if (q === "1") localStorage.setItem("mi3lee-owner", "1");
+      if (q === "0") localStorage.removeItem("mi3lee-owner");
+      return localStorage.getItem("mi3lee-owner") === "1";
+    } catch { return false; }
+  });
   const { cat, item } = useParams();
   const category = getCategory(cat);
   const work = getWork(cat, item);
@@ -342,7 +351,7 @@ export const WorkDetail = () => {
                 <MessageCircle size={16} /> 캐릭터 문의
               </Link>
             )}
-            {work.cta && (
+            {work.cta && isOwner && (
               <div>
                 <a
                   href={work.cta.url}
