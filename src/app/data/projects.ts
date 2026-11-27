@@ -43,6 +43,8 @@ export interface Work {
   link?: { label: string; url: string; textOnly?: boolean };
   // 상세 페이지 "목록으로" 위에 보이는 실행 버튼 (note: 버튼 아래 작은 안내)
   cta?: { label: string; url: string; note?: string };
+  // 세로 영상 (릴스 등) — 이미지 아래 별도 섹션
+  videos?: { title: string; desc?: string; src: string; poster?: string }[];
   info?: WorkInfo;
   overview?: string;
   // 특징 몇 가지 (오른쪽 정보 패널, Design Concept 아래)
@@ -411,6 +413,9 @@ export const works: Work[] = [
     images: [
       { src: "/works/ai/reels-board-storyboard.jpg", alt: "9:16 콘티 카드, 타임라인, 편집 순서표" },
       { src: "/works/ai/reels-board-editor.jpg", alt: "장면 편집기 · 프리셋 버튼, 완성 프롬프트, 생성 기록" },
+    ],
+    videos: [
+      { title: "PROMO REELS", desc: "인스타그램 홍보 릴스 · 16초 · 9:16 · 직접 기획·편집, 배경음악 자체 제작", src: "/works/ai/reels-board-promo.mp4", poster: "/works/ai/reels-board-promo-poster.jpg" },
     ],
     extras: [
       {

@@ -190,6 +190,24 @@ export const WorkDetail = () => {
             </div>
           )}
 
+          {/* 세로 영상 (릴스) */}
+          {work.videos?.map((v) => (
+            <div key={v.src} className="mt-10 border border-zinc-200 p-6 md:p-10">
+              <h3 className={`text-xl md:text-2xl font-bold tracking-tight ${v.desc ? "" : "mb-8"}`}>{v.title}</h3>
+              {v.desc && <p className="text-sm text-gray-500 mt-1 mb-8">{v.desc}</p>}
+              <div className="flex justify-center">
+                <video
+                  src={v.src}
+                  poster={v.poster}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full max-w-[360px] aspect-[9/16] bg-black rounded-2xl"
+                />
+              </div>
+            </div>
+          ))}
+
           {/* 추가 섹션 (PPT 등) — 작은 원본은 원래 크기 이상으로 늘리지 않음 */}
           {work.extras?.map((ex) => (
             <div key={ex.title} className="mt-10 border border-zinc-200 p-6 md:p-10">
