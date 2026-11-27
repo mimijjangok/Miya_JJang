@@ -127,26 +127,6 @@ export const Home = () => {
         </motion.div>
       </motion.section>
 
-      {/* Clients Marquee — 함께한 클라이언트 이름이 옆으로 흐름 */}
-      <section aria-label="Clients" className="-mt-24 mb-40 border-y border-black/10 py-8 overflow-hidden relative">
-        <p className="sr-only">함께한 클라이언트: {clients.join(', ')}</p>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-linear-to-r from-white to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-white to-transparent z-10" />
-        <motion.div
-          aria-hidden="true"
-          className="flex w-max whitespace-nowrap"
-          animate={reduceMotion ? undefined : { x: ['0%', '-50%'] }}
-          transition={{ duration: 40, ease: 'linear', repeat: Infinity }}
-        >
-          {[...clients, ...clients].map((name, i) => (
-            <span key={i} className="flex items-center text-2xl md:text-4xl font-black tracking-tighter text-black/80 uppercase">
-              <span className="px-8 md:px-12">{name}</span>
-              <span className="w-2 h-2 bg-[#05D920] shrink-0" />
-            </span>
-          ))}
-        </motion.div>
-      </section>
-
       {/* Philosophy Section */}
       <motion.section 
         initial="hidden"
@@ -228,6 +208,29 @@ export const Home = () => {
               />
             </motion.div>
           ))}
+        </div>
+
+        {/* Clients Marquee — 대표작 배너 아래 작게 흐르는 클라이언트 이름 */}
+        <div aria-label="Clients" className="mt-10 flex items-center gap-6 border-y border-black/10 py-5">
+          <span className="shrink-0 text-[10px] font-bold tracking-[0.3em] uppercase text-[#05D920]">Selected Clients</span>
+          <p className="sr-only">함께한 클라이언트: {clients.join(', ')}</p>
+          <div className="relative flex-1 overflow-hidden">
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-linear-to-r from-white to-transparent z-10" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-linear-to-l from-white to-transparent z-10" />
+            <motion.div
+              aria-hidden="true"
+              className="flex w-max whitespace-nowrap"
+              animate={reduceMotion ? undefined : { x: ['0%', '-50%'] }}
+              transition={{ duration: 50, ease: 'linear', repeat: Infinity }}
+            >
+              {[...clients, ...clients].map((name, i) => (
+                <span key={i} className="flex items-center text-sm md:text-base font-semibold tracking-tight text-zinc-400">
+                  <span className="px-5">{name}</span>
+                  <span className="text-zinc-300">·</span>
+                </span>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </motion.section>
 
