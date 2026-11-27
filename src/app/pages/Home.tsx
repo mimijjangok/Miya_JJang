@@ -104,6 +104,15 @@ export const Home = () => {
                 EXPERIENCE VALUE <ArrowRight className="group-hover:translate-x-2 transition-transform" />
               </motion.button>
             </Link>
+            <a href="https://claude.ai/artifact/ADhEUEMtYy9dZ4AcYX1125" target="_blank" rel="noopener noreferrer">
+              <motion.button
+                whileHover={{ scale: 1.05, backgroundColor: '#000000', color: '#ffffff' }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full px-12 py-5 bg-[#05D920] border-2 border-black text-black font-bold rounded-none flex items-center justify-center gap-4 group transition-all shrink-0"
+              >
+                REELS STORYBOARD <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+              </motion.button>
+            </a>
           </div>
         </motion.div>
       </motion.section>
