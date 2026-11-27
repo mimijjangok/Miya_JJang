@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { Link, Navigate, useParams } from "react-router";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Copy, Download, MessageCircle, Share2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Download, MessageCircle } from "lucide-react";
 import { getCategory, getWork, getWorksByCategory } from "../data/projects";
 import { WorkThumb } from "../components/WorkThumb";
 import { CopyrightNotice } from "../components/CopyrightNotice";
@@ -10,16 +10,6 @@ import { GoestBrandSheet } from "../components/GoestBrandSheet";
 // 3단계: 작업 상세 페이지 (/works/:cat/:item)
 // GDWEB 선정작 페이지처럼: 위 제목·주소 / 왼쪽 큰 작업 이미지 / 오른쪽 고정 정보 패널
 export const WorkDetail = () => {
-  // 주인 전용 버튼: 주소 끝에 ?owner=1 을 붙여 한 번 열면 그 브라우저에서만 계속 보임 (?owner=0 으로 해제)
-  const [isOwner] = React.useState(() => {
-    try {
-      const q = new URLSearchParams(window.location.search).get("owner");
-      if (q === "1") localStorage.setItem("mi3lee-owner", "1");
-      if (q === "0") localStorage.removeItem("mi3lee-owner");
-      return localStorage.getItem("mi3lee-owner") === "1";
-    } catch { return false; }
-  });
-  const [copied, setCopied] = React.useState(false);
   const { cat, item } = useParams();
   const category = getCategory(cat);
   const work = getWork(cat, item);
@@ -352,7 +342,7 @@ export const WorkDetail = () => {
                 <MessageCircle size={16} /> 캐릭터 문의
               </Link>
             )}
-            {work.cta && isOwner && (
+            {work.cta && (
               <div>
                 <a
                   href={work.cta.url}
@@ -362,29 +352,7 @@ export const WorkDetail = () => {
                 >
                   {work.cta.label} <ArrowUpRight size={16} />
                 </a>
-                <div className="grid grid-cols-2 gap-2 mt-2">
-                  <a
-                    href={work.cta.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 border border-black py-3 text-[13px] font-bold hover:bg-black hover:text-white transition-colors"
-                  >
-                    <Share2 size={14} /> 공유 설정
-                  </a>
-                  <button
-                    type="button"
-                    onClick={async () => {
-                      try { await navigator.clipboard.writeText(work.cta!.url); setCopied(true); setTimeout(() => setCopied(false), 2000); }
-                      catch { window.prompt("링크를 복사하세요", work.cta!.url); }
-                    }}
-                    className="flex items-center justify-center gap-2 border border-black py-3 text-[13px] font-bold hover:bg-black hover:text-white transition-colors"
-                  >
-                    <Copy size={14} /> {copied ? "복사했어요" : "링크 복사"}
-                  </button>
-                </div>
-                <p className="text-[11px] text-gray-500 text-center mt-2 leading-relaxed">
-                  {work.cta.note}<br />공유 설정: 보드가 열리면 오른쪽 위 '공유'에서 이메일로 초대하거나 링크 공개를 켜세요.
-                </p>
+                {work.cta.note && <p className="text-[11px] text-gray-500 text-center mt-2">{work.cta.note}</p>}
               </div>
             )}
             <Link

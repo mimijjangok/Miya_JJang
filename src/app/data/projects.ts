@@ -384,7 +384,7 @@ export const works: Work[] = [
     desc: "이미지 한 장으로 릴스 콘티, AI 영상 프롬프트, 편집 순서표까지 만드는 웹앱",
     thumb: "/works/ai/reels-board-main.jpg",
     icon: "/works/ai/reels-board-icon.png",
-    cta: { label: "보드 열기", url: "https://claude.ai/artifact/ADhEUEMtYy9dZ4AcYX1125", note: "초대된 사용자 전용 · Claude 로그인 필요" },
+    cta: { label: "릴스 콘티 보드 써보기", url: "https://mi3lee.pages.dev/reels-board/", note: "누구나 무료 · 사진 콘티는 내 Claude·ChatGPT로 만들어요" },
     info: {
       client: "자체 프로젝트",
       year: "2026",
