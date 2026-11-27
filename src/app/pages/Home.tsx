@@ -104,7 +104,7 @@ export const Home = () => {
                 EXPERIENCE VALUE <ArrowRight className="group-hover:translate-x-2 transition-transform" />
               </motion.button>
             </Link>
-            <a href="https://claude.ai/artifact/ADhEUEMtYy9dZ4AcYX1125" target="_blank" rel="noopener noreferrer">
+            <Link to="/works/ai-dx/reels-storyboard">
               <motion.button
                 whileHover={{ scale: 1.05, backgroundColor: '#000000', color: '#ffffff' }}
                 whileTap={{ scale: 0.95 }}
@@ -112,7 +112,7 @@ export const Home = () => {
               >
                 REELS STORYBOARD <ArrowRight className="group-hover:translate-x-2 transition-transform" />
               </motion.button>
-            </a>
+            </Link>
           </div>
         </motion.div>
       </motion.section>
