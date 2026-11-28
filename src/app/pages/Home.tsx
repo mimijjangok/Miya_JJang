@@ -67,7 +67,7 @@ export const Home = () => {
       >
         <div className="overflow-hidden">
           <motion.p variants={revealVariants} className="text-[#05D920] font-semibold mb-6 tracking-[0.3em] border-l-2 border-[#05D920] pl-4 uppercase text-xs">
-           MODUVA CREATIVE STUDIO
+           UI/UX · BRAND · AI DESIGN
           </motion.p>
         </div>
         
