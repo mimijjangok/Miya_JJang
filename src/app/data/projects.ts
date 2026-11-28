@@ -1140,6 +1140,37 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "lotte-cinema-worldtower",
+    category: "web-platform",
+    name: "롯데시네마 월드타워 OPEN",
+    desc: "롯데월드타워 오픈 홍보 마이크로 사이트 메인",
+    thumb: "/works/web/lotte-worldtower-main.png",
+    thumbCard: { bg: "#1E1E1E", color: "#FFFFFF", text: "LOTTE CINEMA", sub: "월드타워 OPEN 마이크로 사이트" },
+    info: {
+      client: "롯데시네마",
+      role: "마이크로 사이트 메인 디자인",
+      expression: "오픈 홍보 마이크로 사이트 · 메인 · 상영관 소개",
+      concept: "세계 최대 스크린의 블록버스터 영화관 — 대형 상영관 실사를 넓게 펼쳐 웅장한 공간감을 전달하는 메인",
+      colors: [
+        { name: "CHARCOAL", hex: "#1E1E1E" },
+        { name: "LOTTE RED", hex: "#E2231A" },
+        { name: "IVORY", hex: "#F3EFE6" },
+      ],
+    },
+    overview: "롯데월드타워 오픈을 알리는 롯데시네마 월드타워 홍보 마이크로 사이트의 메인과 상영관 소개 화면을 디자인했습니다.",
+    hero: { src: "/works/web/lotte-worldtower-main.png", alt: "롯데시네마 월드타워 오픈 마이크로 사이트 메인" },
+    images: [],
+    extras: [
+      {
+        title: "SUB PAGE",
+        desc: "상영관 소개 화면",
+        images: [
+          { src: "/works/web/lotte-worldtower-sub.png", alt: "롯데시네마 월드타워 상영관 소개 화면", caption: "상영관 소개" },
+        ],
+      },
+    ],
+  },
+  {
     slug: "babystar",
     category: "character",
     name: "아기별 · BABY STAR",
