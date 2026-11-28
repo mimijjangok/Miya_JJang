@@ -1144,7 +1144,7 @@ export const works: Work[] = [
     category: "web-platform",
     name: "롯데시네마 월드타워 OPEN",
     desc: "롯데월드타워 오픈 홍보 마이크로 사이트 메인",
-    thumb: "/works/web/lotte-worldtower-main.png",
+    thumb: "/works/web/lotte-worldtower-lobby.png",
     thumbCard: { bg: "#1E1E1E", color: "#FFFFFF", text: "LOTTE CINEMA", sub: "월드타워 OPEN 마이크로 사이트" },
     info: {
       client: "롯데시네마",
@@ -1158,14 +1158,15 @@ export const works: Work[] = [
       ],
     },
     overview: "롯데월드타워 오픈을 알리는 롯데시네마 월드타워 홍보 마이크로 사이트의 메인과 상영관 소개 화면을 디자인했습니다.",
-    hero: { src: "/works/web/lotte-worldtower-main.png", alt: "롯데시네마 월드타워 오픈 마이크로 사이트 메인" },
+    hero: { src: "/works/web/lotte-worldtower-lobby.png", alt: "롯데시네마 월드타워 오픈 마이크로 사이트 메인 · 상영관 21개, 세계 최대 스크린" },
     images: [],
     extras: [
       {
         title: "SUB PAGE",
-        desc: "상영관 소개 화면",
+        desc: "세계 최대 스크린 소개와 특별관 소개 서브 페이지",
         images: [
-          { src: "/works/web/lotte-worldtower-sub.png", alt: "롯데시네마 월드타워 상영관 소개 화면", caption: "상영관 소개" },
+          { src: "/works/web/lotte-worldtower-main.png", alt: "롯데시네마 월드타워 세계 최대 스크린 소개 서브 페이지", caption: "세계 최대 스크린" },
+          { src: "/works/web/lotte-worldtower-sub.png", alt: "롯데시네마 월드타워 특별관 소개 서브 페이지", caption: "특별관 소개" },
         ],
       },
     ],
