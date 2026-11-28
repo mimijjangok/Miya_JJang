@@ -82,7 +82,7 @@ export const Home = () => {
 
         <motion.div variants={revealVariants} className="flex flex-col md:flex-row md:items-end justify-between gap-12">
           <p className="text-lg md:text-2xl text-zinc-500 max-w-3xl font-normal leading-relaxed break-keep">
-            당신의 생각이 디자인이 된다. <br />
+            AI 시대, 감성으로 디자인합니다. <br />
             아이디어에서 브랜드까지, 생각을 새로운 가치로 완성합니다.
           </p>
           
