@@ -73,9 +73,10 @@ export const Home = () => {
         
         <div className="overflow-hidden">
           <motion.h1 variants={revealVariants} className="text-7xl md:text-[10rem] font-black tracking-tighter leading-[0.9] mb-12 text-black">
-            <span className="text-[#05D920]">YOUR IDEAS.</span><br />
-            BECOME<br />
-            DESIGN.
+            <span className="text-[#05D920]">EMOTIONAL</span><br />
+            DESIGNER<br />
+            IN THE AGE<br />
+            OF AI.
           </motion.h1>
         </div>
 
